@@ -604,6 +604,152 @@ a{ color: var(--azul); }
   .about-head h1{ font-size:20px; }
   .fe-sidebar{ display:none; }
 }
+
+/* ============================================================
+   INVENTA — CASO DE ESTUDIO DESTACADO
+   ============================================================ */
+.inv-scroll{ height:100%; overflow-y:auto; overflow-x:hidden; }
+.inv-scroll::-webkit-scrollbar{ width:9px; }
+.inv-scroll::-webkit-scrollbar-track{ background:rgba(15,23,42,.06); }
+.inv-scroll::-webkit-scrollbar-thumb{ background:linear-gradient(180deg,#3b82f6,#1e40af); border-radius:5px; border:2px solid rgba(255,255,255,.5); }
+
+/* Hero */
+.inv-hero{
+  background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%);
+  padding:32px 28px 28px; color:#fff; position:relative; overflow:hidden;
+}
+.inv-hero::before{
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse at 30% 20%, rgba(59,130,246,.25) 0%, transparent 60%),
+             radial-gradient(ellipse at 80% 80%, rgba(139,92,246,.15) 0%, transparent 50%);
+  pointer-events:none;
+}
+.inv-hero *{ position:relative; z-index:1; }
+.inv-badge{
+  display:inline-flex; align-items:center; gap:6px;
+  background:rgba(59,130,246,.18); border:1px solid rgba(59,130,246,.4);
+  color:#93c5fd; font-size:10.5px; font-weight:700; letter-spacing:.8px; text-transform:uppercase;
+  padding:4px 12px; border-radius:999px; margin-bottom:12px;
+}
+.inv-badge::before{
+  content:''; width:7px; height:7px; border-radius:50%;
+  background:#3b82f6; box-shadow:0 0 8px #3b82f6;
+  animation:inv-pulse 2s ease-in-out infinite;
+}
+@keyframes inv-pulse{ 0%,100%{opacity:1;} 50%{opacity:.4;} }
+.inv-hero h1{ font-size:28px; font-weight:800; letter-spacing:-.5px; margin-bottom:4px; }
+.inv-hero h1 span{ background:linear-gradient(90deg,#60a5fa,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.inv-hero .inv-tagline{ font-size:15px; color:#94a3b8; font-weight:500; margin-bottom:14px; }
+.inv-hero p{ font-size:13px; line-height:1.65; color:#cbd5e1; max-width:580px; }
+
+/* Secciones internas */
+.inv-section{ padding:20px 24px; }
+.inv-section + .inv-section{ border-top:1px solid #e2e8f0; }
+.inv-stitle{
+  font-size:10.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase;
+  color:#64748b; margin-bottom:6px;
+}
+.inv-sh{ font-size:17px; font-weight:700; color:#0f172a; margin-bottom:12px; }
+
+/* Problema */
+.inv-problem-text{ font-size:12.5px; line-height:1.6; color:#475569; margin-bottom:14px; }
+.inv-pain-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:8px; }
+.inv-pain{
+  display:flex; align-items:center; gap:8px; padding:8px 10px; border-radius:8px;
+  background:linear-gradient(135deg,#fef2f2,#fff1f2); border:1px solid #fecaca;
+  font-size:11.5px; color:#991b1b; font-weight:600;
+}
+.inv-pain .inv-pain-icon{ font-size:16px; flex:0 0 auto; }
+
+/* Features */
+.inv-feat-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:10px; }
+.inv-feat{
+  padding:14px 12px; border-radius:10px; border:1px solid #e2e8f0;
+  background:linear-gradient(180deg,#ffffff,#f8fafc);
+  box-shadow:0 1px 3px rgba(15,23,42,.06);
+  transition:box-shadow .2s, transform .2s;
+}
+.inv-feat:hover{ box-shadow:0 4px 16px rgba(59,130,246,.15); transform:translateY(-2px); }
+.inv-feat-icon{
+  width:36px; height:36px; border-radius:9px; display:grid; place-items:center;
+  font-size:18px; margin-bottom:8px;
+  background:linear-gradient(135deg,#eff6ff,#dbeafe); border:1px solid #bfdbfe;
+}
+.inv-feat h4{ font-size:12.5px; font-weight:700; color:#0f172a; margin-bottom:4px; }
+.inv-feat p{ font-size:11px; line-height:1.5; color:#64748b; }
+
+/* Rol */
+.inv-role-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:8px; }
+.inv-role-item{
+  display:flex; align-items:center; gap:8px; padding:7px 10px; border-radius:7px;
+  background:#f8fafc; border:1px solid #e2e8f0; font-size:11.5px; color:#334155; font-weight:500;
+}
+.inv-role-item::before{
+  content:''; width:8px; height:8px; border-radius:50%;
+  background:linear-gradient(135deg,#3b82f6,#8b5cf6); flex:0 0 auto;
+}
+
+/* Tech Badges */
+.inv-techs{ display:flex; flex-wrap:wrap; gap:7px; }
+.inv-tech{
+  padding:5px 12px; border-radius:999px; font-size:11px; font-weight:600;
+  background:linear-gradient(135deg,#0f172a,#1e293b); color:#e2e8f0;
+  border:1px solid #334155; letter-spacing:.3px;
+  transition:background .2s, box-shadow .2s;
+}
+.inv-tech:hover{ background:linear-gradient(135deg,#1e40af,#3b82f6); box-shadow:0 2px 8px rgba(59,130,246,.4); color:#fff; }
+
+/* Resultados */
+.inv-results{ display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:10px; }
+.inv-result{
+  text-align:center; padding:14px 8px; border-radius:10px;
+  background:linear-gradient(135deg,#f0f9ff,#eff6ff); border:1px solid #bfdbfe;
+}
+.inv-result-icon{ font-size:22px; margin-bottom:6px; }
+.inv-result p{ font-size:11px; color:#1e40af; font-weight:600; line-height:1.3; }
+
+/* Galería */
+.inv-gallery{ position:relative; }
+.inv-gallery-track{
+  display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory;
+  padding:4px 0 12px; scrollbar-width:thin;
+}
+.inv-gallery-track::-webkit-scrollbar{ height:6px; }
+.inv-gallery-track::-webkit-scrollbar-thumb{ background:#94a3b8; border-radius:3px; }
+.inv-gallery-slide{
+  flex:0 0 280px; scroll-snap-align:start; border-radius:10px; overflow:hidden;
+  border:1px solid #e2e8f0; box-shadow:0 2px 8px rgba(15,23,42,.1);
+  transition:transform .2s, box-shadow .2s; cursor:pointer;
+}
+.inv-gallery-slide:hover{ transform:scale(1.02); box-shadow:0 6px 20px rgba(15,23,42,.18); }
+.inv-gallery-slide img{ width:100%; height:auto; display:block; }
+.inv-gallery-caption{
+  padding:8px 10px; background:#f8fafc; font-size:11px; color:#475569; font-weight:600;
+  border-top:1px solid #e2e8f0;
+}
+
+/* Botones de acción */
+.inv-actions{ display:flex; flex-wrap:wrap; gap:10px; padding:20px 24px; border-top:1px solid #e2e8f0; }
+.inv-btn{
+  display:inline-flex; align-items:center; gap:7px;
+  padding:9px 18px; border-radius:8px; font-size:12.5px; font-weight:600;
+  text-decoration:none; cursor:pointer; transition:all .2s;
+}
+.inv-btn-primary{
+  background:linear-gradient(135deg,#3b82f6,#2563eb); color:#fff;
+  box-shadow:0 2px 8px rgba(37,99,235,.35); border:1px solid #2563eb;
+}
+.inv-btn-primary:hover{ background:linear-gradient(135deg,#60a5fa,#3b82f6); box-shadow:0 4px 16px rgba(37,99,235,.45); transform:translateY(-1px); }
+.inv-btn-secondary{
+  background:#fff; color:#0f172a; border:1px solid #cbd5e1;
+  box-shadow:0 1px 3px rgba(15,23,42,.08);
+}
+.inv-btn-secondary:hover{ border-color:#3b82f6; color:#2563eb; box-shadow:0 2px 8px rgba(59,130,246,.15); }
+.inv-btn-dark{
+  background:linear-gradient(135deg,#0f172a,#1e293b); color:#e2e8f0;
+  border:1px solid #334155;
+}
+.inv-btn-dark:hover{ background:#1e293b; box-shadow:0 2px 8px rgba(15,23,42,.4); }
 </style>
 </head>
 <body>
@@ -753,6 +899,7 @@ const DATA = {
    ============================================================ */
 const DESKTOP_ICONS = [
   'projects',
+  'inventa',
   'about',
   'ie',
   'cmd',
@@ -960,6 +1107,27 @@ const ICONS = {
   search: `<svg viewBox="0 0 24 24" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#3a6da0" stroke-width="2.4"/><line x1="15" y1="15" x2="21" y2="21" stroke="#3a6da0" stroke-width="2.4" stroke-linecap="round"/></svg>`,
   github: `<svg viewBox="0 0 24 24" width="__W__" height="__W__" fill="#24384c"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>`,
   linkedin: `<svg viewBox="0 0 24 24" width="__W__" height="__W__" fill="#0077b5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>`,
+
+  // INVENTA — Icono de caso de estudio (Dashboard/IA)
+  inventa: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="inv_b__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#1e40af"/></linearGradient>
+      <linearGradient id="inv_s__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+      <linearGradient id="inv_c__UID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+    </defs>
+    <rect x="6" y="8" width="52" height="42" rx="7" fill="url(#inv_b__UID__)" stroke="#1e3a8a" stroke-width="1.3"/>
+    <rect x="10" y="12" width="44" height="34" rx="4" fill="#0f172a" stroke="#1e40af" stroke-width="0.8"/>
+    <path d="M14 40 L14 30 L22 26 L30 32 L38 20 L46 24 L50 18" fill="none" stroke="url(#inv_c__UID__)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 40 L14 30 L22 26 L30 32 L38 20 L46 24 L50 18 L50 40 Z" fill="url(#inv_c__UID__)" opacity="0.15"/>
+    <circle cx="38" cy="20" r="3" fill="#a78bfa" stroke="#fff" stroke-width="1"/>
+    <circle cx="50" cy="18" r="2.5" fill="#60a5fa" stroke="#fff" stroke-width="1"/>
+    <rect x="14" y="34" width="6" height="6" rx="1" fill="#3b82f6" opacity="0.6"/>
+    <rect x="22" y="36" width="6" height="4" rx="1" fill="#60a5fa" opacity="0.6"/>
+    <rect x="30" y="33" width="6" height="7" rx="1" fill="#818cf8" opacity="0.6"/>
+    <ellipse cx="28" cy="14" rx="16" ry="4" fill="url(#inv_s__UID__)"/>
+    <path d="M24 50h16l2 6H22z" fill="#94a3b8" stroke="#64748b" stroke-width="0.6"/>
+    <rect x="18" y="55" width="28" height="4" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="0.5"/>
+  </svg>`,
 };
 
 function svgIcon(name, size){
@@ -996,6 +1164,151 @@ function renderProjects(){
             : `<span class="proj-link proj-soon">En producción</span>`}
         </article>`).join('')}
     </div>`;
+}
+
+// INVENTA — Caso de Estudio Destacado
+function renderInventa(){
+  return `<div class="inv-scroll">
+    <!-- HERO -->
+    <div class="inv-hero">
+      <div class="inv-badge">Proyecto Destacado</div>
+      <h1><span>INVENTA</span></h1>
+      <p class="inv-tagline">El Cerebro de Compras para tu Empresa</p>
+      <p>Plataforma SaaS impulsada por inteligencia artificial diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar decisiones de compra para empresas de Latinoamérica.</p>
+      <p style="margin-top:8px">INVENTA transforma datos operativos en decisiones estratégicas mediante modelos predictivos, automatización y análisis empresarial en tiempo real.</p>
+    </div>
+
+    <!-- PROBLEMA -->
+    <div class="inv-section">
+      <p class="inv-stitle">El Problema</p>
+      <h3 class="inv-sh">¿Por qué existe INVENTA?</h3>
+      <p class="inv-problem-text">Muchas empresas toman decisiones de compra basadas en intuición, hojas de cálculo dispersas y procesos manuales. Esto genera pérdidas operativas y financieras significativas:</p>
+      <div class="inv-pain-grid">
+        <div class="inv-pain"><span class="inv-pain-icon">📉</span>Quiebres de stock</div>
+        <div class="inv-pain"><span class="inv-pain-icon">📦</span>Exceso de inventario</div>
+        <div class="inv-pain"><span class="inv-pain-icon">💰</span>Capital inmovilizado</div>
+        <div class="inv-pain"><span class="inv-pain-icon">🔄</span>Compras ineficientes</div>
+        <div class="inv-pain"><span class="inv-pain-icon">🚫</span>Pérdida de ventas</div>
+      </div>
+    </div>
+
+    <!-- FUNCIONALIDADES -->
+    <div class="inv-section">
+      <p class="inv-stitle">Plataforma</p>
+      <h3 class="inv-sh">Funcionalidades Principales</h3>
+      <div class="inv-feat-grid">
+        <div class="inv-feat">
+          <div class="inv-feat-icon">🧠</div>
+          <h4>Predicción de Demanda</h4>
+          <p>Anticipa necesidades futuras utilizando análisis de datos e inteligencia artificial.</p>
+        </div>
+        <div class="inv-feat">
+          <div class="inv-feat-icon">📊</div>
+          <h4>Gestión Inteligente de Inventarios</h4>
+          <p>Detecta riesgos de sobrestock y quiebres de stock en tiempo real.</p>
+        </div>
+        <div class="inv-feat">
+          <div class="inv-feat-icon">⚡</div>
+          <h4>Automatización de Compras</h4>
+          <p>Genera recomendaciones accionables para optimizar abastecimiento.</p>
+        </div>
+        <div class="inv-feat">
+          <div class="inv-feat-icon">📈</div>
+          <h4>Dashboard Ejecutivo</h4>
+          <p>KPIs empresariales y monitoreo de operaciones en tiempo real.</p>
+        </div>
+        <div class="inv-feat">
+          <div class="inv-feat-icon">🔍</div>
+          <h4>Inteligencia de Negocio</h4>
+          <p>Análisis de tendencias y oportunidades de optimización continua.</p>
+        </div>
+        <div class="inv-feat">
+          <div class="inv-feat-icon">☁️</div>
+          <h4>Escalabilidad SaaS</h4>
+          <p>Arquitectura cloud-native preparada para crecimiento empresarial.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MI ROL -->
+    <div class="inv-section">
+      <p class="inv-stitle">Liderazgo</p>
+      <h3 class="inv-sh">Mi Participación</h3>
+      <div class="inv-role-grid">
+        <div class="inv-role-item">Conceptualización del producto</div>
+        <div class="inv-role-item">Diseño de modelo de negocio</div>
+        <div class="inv-role-item">Definición de estrategia SaaS</div>
+        <div class="inv-role-item">Diseño funcional de la plataforma</div>
+        <div class="inv-role-item">Investigación de mercado</div>
+        <div class="inv-role-item">Definición de experiencia de usuario</div>
+        <div class="inv-role-item">Dirección del proyecto</div>
+        <div class="inv-role-item">Lean Startup, Design Thinking & Scrum</div>
+      </div>
+    </div>
+
+    <!-- TECNOLOGÍAS -->
+    <div class="inv-section">
+      <p class="inv-stitle">Stack & Metodologías</p>
+      <h3 class="inv-sh">Tecnologías</h3>
+      <div class="inv-techs">
+        <span class="inv-tech">Artificial Intelligence</span>
+        <span class="inv-tech">SaaS</span>
+        <span class="inv-tech">Product Management</span>
+        <span class="inv-tech">Business Intelligence</span>
+        <span class="inv-tech">Predictive Analytics</span>
+        <span class="inv-tech">UX/UI</span>
+        <span class="inv-tech">Agile</span>
+        <span class="inv-tech">Cloud</span>
+        <span class="inv-tech">React</span>
+        <span class="inv-tech">Vercel</span>
+        <span class="inv-tech">GitHub</span>
+      </div>
+    </div>
+
+    <!-- RESULTADOS ESPERADOS -->
+    <div class="inv-section">
+      <p class="inv-stitle">Impacto</p>
+      <h3 class="inv-sh">Resultados Esperados</h3>
+      <div class="inv-results">
+        <div class="inv-result"><div class="inv-result-icon">📦</div><p>Optimización de inventarios</p></div>
+        <div class="inv-result"><div class="inv-result-icon">📉</div><p>Reducción de quiebres de stock</p></div>
+        <div class="inv-result"><div class="inv-result-icon">🎯</div><p>Mejora en decisiones de compra</p></div>
+        <div class="inv-result"><div class="inv-result-icon">⚙️</div><p>Mayor eficiencia operativa</p></div>
+        <div class="inv-result"><div class="inv-result-icon">🚀</div><p>Escalabilidad empresarial</p></div>
+      </div>
+    </div>
+
+    <!-- GALERÍA -->
+    <div class="inv-section inv-gallery">
+      <p class="inv-stitle">Producto</p>
+      <h3 class="inv-sh">Galería Visual</h3>
+      <div class="inv-gallery-track">
+        <div class="inv-gallery-slide">
+          <img src="inventa-dashboard.jpg" alt="Dashboard principal de INVENTA" loading="lazy"/>
+          <div class="inv-gallery-caption">Dashboard Principal — Panel de Control</div>
+        </div>
+        <div class="inv-gallery-slide">
+          <img src="inventa-inventory.jpg" alt="Módulo de inventarios INVENTA" loading="lazy"/>
+          <div class="inv-gallery-caption">Gestión de Inventarios — Vista de Productos</div>
+        </div>
+        <div class="inv-gallery-slide">
+          <img src="inventa-analytics.jpg" alt="Analítica e inteligencia de negocio" loading="lazy"/>
+          <div class="inv-gallery-caption">Analítica — Predicción de Demanda vs Real</div>
+        </div>
+        <div class="inv-gallery-slide">
+          <img src="inventa-mobile.jpg" alt="Vista móvil de INVENTA" loading="lazy"/>
+          <div class="inv-gallery-caption">Vista Móvil — Acceso desde cualquier dispositivo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTONES CTA -->
+    <div class="inv-actions">
+      <a class="inv-btn inv-btn-primary" href="https://inventa-dpzedgxep-juzaki.vercel.app/" target="_blank" rel="noopener">🚀 Ver Proyecto</a>
+      <a class="inv-btn inv-btn-secondary" onclick="openApp('contact')" style="cursor:pointer">✉️ Contactar</a>
+      <a class="inv-btn inv-btn-dark" href="https://github.com/Juzakito" target="_blank" rel="noopener">${svgIcon('github',14)} GitHub</a>
+    </div>
+  </div>`;
 }
 
 // 2. About Me
@@ -1308,6 +1621,7 @@ function renderContact(){
    ============================================================ */
 const APPS = {
   projects: { titulo: 'Projects',                  icono: 'projects', w: 700, h: 480, minW: 460, minH: 340, render: renderProjects },
+  inventa:  { titulo: 'INVENTA — Caso de Estudio', icono: 'inventa',  w: 860, h: 580, minW: 520, minH: 400, render: renderInventa },
   about:    { titulo: 'About Me',                  icono: 'about',    w: 580, h: 420, minW: 440, minH: 340, render: renderAbout },
   ie:       { titulo: 'Internet Explorer',         icono: 'ie',       w: 780, h: 520, minW: 480, minH: 360, render: renderIE },
   cmd:      { titulo: 'Command Prompt',            icono: 'cmd',      w: 640, h: 400, minW: 420, minH: 280, render: renderCMD },
