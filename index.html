@@ -221,39 +221,7 @@ a{ color: var(--azul); }
 .sys-row:last-child{ margin-bottom:0; }
 .sys-row .lbl{ color:#4a6886; font-weight:600; }
 .sys-row .val{ color:#16324f; }
-
-/* ---------- gadget: windows sidebar / msn messenger ---------- */
-#msn-gadget{
-  position:absolute; top:18px; right:18px; width:280px; z-index:900;
-  background:linear-gradient(180deg, rgba(245,250,255,.70), rgba(215,233,250,.58));
-  backdrop-filter: blur(14px) saturate(1.6);
-  -webkit-backdrop-filter: blur(14px) saturate(1.6);
-  border:1px solid rgba(255,255,255,.8); border-radius:10px;
-  box-shadow:0 8px 26px rgba(0,25,60,.25), inset 0 1px 0 #fff;
-  padding:10px 12px; user-select:none; animation:gadgetIn .3s ease-out;
-}
-@keyframes gadgetIn{ from{ opacity:0; transform:translateX(20px); } }
-.gadget-header{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
-.msn-logo{ display:flex; align-items:center; gap:6px; font-size:11.5px; color:#12477c; font-weight:700; }
-.msn-butterfly{ width:15px; height:15px; border-radius:50%; background:linear-gradient(135deg,#00a859,#0099ff); display:inline-block; }
-.gadget-close{ cursor:pointer; font-size:16px; color:#52779c; line-height:1; padding:0 4px; border-radius:3px; }
-.gadget-close:hover{ background:rgba(255,100,80,.2); color:#c02010; }
-.gadget-body{ display:flex; align-items:center; gap:10px; margin-bottom:8px; }
-.gadget-avatar-wrap{ position:relative; flex:0 0 38px; }
-.gadget-status-dot{
-  position:absolute; bottom:0; right:0; width:11px; height:11px; border-radius:50%;
-  background:#ff3b30; border:2px solid #fff; box-shadow:0 0 4px rgba(255,50,40,.6);
-}
-.gadget-info{ min-width:0; flex:1; }
-.gadget-name{ font-size:12.5px; font-weight:700; color:#0e2f58; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.gadget-status{ font-size:11px; font-weight:500; color:#a02c20; }
-.gadget-music{ font-size:11px; color:#2c6396; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.gadget-submsg{
-  font-size:11.5px; line-height:1.45; color:#27435f; background:rgba(255,255,255,.65);
-  border:1px solid rgba(180,210,240,.6); border-radius:6px; padding:6px 8px;
-}
 @media (max-width: 900px){
-  #msn-gadget{ display:none; }
   .sys-row{ grid-template-columns:1fr; gap:2px; }
 }
 
@@ -459,34 +427,6 @@ a{ color: var(--azul); }
   </svg>
 
   <div class="watermark">Escritorio Aero<br>Frutiger Portfolio · Build 2026</div>
-
-  <!-- Gadget estilo Windows Sidebar / MSN Messenger -->
-  <aside id="msn-gadget" class="aero-gadget">
-    <div class="gadget-header">
-      <div class="msn-logo">
-        <span class="msn-butterfly"></span>
-        <b>MSN Messenger</b>
-      </div>
-      <span class="gadget-close" onclick="document.getElementById('msn-gadget').style.display='none'" title="Cerrar gadget">×</span>
-    </div>
-    <div class="gadget-body">
-      <div class="gadget-avatar-wrap">
-        <svg viewBox="0 0 64 64" width="38" height="38">
-          <circle cx="32" cy="32" r="30" fill="#2979bb"/>
-          <circle cx="32" cy="24" r="10" fill="#fff" opacity=".95"/>
-          <path d="M13 54c2.5-12 10-18 19-18s16.5 6 19 18z" fill="#fff" opacity=".95"/>
-        </svg>
-        <span class="gadget-status-dot" title="Ocupado"></span>
-      </div>
-      <div class="gadget-info">
-        <div class="gadget-name">José González <span class="gadget-status">(Ocupado)</span></div>
-        <div class="gadget-music">🎧 <span>Escuchando a los usuarios...</span></div>
-      </div>
-    </div>
-    <div class="gadget-submsg">
-      🚀 <i>Democratizando la ejecución técnica. Construyendo PMVs funcionales que conectan empatía humana con IA avanzada.</i>
-    </div>
-  </aside>
 
   <!-- iconos del escritorio (los llena el script) -->
   <div id="icon-col"></div>
