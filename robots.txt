@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://joseg-dev.vercel.app/sitemap.xml

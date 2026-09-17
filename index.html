@@ -1,831 +1,2325 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO PRIMARIO -->
-  <title>José González | Product Manager & Tech Lead · SaaS B2B, IA & Estrategia Digital</title>
-  <meta name="description" content="Portafolio profesional de José González (Josh). Product Manager, Scrum Master y Tech Lead especializado en SaaS B2B, Inteligencia Artificial aplicada a negocios y optimización de productos digitales de alto impacto." />
-  <meta name="keywords" content="Product Manager, Tech Lead, Scrum Master, SaaS B2B, Inteligencia Artificial, Innovación Digital, Estrategia de Producto, Lean Startup, INVENTA, Free Mind, José González" />
-  <meta name="author" content="José González" />
-  <link rel="canonical" href="https://joseg-dev.vercel.app/" />
-  
-  <!-- OPEN GRAPH / LINKEDIN / FACEBOOK -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://joseg-dev.vercel.app/" />
-  <meta property="og:title" content="José González | Product Manager & Tech Lead · SaaS B2B & IA" />
-  <meta property="og:description" content="Transformando complejidad operativa en productos SaaS con IA de alto impacto. Descubre casos de estudio reales: INVENTA y Free Mind." />
-  <meta property="og:image" content="https://joseg-dev.vercel.app/inventa-dashboard.jpg" />
-  <meta property="og:locale" content="es_ES" />
-  
-  <!-- TWITTER CARDS -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://joseg-dev.vercel.app/" />
-  <meta name="twitter:title" content="José González | Product Manager & Tech Lead · SaaS B2B & IA" />
-  <meta name="twitter:description" content="Transformando complejidad operativa en productos SaaS con IA de alto impacto. Casos de estudio: INVENTA y Free Mind." />
-  <meta name="twitter:image" content="https://joseg-dev.vercel.app/inventa-dashboard.jpg" />
-  
-  <!-- THEME COLOR & FAVICON -->
-  <meta name="theme-color" content="#06080c" />
-  <link rel="icon" type="image/png" href="favicon.png" />
-  
-  <!-- GOOGLE FONTS PRECONNECT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  
-  <!-- ESTILOS DEL SISTEMA DE DISEÑO -->
-  <link rel="stylesheet" href="styles/main.css" />
-  <link rel="stylesheet" href="styles/components.css" />
-  <link rel="stylesheet" href="styles/animations.css" />
-  
-  <!-- JSON-LD STRUCTURED DATA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "José González",
-    "alternateName": "Josh",
-    "jobTitle": "Product Manager & Tech Lead",
-    "description": "Líder de Producto y Scrum Master especializado en modelos SaaS B2B, Inteligencia Artificial aplicada a procesos y Lean Startup.",
-    "url": "https://joseg-dev.vercel.app/",
-    "sameAs": [
-      "https://www.linkedin.com/in/jmgonzalezz",
-      "https://github.com/Juzakito"
-    ],
-    "knowsAbout": [
-      "Product Management",
-      "Scrum",
-      "Agile Project Management",
-      "Artificial Intelligence",
-      "SaaS B2B Strategy",
-      "Lean Startup",
-      "Demand Forecasting",
-      "React"
-    ]
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portafolio interactivo de José González · Product Manager & Tech Lead (SaaS B2B e IA) con interfaz Windows Vista (Frutiger Aero).">
+<title>José González — Portafolio</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><radialGradient id='o' cx='35%25' cy='30%25' r='68%25'><stop offset='0%25' stop-color='%23b4f058'/><stop offset='35%25' stop-color='%236ec824'/><stop offset='70%25' stop-color='%23368c10'/><stop offset='100%25' stop-color='%23144d05'/></radialGradient><linearGradient id='sh' x1='0' y1='0' x2='0' y2='1'><stop offset='0%25' stop-color='%23ffffff' stop-opacity='0.95'/><stop offset='100%25' stop-color='%23ffffff' stop-opacity='0'/></linearGradient></defs><circle cx='32' cy='32' r='30' fill='url(%23o)' stroke='%231a5a08' stroke-width='1.5'/><g transform='translate(17 17) scale(0.48)'><path d='M4 4 C 15 1, 23 8, 30 7 L 30 28 C 23 29, 15 22, 4 25 Z' fill='%23ff4b30'/><path d='M34 7 C 42 6, 52 11, 60 9 L 60 30 C 52 32, 42 27, 34 28 Z' fill='%236ed822'/><path d='M4 29 C 15 26, 23 33, 30 32 L 30 53 C 23 54, 15 47, 4 50 Z' fill='%230078d7'/><path d='M34 32 C 42 31, 52 36, 60 34 L 60 55 C 52 57, 42 52, 34 53 Z' fill='%23ffb900'/></g><ellipse cx='26' cy='16' rx='18' ry='9' fill='url(%23sh)'/></svg>">
+<style>
+/* ============================================================
+   ESCRITORIO WINDOWS VISTA AERO — Estilos
+   ============================================================ */
+:root{
+  --taskbar-h: 44px;
+  --glass-border: rgba(255,255,255,.65);
+  --azul: #1e5fa8;
+  --texto: #16324f;
+}
+*{ box-sizing: border-box; margin:0; padding:0; }
+html, body{ height:100%; overflow:hidden; }
+body{
+  font-family: "Segoe UI", "Segoe UI Web", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--texto);
+  -webkit-font-smoothing: antialiased;
+}
+button, input, textarea{ font-family: inherit; }
+a{ color: var(--azul); }
+
+/* ---------- Fondo Bliss ---------- */
+#desktop{ position:fixed; inset:0; overflow:hidden; user-select:none; }
+#wallpaper{
+  position:absolute; inset:0; width:100%; height:100%; z-index:0;
+  background: #145058 url('aurora.jpg') center center / cover no-repeat;
+}
+.watermark{
+  display:none; /* oculto para coincidir con la captura de referencia */
+  position:absolute; right:18px; bottom:calc(var(--taskbar-h) + 12px); z-index:1;
+  text-align:right; color:#eaf6ff; opacity:.85; font-size:11px; line-height:1.45;
+  text-shadow:0 1px 3px rgba(0,20,60,.9); pointer-events:none;
+}
+
+/* ---------- Iconos del Escritorio ---------- */
+#icon-col{
+  position:absolute; top:8px; left:8px; z-index:10;
+  display:flex; flex-direction:column; flex-wrap:wrap; align-content:flex-start;
+  gap:0px; height:calc(100% - var(--taskbar-h) - 12px);
+}
+.dicon{
+  width:76px; padding:4px 3px 2px; border-radius:6px; border:1px solid transparent;
+  display:flex; flex-direction:column; align-items:center; gap:2px; cursor:default;
+  transition:background .12s, border-color .12s;
+}
+.dicon svg{ width:42px; height:42px; filter:drop-shadow(0 3px 5px rgba(0,20,60,.45)); transition:transform .12s; }
+.dicon:hover svg{ transform:scale(1.06) translateY(-1px); }
+.dicon:hover{ background:rgba(160,215,255,.22); border-color:rgba(190,230,255,.45); }
+.dicon.selected{ background:rgba(120,190,255,.38); border-color:rgba(190,230,255,.75); box-shadow:inset 0 0 8px rgba(255,255,255,.28); }
+.dlabel{
+  font-size:11px; color:#fff; text-align:center; max-width:74px; line-height:1.15;
+  text-shadow:0 1px 3px rgba(0,20,60,.95), 0 0 8px rgba(0,30,80,.8); overflow-wrap:anywhere;
+}
+
+/* ---------- Ventanas Aero ---------- */
+.aero-window{
+  position:absolute; display:flex; flex-direction:column;
+  border-radius:9px;
+  background:linear-gradient(180deg, rgba(250,252,255,.58), rgba(228,240,252,.44) 120px, rgba(214,232,248,.38));
+  backdrop-filter: blur(12px) saturate(1.55) brightness(1.06);
+  -webkit-backdrop-filter: blur(12px) saturate(1.55) brightness(1.06);
+  border:1px solid rgba(255,255,255,.52);
+  box-shadow:0 8px 26px rgba(0,25,70,.32), inset 0 1px 0 rgba(255,255,255,.88);
+  min-width:260px; min-height:160px;
+}
+.aero-window.active{
+  border-color:rgba(150,210,255,.98);
+  box-shadow:0 0 0 1px rgba(130,200,255,.5), 0 14px 40px rgba(0,25,70,.48), inset 0 1px 0 rgba(255,255,255,.98);
+}
+.aero-window.opening{ animation:winOpen .18s ease-out both; }
+@keyframes winOpen{ from{ opacity:0; transform:scale(.88); } }
+.aero-window.closing{ animation:winClose .15s ease-in both; pointer-events:none; }
+@keyframes winClose{ to{ opacity:0; transform:scale(.92); } }
+.aero-window.anim{ transition:left .2s ease, top .2s ease, width .2s ease, height .2s ease, transform .2s ease, opacity .2s ease; }
+.aero-window.dragging{ transition:none; }
+.aero-window.minimized{
+  opacity:0; transform:translateY(90px) scale(.55); pointer-events:none;
+  transition:transform .2s ease-in, opacity .2s ease-in;
+}
+.aero-window.maximized{ border-radius:0; }
+
+.titlebar{
+  height:34px; flex:0 0 34px; display:flex; align-items:center; gap:8px;
+  padding:0 0 0 10px; touch-action:none; cursor:default;
+  border-radius:9px 9px 0 0;
+  background:linear-gradient(180deg, rgba(255,255,255,.68) 0%, rgba(255,255,255,.28) 46%, rgba(165,205,242,.22) 50%, rgba(125,172,222,.15) 100%);
+  border-bottom:1px solid rgba(255,255,255,.55);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.85), inset 0 -1px 0 rgba(120,160,210,.22);
+}
+.aero-window:not(.active) .titlebar{
+  background:linear-gradient(180deg, rgba(255,255,255,.45), rgba(235,240,246,.22) 50%, rgba(200,210,222,.14));
+}
+.win-title{ display:flex; align-items:center; gap:7px; min-width:0; flex:1; }
+.win-title svg{ width:16px; height:16px; flex:0 0 auto; }
+.win-title span{
+  font-size:12.5px; font-weight:600; color:#0d2c55; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  text-shadow:0 0 4px rgba(255,255,255,.9), 0 0 8px rgba(255,255,255,.7);
+}
+.aero-window:not(.active) .win-title span{ color:#41607e; }
+
+.wbtn-group{
+  display:flex; gap:1px; margin:0 7px 0 0; align-self:flex-start; margin-top:6px;
+  border:1px solid rgba(255,255,255,.55); border-radius:9px; overflow:hidden;
+  box-shadow:0 1px 3px rgba(0,30,70,.25);
+}
+.wbtn{
+  width:29px; height:20px; border:none; cursor:pointer; display:grid; place-items:center;
+  background:linear-gradient(180deg, rgba(235,246,255,.9), rgba(150,190,230,.75));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9);
+}
+.wbtn svg{ width:10px; height:10px; }
+.wbtn:hover{ background:linear-gradient(180deg, #eef8ff, #a8d2f2); }
+.wbtn:active{ background:linear-gradient(180deg, #9cc4e6, #c4e0f6); }
+.wbtn-close{ width:38px; background:linear-gradient(180deg, rgba(255,150,120,.95), rgba(216,70,45,.92)); }
+.wbtn-close:hover{ background:linear-gradient(180deg, #ffab8c, #e5452a); box-shadow:0 0 8px rgba(255,90,50,.8); }
+.wbtn-close:active{ background:linear-gradient(180deg, #d2482c, #ff9a78); }
+
+.window-body{
+  flex:1; min-height:0; margin:0 6px 6px;
+  background:rgba(252,254,255,.92);
+  border:1px solid rgba(255,255,255,.6); border-radius:5px;
+  box-shadow:inset 0 1px 2px rgba(120,160,210,.25);
+  overflow:hidden; display:flex; flex-direction:column;
+}
+.app-content{ height:100%; overflow:auto; padding:16px 18px; user-select:text; }
+.app-content::-webkit-scrollbar{ width:11px; height:11px; }
+.app-content::-webkit-scrollbar-track{ background:rgba(190,210,232,.35); border-radius:6px; }
+.app-content::-webkit-scrollbar-thumb{ background:linear-gradient(180deg,#cfe4f6,#a6c8e6); border-radius:6px; border:2px solid rgba(255,255,255,.5); }
+
+.resizer{
+  position:absolute; right:0; bottom:0; width:16px; height:16px; z-index:5;
+  cursor:nwse-resize; touch-action:none;
+  background:linear-gradient(135deg, transparent 0 50%, rgba(255,255,255,.7) 50% 60%, transparent 60% 70%, rgba(255,255,255,.7) 70% 80%, transparent 80%);
+  border-bottom-right-radius:9px;
+}
+.aero-window.maximized .resizer{ display:none; }
+
+/* ---------- Gadgets Vista (Margarita y Calendario) ---------- */
+#sidebar-gadgets{
+  display:none !important; /* oculto para coincidir exactamente con la captura de referencia */
+  position:absolute; top:22px; right:24px; z-index:50;
+  pointer-events:auto; user-select:none;
+}
+.vista-gadget{
+  filter:drop-shadow(0 6px 14px rgba(0,25,60,.35));
+  transition:transform .18s ease; cursor:default;
+}
+.vista-gadget:hover{ transform:scale(1.05); }
+
+.cal-card{
+  width:108px; background:#ffffff; border-radius:6px; overflow:hidden;
+  border:1px solid rgba(140,180,220,.85);
+  box-shadow:0 4px 12px rgba(0,25,60,.25), inset 0 1px 0 #fff;
+}
+.cal-header{
+  background:linear-gradient(180deg, #4ea3e8, #1860a4); color:#fff;
+  font-size:9.5px; font-weight:700; text-align:center; padding:3.5px 2px;
+  letter-spacing:.5px; text-shadow:0 1px 2px rgba(0,20,50,.6);
+  border-bottom:1px solid #144e85;
+}
+.cal-days-head{
+  display:grid; grid-template-columns:repeat(7, 1fr); text-align:center;
+  background:#edf4fa; font-size:8px; font-weight:700; color:#36628c;
+  padding:2px 2px; border-bottom:1px solid #d3e4f3;
+}
+.cal-days-body{
+  display:grid; grid-template-columns:repeat(7, 1fr); text-align:center;
+  padding:3px; gap:1px;
+}
+.cal-day{ font-size:8.5px; color:#223c58; padding:1.5px 0; border-radius:2px; }
+.cal-day.empty{ visibility:hidden; }
+.cal-day.today{
+  background:linear-gradient(180deg, #ff9f43, #ee5253); color:#fff; font-weight:700;
+  box-shadow:0 1px 3px rgba(230,60,40,.4);
+}
+@media (max-width: 850px){
+  #sidebar-gadgets{ display:none !important; }
+}
+
+/* ---------- Barra de Tareas y Quick Launch ---------- */
+#taskbar{
+  position:absolute; left:0; right:0; bottom:0; height:var(--taskbar-h); z-index:9500;
+  display:flex; align-items:center; gap:6px; padding:0 8px 0 4px;
+  background:linear-gradient(180deg, rgba(52,74,104,.62), rgba(10,24,48,.75));
+  backdrop-filter: blur(16px) saturate(1.7);
+  -webkit-backdrop-filter: blur(16px) saturate(1.7);
+  border-top:1px solid rgba(255,255,255,.38);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22), 0 -6px 18px rgba(0,15,45,.35);
+}
+#start-button{
+  width:46px; height:40px; border:none; background:transparent; cursor:pointer;
+  display:grid; place-items:center; border-radius:9px;
+}
+#start-button svg{ width:34px; height:34px; transition:filter .15s; }
+#start-button:hover{ box-shadow:0 0 14px rgba(120,200,255,.55), inset 0 0 8px rgba(160,220,255,.3); }
+#start-button:hover svg{ filter:brightness(1.2) drop-shadow(0 0 5px rgba(150,215,255,.9)); }
+
+#quick-launch{
+  display:flex; align-items:center; gap:2px; padding:0 6px 0 2px;
+  border-right:1px solid rgba(255,255,255,.25); box-shadow:1px 0 0 rgba(0,10,30,.35);
+  height:30px;
+}
+.ql-btn{
+  width:26px; height:26px; display:grid; place-items:center;
+  border:1px solid transparent; background:transparent; border-radius:4px;
+  cursor:pointer; padding:0; transition:background .15s, border-color .15s;
+}
+.ql-btn svg{ width:18px; height:18px; filter:drop-shadow(0 1px 2px rgba(0,0,0,.4)); }
+.ql-btn:hover{ background:rgba(255,255,255,.2); border-color:rgba(255,255,255,.35); }
+.ql-btn:active{ background:rgba(180,220,255,.35); }
+
+#task-buttons{ display:flex; gap:5px; flex:1; min-width:0; overflow:hidden; }
+.task-btn{
+  display:flex; align-items:center; gap:7px; height:32px; padding:0 11px; max-width:170px;
+  border-radius:7px; cursor:pointer; border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.08); color:#e8f3ff; font-size:12px;
+}
+.task-btn svg{ width:19px; height:19px; flex:0 0 auto; }
+.task-btn .tb-label{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.task-btn:hover{ background:rgba(255,255,255,.18); border-color:rgba(255,255,255,.3); }
+.task-btn.active{
+  background:linear-gradient(180deg, rgba(190,225,255,.36), rgba(120,175,230,.22));
+  border-color:rgba(190,225,255,.6);
+  box-shadow:inset 0 1px 3px rgba(0,20,50,.35), inset 0 -1px 0 rgba(255,255,255,.28);
+}
+#tray{
+  display:flex; align-items:center; gap:9px; padding:0 4px 0 10px; height:32px;
+  border-left:1px solid rgba(255,255,255,.25); box-shadow:-1px 0 0 rgba(0,10,30,.35);
+}
+#tray svg{ width:17px; height:17px; opacity:.92; }
+#clock{ text-align:right; color:#eaf6ff; font-size:11.5px; line-height:1.35; text-shadow:0 1px 2px rgba(0,10,30,.8); }
+
+/* ---------- Menú Inicio ---------- */
+#start-menu{
+  position:absolute; left:6px; bottom:calc(var(--taskbar-h) + 5px); width:410px; z-index:9000;
+  border-radius:10px; overflow:hidden; display:none;
+  background:linear-gradient(180deg, rgba(250,253,255,.76), rgba(228,240,252,.64));
+  backdrop-filter: blur(18px) saturate(1.6);
+  -webkit-backdrop-filter: blur(18px) saturate(1.6);
+  border:1px solid rgba(255,255,255,.8);
+  box-shadow:0 12px 42px rgba(0,20,60,.45), inset 0 1px 0 rgba(255,255,255,.9);
+}
+#start-menu.open{ display:block; animation:smIn .16s ease-out; }
+@keyframes smIn{ from{ opacity:0; transform:translateY(14px); } }
+.sm-cols{ display:grid; grid-template-columns:1.35fr .85fr; min-height:410px; }
+.sm-left{
+  background:rgba(255,255,255,.82); padding:8px; display:flex; flex-direction:column;
+  border-right:1px solid rgba(160,195,230,.5);
+}
+.sm-item{
+  display:flex; align-items:center; gap:10px; padding:6px 9px; border-radius:6px;
+  border:1px solid transparent; cursor:pointer; font-size:12.5px; color:#16324f;
+}
+.sm-item svg{ width:28px; height:28px; flex:0 0 auto; }
+.sm-item:hover{ background:linear-gradient(180deg,#e8f4ff,#d2e8fa); border-color:#b3d5f0; }
+.sm-sep{ height:1px; background:linear-gradient(90deg, transparent, #c3d9ec, transparent); margin:6px 4px; }
+.sm-search{
+  margin-top:auto; display:flex; align-items:center; gap:6px;
+  background:#fff; border:1px solid #a9c6e2; border-radius:999px; padding:5px 12px;
+  box-shadow:inset 0 1px 3px rgba(30,70,120,.18);
+}
+.sm-search input{
+  border:none; outline:none; flex:1; font-size:12px; font-family:inherit; color:#16324f; background:transparent;
+}
+.sm-search input::placeholder{ color:#8aa8c4; }
+.sm-search svg{ width:14px; height:14px; opacity:.6; }
+.sm-right{
+  background:linear-gradient(180deg, rgba(88,128,168,.34), rgba(34,62,98,.5));
+  padding:14px 12px; display:flex; flex-direction:column; color:#eaf4ff;
+}
+.sm-user{ display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+.sm-user svg{ width:44px; height:44px; filter:drop-shadow(0 2px 4px rgba(0,20,50,.4)); }
+.sm-user b{ font-size:13px; display:block; text-shadow:0 1px 2px rgba(0,20,50,.6); }
+.sm-user small{ font-size:10.5px; opacity:.85; }
+.sm-link{
+  display:block; padding:5px 9px; margin-left:-6px; border-radius:6px; font-size:12px;
+  color:#e8f3ff; text-decoration:none; cursor:pointer; text-shadow:0 1px 2px rgba(0,20,50,.5);
+}
+.sm-link:hover{ background:rgba(255,255,255,.16); text-decoration:underline; }
+.sm-shutdown{
+  margin-top:auto; align-self:flex-end; display:flex; align-items:center; gap:8px;
+  padding:7px 14px; border-radius:8px; border:1px solid rgba(255,255,255,.5); cursor:pointer;
+  background:linear-gradient(180deg, rgba(255,150,110,.95), rgba(205,70,35,.95)); color:#fff; font-size:12.5px; font-weight:600;
+  box-shadow:0 2px 8px rgba(120,30,0,.4), inset 0 1px 0 rgba(255,255,255,.6);
+}
+.sm-shutdown:hover{ filter:brightness(1.12); box-shadow:0 0 12px rgba(255,110,60,.7); }
+.sm-shutdown svg{ width:18px; height:18px; }
+
+/* ---------- Pantalla de apagado ---------- */
+#shutdown-screen{
+  position:fixed; inset:0; z-index:99999; background:#000; display:none;
+  place-items:center; text-align:center; cursor:pointer;
+}
+#shutdown-screen.show{ display:grid; animation:fadeBlack .8s ease-out; }
+@keyframes fadeBlack{ from{ opacity:0; } }
+#shutdown-screen h2{ color:#f5b544; font-weight:400; font-size:26px; margin-bottom:10px; }
+#shutdown-screen p{ color:#9aa7b5; font-size:13px; }
+
+/* ============================================================
+   ESTILOS ESPECÍFICOS DE CADA APLICACIÓN
+   ============================================================ */
+
+/* 1. Projects */
+.addr-bar{
+  display:flex; align-items:center; gap:8px; font-size:12px; color:#3a6da0;
+  background:linear-gradient(180deg,#f2f9ff,#e2effb);
+  border:1px solid #c3ddf1; border-radius:5px; padding:6px 10px; margin-bottom:12px;
+}
+.proj-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:12px; }
+.proj-card{
+  background:linear-gradient(180deg,#ffffff,#f0f7fd); border:1px solid #bcd6ec; border-radius:8px;
+  padding:12px; display:flex; flex-direction:column; gap:8px;
+  box-shadow:0 2px 6px rgba(20,60,110,.12), inset 0 1px 0 #fff;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.proj-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 5px 14px rgba(20,60,110,.18), inset 0 1px 0 #fff;
+}
+.proj-card.proj-featured{
+  background:linear-gradient(180deg,#ffffff 0%,#f0f6ff 100%);
+  border:1.5px solid #4a90e2;
+  box-shadow:0 3px 12px rgba(37,99,235,.2), inset 0 1px 0 #fff;
+}
+.proj-badge-destacado{
+  align-self:flex-start; font-size:9.5px; font-weight:800; letter-spacing:.5px;
+  color:#1d4ed8; background:linear-gradient(180deg,#e0edff,#bfdbfe);
+  border:1px solid #93c5fd; padding:2px 7px; border-radius:4px;
+}
+.proj-sub{
+  font-size:10.5px; color:#2563eb; font-weight:600; margin-top:1px;
+}
+.proj-head{ display:flex; align-items:center; gap:8px; }
+.proj-head h3{ font-size:13.5px; color:#0d2c55; }
+.proj-card p{ font-size:12px; line-height:1.5; color:#3d5a75; flex:1; }
+.tags{ display:flex; flex-wrap:wrap; gap:5px; }
+.tags span{ font-size:10.5px; padding:2px 8px; border-radius:999px; background:#dcebf8; border:1px solid #b7d5ec; color:#2c587e; }
+.proj-actions{ display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; padding-top:4px; }
+.proj-link{
+  font-size:11.5px; font-weight:600; text-decoration:none; color:#11477e;
+  padding:4px 11px; border-radius:5px; width:max-content;
+  background:linear-gradient(180deg,#f4faff,#d8ecfc); border:1px solid #9cc4e4;
+  cursor:pointer; display:inline-flex; align-items:center; gap:4px;
+}
+.proj-link:hover{ background:linear-gradient(180deg,#ffffff,#e8f5ff); box-shadow:0 1px 4px rgba(40,120,200,.3); }
+.proj-btn-case{
+  background:linear-gradient(180deg,#2563eb,#1d4ed8) !important;
+  color:#ffffff !important; border:1px solid #1e40af !important;
+  box-shadow:0 1px 4px rgba(37,99,235,.35);
+}
+.proj-btn-case:hover{
+  background:linear-gradient(180deg,#3b82f6,#2563eb) !important;
+  box-shadow:0 2px 8px rgba(37,99,235,.5) !important;
+}
+.proj-soon{ color:#7a94ab; background:#eef3f8; border-color:#cfdae5; cursor:default; }
+
+/* 2. About Me */
+.about-head{ display:flex; gap:16px; align-items:center; margin-bottom:14px; }
+.about-avatar svg{ width:76px; height:76px; filter:drop-shadow(0 3px 6px rgba(0,30,80,.3)); }
+.about-head h1{ font-size:22px; color:#0d2c55; }
+.about-title{ font-size:13px; color:#3a6da0; margin-top:2px; font-weight:500; }
+.about-bio{ font-size:13px; line-height:1.6; color:#2a4664; margin-bottom:14px; }
+.chips{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+.chip{
+  font-size:11.5px; padding:4px 11px; border-radius:999px; color:#11477e;
+  background:linear-gradient(180deg,#eaf6ff,#cfe6fa); border:1px solid #a9cdec;
+  box-shadow:inset 0 1px 0 #fff;
+}
+.about-actions{ display:flex; gap:10px; }
+.about-btn{
+  display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border-radius:6px;
+  background:linear-gradient(180deg,#f7fbff,#d8ebfa); border:1px solid #9fc5e6;
+  color:#10477e; font-size:12px; font-weight:600; text-decoration:none; cursor:pointer;
+}
+.about-btn:hover{ background:linear-gradient(180deg,#ffffff,#e5f2fd); box-shadow:0 2px 6px rgba(30,100,180,.25); }
+
+/* 3. Internet Explorer */
+.ie-container{ display:flex; flex-direction:column; height:100%; }
+.ie-nav{
+  display:flex; align-items:center; gap:6px; padding:6px 8px;
+  background:linear-gradient(180deg,#e8f1fa,#d0e2f2); border-bottom:1px solid #b2cee6;
+}
+.ie-circle-btn{
+  width:26px; height:26px; border-radius:50%; border:1px solid #8eb5d6;
+  background:linear-gradient(180deg,#ffffff,#cde2f5); display:grid; place-items:center;
+  cursor:pointer; color:#285e92; font-size:12px; font-weight:bold;
+}
+.ie-circle-btn:hover{ background:linear-gradient(180deg,#ffffff,#e1effb); box-shadow:0 0 6px rgba(60,140,220,.5); }
+.ie-addr-wrap{
+  flex:1; display:flex; align-items:center; background:#fff; border:1px solid #9abddb;
+  border-radius:4px; padding:2px 8px; gap:6px; box-shadow:inset 0 1px 2px rgba(0,20,60,.1);
+}
+.ie-addr-wrap svg{ width:14px; height:14px; opacity:.7; }
+.ie-addr-input{ flex:1; border:none; outline:none; font-size:12px; color:#183654; }
+.ie-go-btn{
+  background:linear-gradient(180deg,#a2d96c,#68b82e); border:1px solid #4d8f1e;
+  border-radius:3px; color:#fff; font-size:11px; font-weight:700; padding:2px 8px; cursor:pointer;
+}
+.ie-tabs{
+  display:flex; gap:2px; padding:4px 8px 0; background:linear-gradient(180deg,#cadff3,#b4d0eb);
+  border-bottom:1px solid #8eb5d6;
+}
+.ie-tab{
+  display:flex; align-items:center; gap:6px; padding:5px 12px; font-size:11.5px; color:#244464;
+  background:rgba(255,255,255,.45); border:1px solid #9abddb; border-bottom:none;
+  border-radius:5px 5px 0 0; cursor:pointer;
+}
+.ie-tab.active{
+  background:#ffffff; color:#0e2e50; font-weight:600;
+  box-shadow:0 -1px 3px rgba(0,20,60,.1);
+}
+.ie-viewport{ flex:1; overflow:auto; background:#fff; padding:18px; }
+.ie-hero{
+  background:linear-gradient(135deg,#ebf6ff 0%,#d2e9fb 100%); border:1px solid #b8daf5;
+  border-radius:8px; padding:20px; margin-bottom:16px; box-shadow:0 2px 8px rgba(0,40,90,.08);
+}
+.ie-hero h2{ font-size:18px; color:#0c3866; margin-bottom:8px; }
+.ie-hero p{ font-size:13px; line-height:1.55; color:#2e5072; margin-bottom:14px; }
+.ie-big-link{
+  display:inline-flex; align-items:center; gap:8px; padding:8px 16px; border-radius:6px;
+  background:linear-gradient(180deg,#318ee4,#1766b5); color:#fff; font-weight:600; font-size:12.5px;
+  text-decoration:none; box-shadow:0 2px 6px rgba(10,50,120,.3);
+}
+.ie-big-link:hover{ background:linear-gradient(180deg,#4ea4f5,#1f77cf); }
+
+/* 4. Command Prompt */
+.cmd-box{
+  background:#0c0f14; color:#d6dee6; font-family:Consolas, "Lucida Console", monospace;
+  font-size:12.5px; line-height:1.45; padding:12px; height:100%; overflow-y:auto; user-select:text;
+}
+.cmd-history{ white-space:pre-wrap; }
+.cmd-line{ display:flex; align-items:center; margin-top:4px; }
+.cmd-prompt-lbl{ color:#7fd4ff; margin-right:6px; font-weight:bold; }
+.cmd-input{
+  flex:1; background:transparent; border:none; outline:none; color:#ffffff;
+  font-family:inherit; font-size:inherit; caret-color:#ffffff;
+}
+.cmd-cyan{ color:#58c8f5; }
+.cmd-green{ color:#4cd964; }
+.cmd-yellow{ color:#ffcc00; }
+.cmd-muted{ color:#8fa0b2; }
+
+/* 5. File Explorer */
+.fe-container{ display:flex; flex-direction:column; height:100%; }
+.fe-cmdbar{
+  display:flex; gap:6px; padding:4px 8px; background:linear-gradient(180deg,#f8fcff,#e2effa);
+  border-bottom:1px solid #bed8ee; font-size:11.5px; color:#26486a;
+}
+.fe-cmd-btn{ padding:3px 8px; border-radius:3px; cursor:pointer; border:1px solid transparent; }
+.fe-cmd-btn:hover{ background:#d5e8f8; border-color:#a8cde8; }
+.fe-body{ display:flex; flex:1; min-height:0; }
+.fe-sidebar{
+  width:160px; background:#edf4fb; border-right:1px solid #cbdfef; padding:10px 8px;
+  font-size:11.5px; color:#244464; overflow-y:auto;
+}
+.fe-tree-title{ font-weight:700; color:#4a7196; margin:8px 0 4px 4px; text-transform:uppercase; font-size:10px; }
+.fe-tree-item{
+  display:flex; align-items:center; gap:6px; padding:4px 6px; border-radius:4px; cursor:pointer;
+}
+.fe-tree-item:hover{ background:#d6e8f8; }
+.fe-tree-item.active{ background:#c5def4; font-weight:600; }
+.fe-grid{ flex:1; padding:12px; display:flex; flex-wrap:wrap; align-content:flex-start; gap:12px; overflow-y:auto; background:#fff; }
+.fe-file{
+  width:110px; padding:8px 6px; border-radius:6px; border:1px solid transparent;
+  display:flex; flex-direction:column; align-items:center; text-align:center; gap:5px; cursor:pointer;
+}
+.fe-file svg{ width:40px; height:40px; }
+.fe-file:hover{ background:rgba(180,220,255,.25); border-color:rgba(160,205,245,.6); }
+.fe-file.selected{ background:rgba(140,200,255,.4); border-color:rgba(130,190,240,.9); }
+.fe-file span{ font-size:11px; color:#183654; line-height:1.2; word-break:break-word; }
+.fe-file small{ font-size:9.5px; color:#708da8; }
+.fe-status{
+  padding:3px 10px; background:#edf4fa; border-top:1px solid #d0e2f2;
+  font-size:11px; color:#507292; display:flex; justify-content:space-between;
+}
+
+/* 6. Media Player */
+.wmp-box{
+  background:linear-gradient(180deg,#141e2c 0%,#090d14 100%); color:#e0edf8;
+  height:100%; display:flex; flex-direction:column;
+}
+.wmp-tabs{
+  display:flex; gap:12px; padding:6px 14px; background:rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.1); font-size:11.5px; color:#a0c0dc;
+}
+.wmp-tab{ cursor:pointer; padding:2px 6px; border-radius:3px; }
+.wmp-tab.active{ color:#fff; font-weight:600; background:rgba(255,255,255,.12); }
+.wmp-main{
+  flex:1; display:flex; align-items:center; justify-content:center; gap:24px; padding:20px;
+}
+.wmp-art{
+  width:130px; height:130px; border-radius:8px; border:2px solid rgba(255,255,255,.2);
+  background:linear-gradient(135deg,#0a4b86,#3ec6ff); box-shadow:0 6px 18px rgba(0,0,0,.6);
+  display:grid; place-items:center; overflow:hidden; position:relative;
+}
+.wmp-info{ display:flex; flex-direction:column; gap:6px; min-width:180px; }
+.wmp-title{ font-size:15px; font-weight:700; color:#ffffff; }
+.wmp-artist{ font-size:12px; color:#78aed8; }
+.wmp-eq{ display:flex; align-items:flex-end; gap:3px; height:36px; margin-top:8px; }
+.wmp-bar{ width:6px; background:linear-gradient(180deg,#5cd3ff,#1c72bd); border-radius:1px; height:8px; transition:height .15s ease; }
+.wmp-controls{
+  background:linear-gradient(180deg,rgba(30,46,68,.8),rgba(12,20,32,.95));
+  border-top:1px solid rgba(255,255,255,.15); padding:10px 18px; display:flex; flex-direction:column; gap:8px;
+}
+.wmp-progress-wrap{ display:flex; align-items:center; gap:10px; font-size:11px; color:#9abddb; }
+.wmp-track{ flex:1; height:6px; background:rgba(255,255,255,.15); border-radius:3px; position:relative; cursor:pointer; }
+.wmp-fill{ width:35%; height:100%; background:linear-gradient(90deg,#2996ea,#5ce3ff); border-radius:3px; }
+.wmp-btns{ display:flex; align-items:center; justify-content:center; gap:16px; }
+.wmp-play-btn{
+  width:42px; height:42px; border-radius:50%; border:1px solid rgba(255,255,255,.5);
+  background:radial-gradient(circle at 35% 30%, #5cb8ff, #1766b5, #083464);
+  box-shadow:0 2px 10px rgba(0,50,120,.6), inset 0 1px 2px #fff;
+  cursor:pointer; display:grid; place-items:center; color:#fff;
+}
+.wmp-play-btn:hover{ filter:brightness(1.15); box-shadow:0 0 12px rgba(80,180,255,.7); }
+
+/* 7. Image Viewer */
+.iv-container{ display:flex; flex-direction:column; height:100%; }
+.iv-toolbar{
+  display:flex; align-items:center; justify-content:center; gap:8px; padding:6px 12px;
+  background:linear-gradient(180deg,#edf5fd,#d3e4f5); border-bottom:1px solid #b2cee6;
+}
+.iv-btn{
+  display:inline-flex; align-items:center; gap:4px; padding:4px 10px; border-radius:4px;
+  background:linear-gradient(180deg,#ffffff,#dcebf8); border:1px solid #9dc2e2;
+  font-size:11.5px; color:#184068; cursor:pointer;
+}
+.iv-btn:hover{ background:linear-gradient(180deg,#ffffff,#ebf4fc); box-shadow:0 1px 4px rgba(40,110,190,.25); }
+.iv-viewport{
+  flex:1; background:#1a2330; display:flex; align-items:center; justify-content:center;
+  overflow:hidden; position:relative; padding:12px;
+}
+.iv-img{
+  max-width:100%; max-height:100%; border-radius:4px; box-shadow:0 6px 20px rgba(0,0,0,.5);
+  transition:transform .2s ease; object-fit:contain;
+}
+.iv-status{
+  padding:4px 12px; background:#edf4fb; border-top:1px solid #cbdfef;
+  font-size:11px; color:#4a6f94; display:flex; justify-content:space-between;
+}
+
+/* 8. Text Editor (Notepad) */
+.np-container{ display:flex; flex-direction:column; height:100%; }
+.np-menubar{
+  display:flex; gap:2px; padding:2px 8px; background:linear-gradient(180deg,#f8fcff,#e6f0fa);
+  border-bottom:1px solid #cbdef0;
+}
+.np-menu-btn{ font-size:12px; color:#223c58; padding:3px 8px; border-radius:3px; cursor:pointer; }
+.np-menu-btn:hover{ background:#d6e9f8; }
+.np-textarea{
+  flex:1; width:100%; border:none; outline:none; resize:none; padding:12px 14px;
+  font-family:Consolas, "Courier New", monospace; font-size:12.5px; line-height:1.55;
+  color:#1a324b; background:#ffffff; box-shadow:inset 0 1px 3px rgba(0,20,60,.08);
+}
+.np-statusbar{
+  padding:3px 10px; background:#edf4fb; border-top:1px solid #cbdfef;
+  font-size:11px; color:#507090; display:flex; justify-content:space-between;
+}
+
+/* Propiedades del Sistema (WEI) */
+.sys-banner{
+  display:flex; align-items:center; gap:14px; padding:10px 14px; margin-bottom:12px;
+  background:linear-gradient(180deg, #ffffff, #edf4fb); border:1px solid #b8d4ec; border-radius:7px;
+  box-shadow:inset 0 1px 0 #fff, 0 1px 3px rgba(0,30,70,.1);
+}
+.sys-banner h3{ font-size:14px; color:#0d2c55; }
+.sys-banner p{ font-size:11.5px; color:#4a7299; margin-top:2px; }
+.sys-section{
+  background:#fff; border:1px solid #c5daf0; border-radius:7px; padding:12px 14px; margin-bottom:12px;
+  box-shadow:0 1px 3px rgba(20,50,90,.05);
+}
+.sys-section h4{
+  font-size:12px; color:#18538c; border-bottom:1px solid #d4e5f5; padding-bottom:5px; margin-bottom:9px;
+  text-transform:uppercase; letter-spacing:.5px; font-weight:700;
+}
+.sys-row{ display:grid; grid-template-columns:160px 1fr; gap:10px; font-size:12px; line-height:1.5; margin-bottom:6px; }
+.sys-row:last-child{ margin-bottom:0; }
+.sys-row .lbl{ color:#4a6886; font-weight:600; }
+.sys-row .val{ color:#16324f; }
+.wei-head{ display:flex; gap:16px; align-items:center; margin-bottom:16px; }
+.wei-base{
+  background:linear-gradient(180deg,#2a72b8,#154f8c); color:#fff; border-radius:8px;
+  padding:10px 14px; text-align:center; box-shadow:0 2px 8px rgba(20,60,110,.35), inset 0 1px 0 rgba(255,255,255,.4);
+}
+.wei-num{ display:block; font-size:26px; font-weight:700; }
+.wei-base small{ font-size:10.5px; opacity:.9; }
+.wei-head p{ font-size:11.5px; color:#5a7d98; line-height:1.5; max-width:280px; }
+.wei-row{ display:grid; grid-template-columns:130px 1fr 40px; gap:10px; align-items:center; margin-bottom:10px; }
+.wei-name{ font-size:12px; color:#2a4664; }
+.bar-wrap{ height:11px; border-radius:6px; background:rgba(120,150,190,.25); box-shadow:inset 0 1px 3px rgba(0,30,60,.25); overflow:hidden; }
+.bar-fill{
+  height:100%; width:0; border-radius:6px;
+  background:linear-gradient(90deg,#37c26e,#31a4e0);
+  box-shadow:inset 0 -2px 3px rgba(0,60,20,.25), inset 0 1px 0 rgba(255,255,255,.55);
+  transition:width .8s cubic-bezier(.25,.8,.35,1);
+}
+.wei-score{
+  font-size:12px; font-weight:700; color:#fff; text-align:center;
+  background:linear-gradient(180deg,#3d84c8,#1e5fa8); border-radius:4px; padding:2px 0;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.4);
+}
+
+/* Contacto */
+.contact-grid{ display:flex; flex-direction:column; gap:10px; }
+.big-btn{
+  display:flex; align-items:center; gap:12px; text-decoration:none;
+  padding:10px 16px; border-radius:10px;
+  background:linear-gradient(180deg,#f6fbff,#d5e9f9); border:1px solid #9cc4e4;
+  box-shadow:0 2px 8px rgba(20,60,110,.15), inset 0 1px 0 #fff;
+  transition:box-shadow .15s, transform .15s;
+}
+.big-btn:hover{ box-shadow:0 4px 14px rgba(40,120,200,.35); transform:translateY(-1px); }
+.big-btn b{ color:#0d2c55; font-size:13.5px; }
+.big-btn small{ color:#3a6da0; font-size:11.5px; }
+
+/* Responsive */
+@media (max-width: 700px){
+  .dicon{ width:72px; }
+  .dicon svg{ width:42px; height:42px; }
+  #start-menu{ width:min(92vw, 340px); }
+  .sm-cols{ min-height:340px; grid-template-columns:1fr .8fr; }
+  .task-btn{ padding:0 8px; max-width:110px; }
+  .wei-row{ grid-template-columns:100px 1fr 38px; }
+  .about-head h1{ font-size:20px; }
+  .fe-sidebar{ display:none; }
+}
+
+/* ============================================================
+   INVENTA — CASO DE ESTUDIO DESTACADO
+   ============================================================ */
+.inv-scroll{ height:100%; overflow-y:auto; overflow-x:hidden; }
+.inv-scroll::-webkit-scrollbar{ width:9px; }
+.inv-scroll::-webkit-scrollbar-track{ background:rgba(15,23,42,.06); }
+.inv-scroll::-webkit-scrollbar-thumb{ background:linear-gradient(180deg,#3b82f6,#1e40af); border-radius:5px; border:2px solid rgba(255,255,255,.5); }
+
+/* Hero */
+.inv-hero{
+  background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%);
+  padding:32px 28px 28px; color:#fff; position:relative; overflow:hidden;
+}
+.inv-hero::before{
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse at 30% 20%, rgba(59,130,246,.25) 0%, transparent 60%),
+             radial-gradient(ellipse at 80% 80%, rgba(139,92,246,.15) 0%, transparent 50%);
+  pointer-events:none;
+}
+.inv-hero *{ position:relative; z-index:1; }
+.inv-badge{
+  display:inline-flex; align-items:center; gap:6px;
+  background:rgba(59,130,246,.18); border:1px solid rgba(59,130,246,.4);
+  color:#93c5fd; font-size:10.5px; font-weight:700; letter-spacing:.8px; text-transform:uppercase;
+  padding:4px 12px; border-radius:999px; margin-bottom:12px;
+}
+.inv-badge::before{
+  content:''; width:7px; height:7px; border-radius:50%;
+  background:#3b82f6; box-shadow:0 0 8px #3b82f6;
+  animation:inv-pulse 2s ease-in-out infinite;
+}
+@keyframes inv-pulse{ 0%,100%{opacity:1;} 50%{opacity:.4;} }
+.inv-hero h1{ font-size:28px; font-weight:800; letter-spacing:-.5px; margin-bottom:4px; }
+.inv-hero h1 span{ background:linear-gradient(90deg,#60a5fa,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.inv-hero .inv-tagline{ font-size:15px; color:#94a3b8; font-weight:500; margin-bottom:14px; }
+.inv-hero p{ font-size:13px; line-height:1.65; color:#cbd5e1; max-width:580px; }
+
+/* Secciones internas */
+.inv-section{ padding:20px 24px; }
+.inv-section + .inv-section{ border-top:1px solid #e2e8f0; }
+.inv-stitle{
+  font-size:10.5px; font-weight:700; letter-spacing:1px; text-transform:uppercase;
+  color:#64748b; margin-bottom:6px;
+}
+.inv-sh{ font-size:17px; font-weight:700; color:#0f172a; margin-bottom:12px; }
+
+/* Problema */
+.inv-problem-text{ font-size:12.5px; line-height:1.6; color:#475569; margin-bottom:14px; }
+.inv-pain-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(130px,1fr)); gap:8px; }
+.inv-pain{
+  display:flex; align-items:center; gap:8px; padding:8px 10px; border-radius:8px;
+  background:linear-gradient(135deg,#fef2f2,#fff1f2); border:1px solid #fecaca;
+  font-size:11.5px; color:#991b1b; font-weight:600;
+}
+.inv-pain .inv-pain-icon{ font-size:16px; flex:0 0 auto; }
+
+/* Features */
+.inv-feat-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:10px; }
+.inv-feat{
+  padding:14px 12px; border-radius:10px; border:1px solid #e2e8f0;
+  background:linear-gradient(180deg,#ffffff,#f8fafc);
+  box-shadow:0 1px 3px rgba(15,23,42,.06);
+  transition:box-shadow .2s, transform .2s;
+}
+.inv-feat:hover{ box-shadow:0 4px 16px rgba(59,130,246,.15); transform:translateY(-2px); }
+.inv-feat-icon{
+  width:36px; height:36px; border-radius:9px; display:grid; place-items:center;
+  font-size:18px; margin-bottom:8px;
+  background:linear-gradient(135deg,#eff6ff,#dbeafe); border:1px solid #bfdbfe;
+}
+.inv-feat h4{ font-size:12.5px; font-weight:700; color:#0f172a; margin-bottom:4px; }
+.inv-feat p{ font-size:11px; line-height:1.5; color:#64748b; }
+
+/* Rol */
+.inv-role-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:8px; }
+.inv-role-item{
+  display:flex; align-items:center; gap:8px; padding:7px 10px; border-radius:7px;
+  background:#f8fafc; border:1px solid #e2e8f0; font-size:11.5px; color:#334155; font-weight:500;
+}
+.inv-role-item::before{
+  content:''; width:8px; height:8px; border-radius:50%;
+  background:linear-gradient(135deg,#3b82f6,#8b5cf6); flex:0 0 auto;
+}
+
+/* Tech Badges */
+.inv-techs{ display:flex; flex-wrap:wrap; gap:7px; }
+.inv-tech{
+  padding:5px 12px; border-radius:999px; font-size:11px; font-weight:600;
+  background:linear-gradient(135deg,#0f172a,#1e293b); color:#e2e8f0;
+  border:1px solid #334155; letter-spacing:.3px;
+  transition:background .2s, box-shadow .2s;
+}
+.inv-tech:hover{ background:linear-gradient(135deg,#1e40af,#3b82f6); box-shadow:0 2px 8px rgba(59,130,246,.4); color:#fff; }
+
+/* Resultados */
+.inv-results{ display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:10px; }
+.inv-result{
+  text-align:center; padding:14px 8px; border-radius:10px;
+  background:linear-gradient(135deg,#f0f9ff,#eff6ff); border:1px solid #bfdbfe;
+}
+.inv-result-icon{ font-size:22px; margin-bottom:6px; }
+.inv-result p{ font-size:11px; color:#1e40af; font-weight:600; line-height:1.3; }
+
+/* Galería */
+.inv-gallery{ position:relative; }
+.inv-gallery-track{
+  display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory;
+  padding:4px 0 12px; scrollbar-width:thin;
+}
+.inv-gallery-track::-webkit-scrollbar{ height:6px; }
+.inv-gallery-track::-webkit-scrollbar-thumb{ background:#94a3b8; border-radius:3px; }
+.inv-gallery-slide{
+  flex:0 0 280px; scroll-snap-align:start; border-radius:10px; overflow:hidden;
+  border:1px solid #e2e8f0; box-shadow:0 2px 8px rgba(15,23,42,.1);
+  transition:transform .2s, box-shadow .2s; cursor:pointer;
+}
+.inv-gallery-slide:hover{ transform:scale(1.02); box-shadow:0 6px 20px rgba(15,23,42,.18); }
+.inv-gallery-slide img{ width:100%; height:auto; display:block; }
+.inv-gallery-caption{
+  padding:8px 10px; background:#f8fafc; font-size:11px; color:#475569; font-weight:600;
+  border-top:1px solid #e2e8f0;
+}
+
+/* Botones de acción */
+.inv-actions{ display:flex; flex-wrap:wrap; gap:10px; padding:20px 24px; border-top:1px solid #e2e8f0; }
+.inv-btn{
+  display:inline-flex; align-items:center; gap:7px;
+  padding:9px 18px; border-radius:8px; font-size:12.5px; font-weight:600;
+  text-decoration:none; cursor:pointer; transition:all .2s;
+}
+.inv-btn-primary{
+  background:linear-gradient(135deg,#3b82f6,#2563eb); color:#fff;
+  box-shadow:0 2px 8px rgba(37,99,235,.35); border:1px solid #2563eb;
+}
+.inv-btn-primary:hover{ background:linear-gradient(135deg,#60a5fa,#3b82f6); box-shadow:0 4px 16px rgba(37,99,235,.45); transform:translateY(-1px); }
+.inv-btn-secondary{
+  background:#fff; color:#0f172a; border:1px solid #cbd5e1;
+  box-shadow:0 1px 3px rgba(15,23,42,.08);
+}
+.inv-btn-secondary:hover{ border-color:#3b82f6; color:#2563eb; box-shadow:0 2px 8px rgba(59,130,246,.15); }
+.inv-btn-dark{
+  background:linear-gradient(135deg,#0f172a,#1e293b); color:#e2e8f0;
+  border:1px solid #334155;
+}
+.inv-btn-dark:hover{ background:#1e293b; box-shadow:0 2px 8px rgba(15,23,42,.4); }
+</style>
 </head>
 <body>
 
-  <!-- FONDOS DECORATIVOS AMBIENTALES -->
-  <div class="bg-mesh" aria-hidden="true"></div>
-  <div class="bg-grid" aria-hidden="true"></div>
+<div id="desktop">
 
-  <!-- ========================================================================
-       1. NAVBAR FLOTANTE GLASSMORPHIC (Estilo Stripe / Linear Dock)
-       ======================================================================== -->
-  <div class="navbar-wrapper">
-    <nav class="navbar" aria-label="Navegación principal">
-      <a href="#" class="nav-brand" title="Inicio">
-        <div class="brand-monogram">JG</div>
-        <span>José González</span>
-        <span class="status-pill-mini">
-          <span class="status-dot"></span>
-          <span>Disponible</span>
-        </span>
+  <!-- Fondo de pantalla Bliss -->
+  <div id="wallpaper" aria-hidden="true"></div>
+
+  <!-- Barra lateral de Gadgets (Reloj Margarita y Calendario Vista) -->
+  <aside id="sidebar-gadgets" aria-label="Gadgets de escritorio">
+    <!-- Gadget 1: Reloj Margarita (Daisy Clock) -->
+    <div class="vista-gadget" id="gadget-clock" title="Reloj Margarita Windows Vista">
+      <svg id="daisy-clock" viewBox="0 0 160 160" width="118" height="118" aria-hidden="true">
+        <defs>
+          <radialGradient id="center-grad" cx="45%" cy="40%" r="55%">
+            <stop offset="0%" stop-color="#ffec6e"/>
+            <stop offset="60%" stop-color="#ff9900"/>
+            <stop offset="100%" stop-color="#c65500"/>
+          </radialGradient>
+          <filter id="petal-shdw" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#001530" flood-opacity="0.32"/>
+          </filter>
+        </defs>
+        <!-- 16 pétalos de margarita -->
+        <g filter="url(#petal-shdw)" fill="#ffffff">
+          <ellipse cx="80" cy="22" rx="9" ry="20"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(22.5 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(45 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(67.5 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(90 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(112.5 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(135 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(157.5 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(180 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(202.5 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(225 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(247.5 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(270 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(292.5 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(315 80 80)"/>
+          <ellipse cx="80" cy="22" rx="9" ry="20" transform="rotate(337.5 80 80)"/>
+        </g>
+        <!-- Centro naranja de la flor -->
+        <circle cx="80" cy="80" r="28" fill="url(#center-grad)" stroke="#cc5200" stroke-width="1.5"/>
+        <g fill="#702800" font-size="9" font-family="'Segoe UI', Tahoma, sans-serif" font-weight="700" text-anchor="middle" dominant-baseline="central">
+          <text x="80" y="60">12</text>
+          <text x="100" y="80">3</text>
+          <text x="80" y="100">6</text>
+          <text x="60" y="80">9</text>
+        </g>
+        <line id="clock-hour" x1="80" y1="80" x2="80" y2="64" stroke="#d84315" stroke-width="3.5" stroke-linecap="round"/>
+        <line id="clock-min" x1="80" y1="80" x2="80" y2="56" stroke="#e64a19" stroke-width="2.5" stroke-linecap="round"/>
+        <line id="clock-sec" x1="80" y1="86" x2="80" y2="52" stroke="#d50000" stroke-width="1.2" stroke-linecap="round"/>
+        <circle cx="80" cy="80" r="3.5" fill="#ffeb3b" stroke="#bf360c" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <!-- Gadget 2: Calendario Vista -->
+    <div class="vista-gadget" id="gadget-calendar" title="Calendario">
+      <div class="cal-card">
+        <div class="cal-header"><span id="cal-month-year">SEPTIEMBRE</span></div>
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="watermark">Escritorio Aero<br>Frutiger Portfolio · Build 2026</div>
+
+  <!-- Iconos del escritorio (las 8 apps en orden) -->
+  <div id="icon-col"></div>
+
+  <!-- Menú inicio -->
+  <nav id="start-menu"></nav>
+
+  <!-- Barra de tareas -->
+  <div id="taskbar">
+    <button id="start-button" aria-label="Inicio" title="Inicio"></button>
+    <div id="quick-launch"></div>
+    <div id="task-buttons"></div>
+    <div id="tray">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="#e8f4ff"/><path d="M16 8.5a5 5 0 0 1 0 7" stroke="#e8f4ff" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18.5 6a8.5 8.5 0 0 1 0 12" stroke="#e8f4ff" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/></svg>
+      <div id="clock"><span id="clk-time">--:--</span><br><span id="clk-date"></span></div>
+    </div>
+  </div>
+
+  <!-- Pantalla de apagado -->
+  <div id="shutdown-screen">
+    <div>
+      <h2>Ahora puede cerrar la sesión de forma segura.</h2>
+      <p>(haz clic en cualquier parte para reiniciar el escritorio)</p>
+    </div>
+  </div>
+</div>
+
+<script>
+'use strict';
+/* ============================================================
+   DATOS DEL PERFIL — José González
+   ============================================================ */
+const DATA = {
+  nombre: 'José González',
+  titulo: 'Product Manager & Tech Lead · SaaS B2B e Inteligencia Artificial',
+  bio: 'Soy un Project Manager y Scrum Master apasionado por orquestar el ciclo completo de desarrollo de software. Combino arquitecturas ágiles, diseño UI/UX e Inteligencia Artificial para resolver problemas críticos mediante modelos SaaS B2B. Actualmente lidero la tecnología detrás de Free Mind, construyendo ecosistemas digitales que protegen la salud mental estudiantil y el Lifetime Value (LTV) institucional.',
+  skills: [
+    { nombre: 'Product Management & Scrum', score: 5.8 },
+    { nombre: 'Estrategia B2B & Lean Startup', score: 5.6 },
+    { nombre: 'Diseño UI/UX (Figma)',       score: 4.8 },
+    { nombre: 'Integración IA (Protocolos)',score: 4.7 },
+    { nombre: 'React & Entornos No-Code',   score: 4.5 },
+  ],
+  projects: [
+    {
+      id: 'inventa',
+      nombre: 'INVENTA',
+      subtitulo: 'El Cerebro de Compras para tu Empresa',
+      destacado: true,
+      desc: 'Plataforma SaaS impulsada por IA diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar compras empresariales.',
+      tags: ['SaaS B2B', 'IA Predictiva', 'Product Management', 'Tech Lead'],
+      url: 'https://inventa-dpzedgxep-juzaki.vercel.app/'
+    },
+    {
+      nombre: 'Free Mind',
+      desc: 'Plataforma SaaS B2B de apoyo emocional anónimo para universitarios, impulsada por IA y un ecosistema Peer-to-Peer.',
+      tags: ['React', 'SaaS B2B', 'IA'],
+      url: 'https://freemind-app.vercel.app/'
+    },
+    {
+      nombre: 'Protocolo I-CARE (Duty to Warn)',
+      desc: 'Sistema algorítmico de moderación semántica que detecta riesgos de crisis en milisegundos y activa rescates institucionales automatizados.',
+      tags: ['Inteligencia Artificial', 'Seguridad', 'Automatización'],
+      url: 'https://freemind-app.vercel.app/'
+    },
+    {
+      nombre: 'B2B Insights Dashboard',
+      desc: 'Panel analítico para rectorados que genera mapas de calor de estrés por facultad y mide la protección del Lifetime Value (LTV) institucional.',
+      tags: ['Data Analytics', 'UI/UX', 'Lean Startup'],
+      url: '#'
+    },
+    {
+      nombre: 'MVP Wizard of Oz (No-Code)',
+      desc: 'Experimento de validación en campo utilizando Bubble, Telegram y Códigos QR para medir la tracción y engagement sin fricción técnica inicial.',
+      tags: ['No-Code', 'Bubble', 'Growth'],
+      url: '#'
+    }
+  ],
+  socials: {
+    github:   'https://github.com/Juzakito',
+    linkedin: 'https://www.linkedin.com/in/jmgonzalezz',
+    email:    'jmgonzalez.contact@gmail.com',
+  },
+};
+
+/* ============================================================
+   LAS 8 APPS EXACTAS EN ORDEN DEL ESCRITORIO
+   ============================================================ */
+const DESKTOP_ICONS = [
+  'projects',
+  'inventa',
+  'about',
+  'ie',
+  'cmd',
+  'explorer',
+  'wmp',
+  'gallery',
+  'notepad'
+];
+
+/* ============================================================
+   ICONOS SVG ESTILO FRUTIGER AERO / WINDOWS VISTA
+   ============================================================ */
+let _uid = 0;
+const ICONS = {
+  // 1. Projects (Glass binder / papers stack)
+  projects: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="prj_b__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b0d4f1"/><stop offset="1" stop-color="#3b7cb8"/></linearGradient>
+      <linearGradient id="prj_f__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.7" stop-color="#d6e8f8"/><stop offset="1" stop-color="#9dc5e8"/></linearGradient>
+      <linearGradient id="prj_g__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <path d="M8 12c0-2.2 1.8-4 4-4h16l5 6h23c2.2 0 4 1.8 4 4v10H8z" fill="url(#prj_b__UID__)" stroke="#2b6299" stroke-width="1.2"/>
+    <rect x="13" y="16" width="38" height="38" rx="2" fill="#e2edfa" stroke="#9abddb"/>
+    <rect x="15" y="14" width="38" height="38" rx="2" fill="#ffffff" stroke="#a0c0dc"/>
+    <line x1="20" y1="20" x2="46" y2="20" stroke="#7aaad6" stroke-width="2" stroke-linecap="round"/>
+    <line x1="20" y1="26" x2="42" y2="26" stroke="#9bc1e4" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="20" y1="31" x2="48" y2="31" stroke="#9bc1e4" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M8 22c0-1.8 1.4-3.2 3.2-3.2h41.6c1.8 0 3.2 1.4 3.2 3.2v32c0 2-1.6 3.6-3.6 3.6H11.6c-2 0-3.6-1.6-3.6-3.6z" fill="url(#prj_f__UID__)" fill-opacity="0.88" stroke="#2565a4" stroke-width="1.3"/>
+    <path d="M10 24h44v14c-12-3-32-3-44 1z" fill="url(#prj_g__UID__)"/>
+    <rect x="6" y="24" width="5" height="28" rx="2.5" fill="#357ebd" stroke="#1c4e7a"/>
+  </svg>`,
+
+  // 2. About Me (Windows User Accounts - Green & Blue shirts)
+  about: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="ab_h1__UID__" cx="40%" cy="35%" r="60%"><stop offset="0" stop-color="#ffebd4"/><stop offset="0.6" stop-color="#f8be90"/><stop offset="1" stop-color="#cf8152"/></radialGradient>
+      <radialGradient id="ab_h2__UID__" cx="40%" cy="35%" r="60%"><stop offset="0" stop-color="#ffe6cb"/><stop offset="0.6" stop-color="#f4b584"/><stop offset="1" stop-color="#c67442"/></radialGradient>
+      <linearGradient id="ab_b1__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#64cf6f"/><stop offset="0.5" stop-color="#2ca73a"/><stop offset="1" stop-color="#186c23"/></linearGradient>
+      <linearGradient id="ab_b2__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#63b6f8"/><stop offset="0.5" stop-color="#1f7ccd"/><stop offset="1" stop-color="#0f4a82"/></linearGradient>
+      <linearGradient id="ab_sh__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.75"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <g>
+      <path d="M8 56c0-10 6-16 16-16s16 6 16 16z" fill="url(#ab_b1__UID__)" stroke="#115018" stroke-width="1.2"/>
+      <path d="M20 40l4 6 4-6z" fill="#f8be90"/>
+      <path d="M19 40l5 4 5-4" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+      <circle cx="24" cy="25" r="10" fill="url(#ab_h1__UID__)" stroke="#a6582e" stroke-width="1"/>
+      <path d="M14 23c1-7 7-9 14-8 4 1 7 4 7 7-2-1-5-2-8-1-5 1-8 3-13 2z" fill="#58351c"/>
+    </g>
+    <g>
+      <path d="M24 57c0-11 7-18 18-18s18 7 18 18z" fill="url(#ab_b2__UID__)" stroke="#093863" stroke-width="1.2"/>
+      <path d="M38 39l4 7 4-7z" fill="#f4b584"/>
+      <path d="M37 39l5 4 5-4" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+      <circle cx="42" cy="23" r="10.5" fill="url(#ab_h2__UID__)" stroke="#a6582e" stroke-width="1"/>
+      <path d="M32 21c1-7 7-9 15-8 4 1 7 4 7 8-3-2-6-3-9-2-5 1-9 3-13 2z" fill="#3a2212"/>
+      <path d="M28 44c4-3 10-4 15-4s11 1 15 4c-5-2-10-3-15-3s-11 1-15 3z" fill="url(#ab_sh__UID__)"/>
+    </g>
+  </svg>`,
+
+  // 3. Internet Explorer (Classic blue 'e' with golden orbital halo)
+  ie: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="ie_b__UID__" cx="35%" cy="30%" r="65%"><stop offset="0" stop-color="#6cd4ff"/><stop offset="0.45" stop-color="#1e9be8"/><stop offset="0.85" stop-color="#0c5aab"/><stop offset="1" stop-color="#053268"/></radialGradient>
+      <linearGradient id="ie_r__UID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff88a"/><stop offset="0.3" stop-color="#ffcc00"/><stop offset="0.75" stop-color="#ff9900"/><stop offset="1" stop-color="#d45e00"/></linearGradient>
+      <linearGradient id="ie_g__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <path d="M12 44 C 6 36, 12 18, 36 10 C 46 6, 56 10, 58 14" fill="none" stroke="url(#ie_r__UID__)" stroke-width="4.2" stroke-linecap="round" opacity="0.85"/>
+    <path d="M32 10 C 18 10, 8 20, 8 33 C 8 46, 18 55, 34 55 C 44 55, 50 51, 54 46 L 46 41 C 43 45, 39 47, 34 47 C 24 47, 18 41, 17 32 L 56 32 C 56 30, 56 28, 56 26 C 56 16, 46 10, 32 10 Z M 18 25 C 20 18, 25 16, 32 16 C 39 16, 45 18, 47 25 Z" fill="url(#ie_b__UID__)" stroke="#063e77" stroke-width="1.2"/>
+    <ellipse cx="32" cy="18" rx="14" ry="7" fill="url(#ie_g__UID__)"/>
+    <path d="M58 14 C 60 18, 54 28, 36 39 C 20 48, 8 54, 4 48 C 2 44, 4 38, 12 32" fill="none" stroke="url(#ie_r__UID__)" stroke-width="5" stroke-linecap="round" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.35))"/>
+    <path d="M56 15 C 57 18, 52 27, 36 37 C 21 46, 10 52, 6 47" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  </svg>`,
+
+  // 4. Command Prompt (Black console terminal window with C:\_)
+  cmd: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="cmd_fr__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0f5fa"/><stop offset="0.5" stop-color="#b6cde2"/><stop offset="1" stop-color="#7a97b4"/></linearGradient>
+      <linearGradient id="cmd_tb__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#466a90"/><stop offset="1" stop-color="#18334e"/></linearGradient>
+    </defs>
+    <rect x="5" y="8" width="54" height="48" rx="5" fill="url(#cmd_fr__UID__)" stroke="#496582" stroke-width="1.4" filter="drop-shadow(0 3px 6px rgba(0,20,50,0.4))"/>
+    <path d="M6 13c0-2.2 1.8-4 4-4h44c2.2 0 4 1.8 4 4v7H6z" fill="url(#cmd_tb__UID__)"/>
+    <circle cx="51" cy="14" r="2" fill="#d9534f"/>
+    <circle cx="45" cy="14" r="2" fill="#f0ad4e"/>
+    <circle cx="39" cy="14" r="2" fill="#5cb85c"/>
+    <rect x="8" y="20" width="48" height="33" rx="2" fill="#0c1015" stroke="#1b2530"/>
+    <text x="12" y="32" font-family="Consolas, 'Courier New', monospace" font-size="9" font-weight="700" fill="#eaeaea">C:\&gt;_</text>
+    <rect x="12" y="38" width="16" height="2" fill="#69d2e7" opacity="0.8"/>
+    <rect x="12" y="43" width="26" height="2" fill="#5a7a9a" opacity="0.6"/>
+  </svg>`,
+
+  // 5. File Explorer (Standing translucent glass teal folder)
+  explorer: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="exp_b__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#54d2e8"/><stop offset="1" stop-color="#10749a"/></linearGradient>
+      <linearGradient id="exp_f__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#80e2f4"/><stop offset="0.4" stop-color="#28a8d0"/><stop offset="1" stop-color="#0c6085"/></linearGradient>
+      <linearGradient id="exp_g__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <path d="M12 14c0-2.2 1.8-4 4-4h14l6 6h16c2.2 0 4 1.8 4 4v12H12z" fill="url(#exp_b__UID__)" stroke="#094d68" stroke-width="1.2"/>
+    <rect x="16" y="16" width="34" height="34" rx="2" fill="#f8fcff" stroke="#a4d5ec"/>
+    <line x1="20" y1="22" x2="38" y2="22" stroke="#68a8c8" stroke-width="2" stroke-linecap="round"/>
+    <line x1="20" y1="28" x2="44" y2="28" stroke="#90c4de" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M10 26c0-2 1.6-3.5 3.5-3.5h37c1.9 0 3.5 1.5 3.5 3.5v24c0 2.5-2 4.5-4.5 4.5h-35c-2.5 0-4.5-2-4.5-4.5z" fill="url(#exp_f__UID__)" fill-opacity="0.9" stroke="#07445c" stroke-width="1.3"/>
+    <path d="M12 28h40v12c-10-3-30-3-40 1z" fill="url(#exp_g__UID__)"/>
+  </svg>`,
+
+  // 6. Media Player (WMP 11 blue glossy sphere with orange play triangle)
+  wmp: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="wmp_bezel__UID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf4ff"/><stop offset="0.5" stop-color="#96bcdc"/><stop offset="1" stop-color="#46729a"/></linearGradient>
+      <radialGradient id="wmp_core__UID__" cx="35%" cy="30%" r="65%"><stop offset="0" stop-color="#4ea8f0"/><stop offset="0.4" stop-color="#1a6cc0"/><stop offset="0.85" stop-color="#083878"/><stop offset="1" stop-color="#031d45"/></radialGradient>
+      <linearGradient id="wmp_arrow__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb84d"/><stop offset="0.5" stop-color="#ff8800"/><stop offset="1" stop-color="#cc5200"/></linearGradient>
+      <linearGradient id="wmp_g__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <circle cx="32" cy="32" r="29" fill="url(#wmp_bezel__UID__)" stroke="#2b5278" stroke-width="1.5" filter="drop-shadow(0 3px 6px rgba(0,25,60,0.45))"/>
+    <circle cx="32" cy="32" r="24.5" fill="url(#wmp_core__UID__)" stroke="#042148" stroke-width="1"/>
+    <polygon points="26,20 44,32 26,44" fill="url(#wmp_arrow__UID__)" stroke="#802b00" stroke-width="1" stroke-linejoin="round" filter="drop-shadow(0 1px 3px rgba(0,0,0,0.4))"/>
+    <ellipse cx="32" cy="18" rx="18" ry="9" fill="url(#wmp_g__UID__)"/>
+  </svg>`,
+
+  // 7. Image Viewer (Framed landscape photo with blue sky & green hill)
+  gallery: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="iv_fr__UID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#d2e3f4"/><stop offset="1" stop-color="#8bb1d4"/></linearGradient>
+      <linearGradient id="iv_sky__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a82e4"/><stop offset="0.65" stop-color="#84c8f8"/><stop offset="1" stop-color="#cde9fc"/></linearGradient>
+      <linearGradient id="iv_hill__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#72cc36"/><stop offset="0.5" stop-color="#46a61b"/><stop offset="1" stop-color="#28730b"/></linearGradient>
+      <linearGradient id="iv_g__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <rect x="7" y="10" width="50" height="44" rx="4" fill="url(#iv_fr__UID__)" stroke="#456c92" stroke-width="1.3" filter="drop-shadow(0 3px 6px rgba(0,25,60,0.4))"/>
+    <rect x="12" y="15" width="40" height="34" rx="2" fill="url(#iv_sky__UID__)"/>
+    <ellipse cx="22" cy="22" rx="6" ry="2.5" fill="#ffffff" opacity="0.85"/>
+    <ellipse cx="38" cy="25" rx="8" ry="3" fill="#ffffff" opacity="0.75"/>
+    <path d="M12 40 Q 24 30 36 36 Q 44 32 52 35 L 52 49 L 12 49 Z" fill="url(#iv_hill__UID__)"/>
+    <polygon points="12,15 32,15 12,35" fill="url(#iv_g__UID__)" opacity="0.7"/>
+  </svg>`,
+
+  // 8. Text Editor (Spiral blue notepad with folded corner)
+  notepad: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="te_cov__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#99d0f6"/><stop offset="0.6" stop-color="#4aa0dc"/><stop offset="1" stop-color="#236ca8"/></linearGradient>
+      <linearGradient id="te_pg__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#edf4fc"/></linearGradient>
+      <linearGradient id="te_g__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <rect x="11" y="9" width="42" height="48" rx="4" fill="url(#te_cov__UID__)" stroke="#174f80" stroke-width="1.2" filter="drop-shadow(0 3px 6px rgba(0,25,60,0.4))"/>
+    <path d="M15 13h34c1.1 0 2 .9 2 2v34l-8 8H15c-1.1 0-2-.9-2-2V15c0-1.1.9-2 2-2z" fill="url(#te_pg__UID__)" stroke="#7fa8cb" stroke-width="1"/>
+    <polygon points="43,49 51,49 43,57" fill="#b9d6f0" stroke="#7fa8cb" stroke-width="1"/>
+    <line x1="20" y1="22" x2="44" y2="22" stroke="#9ec1e2" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="20" y1="28" x2="44" y2="28" stroke="#9ec1e2" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="20" y1="34" x2="44" y2="34" stroke="#9ec1e2" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="20" y1="40" x2="38" y2="40" stroke="#9ec1e2" stroke-width="1.8" stroke-linecap="round"/>
+    <g fill="#4d7194" stroke="#ffffff" stroke-width="0.8">
+      <rect x="17" y="7" width="3.5" height="7" rx="1.75"/>
+      <rect x="25" y="7" width="3.5" height="7" rx="1.75"/>
+      <rect x="33" y="7" width="3.5" height="7" rx="1.75"/>
+      <rect x="41" y="7" width="3.5" height="7" rx="1.75"/>
+    </g>
+    <path d="M13 13h38v10H13z" fill="url(#te_g__UID__)"/>
+  </svg>`,
+
+  // Iconos del sistema y auxiliares
+  computer: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="c_fr__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef4fa"/><stop offset="1" stop-color="#b4c8da"/></linearGradient>
+      <linearGradient id="c_sc__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b3664"/><stop offset="0.6" stop-color="#1a7ec2"/><stop offset="1" stop-color="#3fae8f"/></linearGradient>
+    </defs>
+    <rect x="7" y="9" width="50" height="36" rx="5" fill="url(#c_fr__UID__)" stroke="#5b7794"/>
+    <rect x="11" y="13" width="42" height="28" rx="2.5" fill="url(#c_sc__UID__)" stroke="#3a6ea5"/>
+    <path d="M14 33c8-8 15-8 20-4s9 5 16 2" fill="none" stroke="#9fe8c8" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <ellipse cx="28" cy="17.5" rx="15" ry="3.5" fill="#ffffff" opacity="0.3"/>
+    <path d="M27 45h10l2.5 8h-15z" fill="#a9c0d6" stroke="#5b7794" stroke-opacity="0.6"/>
+    <rect x="17" y="52.5" width="30" height="5.5" rx="2.75" fill="url(#c_fr__UID__)" stroke="#5b7794" stroke-opacity="0.7"/>
+  </svg>`,
+  mail: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="m_b__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4fbff"/><stop offset="1" stop-color="#b9d4ec"/></linearGradient>
+      <linearGradient id="m_g__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <rect x="5" y="14" width="54" height="38" rx="6" fill="url(#m_b__UID__)" stroke="#5c8cb8"/>
+    <path d="M8 18l24 18 24-18" fill="none" stroke="#4a86c2" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M8 18c0-1.6 1.2-2.6 2.6-2.6L32 32l21.4-16.6c1.4 0 2.6 1 2.6 2.6l-24 18z" fill="#9fd4f4" opacity="0.45"/>
+    <rect x="7" y="16" width="50" height="10" rx="5" fill="url(#m_g__UID__)"/>
+  </svg>`,
+  power: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="p_o__UID__" cx="0.35" cy="0.28" r="1"><stop offset="0" stop-color="#ffc699"/><stop offset="0.55" stop-color="#e8763a"/><stop offset="1" stop-color="#a82907"/></radialGradient>
+      <linearGradient id="p_g__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <circle cx="32" cy="32" r="27" fill="url(#p_o__UID__)" stroke="#8a2408" stroke-opacity="0.6" stroke-width="1.5"/>
+    <path d="M32 12v14" stroke="#fff" stroke-width="5.5" stroke-linecap="round"/>
+    <path d="M20.5 21a17 17 0 1 0 23 0" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round"/>
+    <ellipse cx="24" cy="18" rx="14" ry="8" fill="url(#p_g__UID__)"/>
+  </svg>`,
+  startOrb: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="s_o__UID__" cx="0.35" cy="0.25" r="1"><stop offset="0" stop-color="#eaf8ff"/><stop offset="0.45" stop-color="#58b1ec"/><stop offset="0.95" stop-color="#0c5aa5"/><stop offset="1" stop-color="#093f77"/></radialGradient>
+      <linearGradient id="s_g__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <circle cx="32" cy="32" r="30" fill="url(#s_o__UID__)" stroke="#0a4786" stroke-opacity="0.7" stroke-width="1.5"/>
+    <g fill="#ffffff" fill-opacity="0.95" transform="rotate(-6 32 32)">
+      <rect x="17" y="16" width="13" height="13" rx="2.5"/>
+      <rect x="34" y="16" width="13" height="13" rx="2.5"/>
+      <rect x="17" y="33" width="13" height="13" rx="2.5"/>
+      <rect x="34" y="33" width="13" height="13" rx="2.5"/>
+    </g>
+    <ellipse cx="24" cy="15" rx="17" ry="9" fill="url(#s_g__UID__)"/>
+  </svg>`,
+  search: `<svg viewBox="0 0 24 24" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="6.5" fill="none" stroke="#3a6da0" stroke-width="2.4"/><line x1="15" y1="15" x2="21" y2="21" stroke="#3a6da0" stroke-width="2.4" stroke-linecap="round"/></svg>`,
+  github: `<svg viewBox="0 0 24 24" width="__W__" height="__W__" fill="#24384c"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>`,
+  linkedin: `<svg viewBox="0 0 24 24" width="__W__" height="__W__" fill="#0077b5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>`,
+
+  // INVENTA — Icono de caso de estudio (Dashboard/IA)
+  inventa: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="inv_b__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#1e40af"/></linearGradient>
+      <linearGradient id="inv_s__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+      <linearGradient id="inv_c__UID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+    </defs>
+    <rect x="6" y="8" width="52" height="42" rx="7" fill="url(#inv_b__UID__)" stroke="#1e3a8a" stroke-width="1.3"/>
+    <rect x="10" y="12" width="44" height="34" rx="4" fill="#0f172a" stroke="#1e40af" stroke-width="0.8"/>
+    <path d="M14 40 L14 30 L22 26 L30 32 L38 20 L46 24 L50 18" fill="none" stroke="url(#inv_c__UID__)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 40 L14 30 L22 26 L30 32 L38 20 L46 24 L50 18 L50 40 Z" fill="url(#inv_c__UID__)" opacity="0.15"/>
+    <circle cx="38" cy="20" r="3" fill="#a78bfa" stroke="#fff" stroke-width="1"/>
+    <circle cx="50" cy="18" r="2.5" fill="#60a5fa" stroke="#fff" stroke-width="1"/>
+    <rect x="14" y="34" width="6" height="6" rx="1" fill="#3b82f6" opacity="0.6"/>
+    <rect x="22" y="36" width="6" height="4" rx="1" fill="#60a5fa" opacity="0.6"/>
+    <rect x="30" y="33" width="6" height="7" rx="1" fill="#818cf8" opacity="0.6"/>
+    <ellipse cx="28" cy="14" rx="16" ry="4" fill="url(#inv_s__UID__)"/>
+    <path d="M24 50h16l2 6H22z" fill="#94a3b8" stroke="#64748b" stroke-width="0.6"/>
+    <rect x="18" y="55" width="28" height="4" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="0.5"/>
+  </svg>`,
+};
+
+function svgIcon(name, size){
+  const uid = _uid++;
+  return (ICONS[name] || '').replace(/__UID__/g, uid).replace(/__W__/g, size);
+}
+
+const GLYPHS = {
+  min:   '<svg viewBox="0 0 10 10"><rect x="1" y="7" width="8" height="2" rx="1" fill="#fff"/></svg>',
+  max:   '<svg viewBox="0 0 10 10"><rect x="1.5" y="1.5" width="7" height="7" rx="1.5" fill="none" stroke="#fff" stroke-width="1.6"/></svg>',
+  restore:'<svg viewBox="0 0 10 10"><rect x="1" y="3" width="6" height="6" rx="1" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M3.5 3V1.8A.8.8 0 0 1 4.3 1H8.2A.8.8 0 0 1 9 1.8v3.9a.8.8 0 0 1-.8.8H7" fill="none" stroke="#fff" stroke-width="1.5"/></svg>',
+  close: '<svg viewBox="0 0 10 10"><path d="M2 2l6 6M8 2l-6 6" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/></svg>',
+};
+
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
+
+/* ============================================================
+   CONTENIDO Y RENDER DE CADA APLICACIÓN
+   ============================================================ */
+
+// 1. Projects
+function renderProjects(){
+  return `
+    <div class="addr-bar">${svgIcon('projects', 18)}<span>Escritorio ▸ Projects (${DATA.projects.length} iniciativas SaaS B2B)</span></div>
+    <div class="proj-grid">
+      ${DATA.projects.map(p => `
+        <article class="proj-card ${p.destacado ? 'proj-featured' : ''}">
+          ${p.destacado ? `<div class="proj-badge-destacado">⭐ PROYECTO DESTACADO</div>` : ''}
+          <div class="proj-head">
+            ${svgIcon(p.id === 'inventa' ? 'inventa' : 'projects', 22)}
+            <div>
+              <h3>${esc(p.nombre)}</h3>
+              ${p.subtitulo ? `<div class="proj-sub">${esc(p.subtitulo)}</div>` : ''}
+            </div>
+          </div>
+          <p>${esc(p.desc)}</p>
+          <div class="tags">${p.tags.map(t => `<span>${esc(t)}</span>`).join('')}</div>
+          <div class="proj-actions">
+            ${p.id === 'inventa' ? `<button class="proj-link proj-btn-case" onclick="openApp('inventa')">Ver Caso de Estudio 🪟</button>` : ''}
+            ${p.url && p.url !== '#'
+              ? `<a class="proj-link" href="${esc(p.url)}" target="_blank" rel="noopener">Abrir en vivo ↗</a>`
+              : `<span class="proj-link proj-soon">En producción</span>`}
+          </div>
+        </article>`).join('')}
+    </div>`;
+}
+
+// INVENTA — Caso de Estudio Destacado
+function renderInventa(){
+  return `<div class="inv-scroll">
+    <!-- HERO -->
+    <div class="inv-hero">
+      <div class="inv-badge">Proyecto Destacado</div>
+      <h1><span>INVENTA</span></h1>
+      <p class="inv-tagline">El Cerebro de Compras para tu Empresa</p>
+      <p>Plataforma SaaS impulsada por inteligencia artificial diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar decisiones de compra para empresas de Latinoamérica.</p>
+      <p style="margin-top:8px">INVENTA transforma datos operativos en decisiones estratégicas mediante modelos predictivos, automatización y análisis empresarial en tiempo real.</p>
+    </div>
+
+    <!-- PROBLEMA -->
+    <div class="inv-section">
+      <p class="inv-stitle">El Problema</p>
+      <h3 class="inv-sh">¿Por qué existe INVENTA?</h3>
+      <p class="inv-problem-text">Muchas empresas toman decisiones de compra basadas en intuición, hojas de cálculo dispersas y procesos manuales. Esto genera pérdidas operativas y financieras significativas:</p>
+      <div class="inv-pain-grid">
+        <div class="inv-pain"><span class="inv-pain-icon">📉</span>Quiebres de stock</div>
+        <div class="inv-pain"><span class="inv-pain-icon">📦</span>Exceso de inventario</div>
+        <div class="inv-pain"><span class="inv-pain-icon">💰</span>Capital inmovilizado</div>
+        <div class="inv-pain"><span class="inv-pain-icon">🔄</span>Compras ineficientes</div>
+        <div class="inv-pain"><span class="inv-pain-icon">🚫</span>Pérdida de ventas</div>
+      </div>
+    </div>
+
+    <!-- FUNCIONALIDADES -->
+    <div class="inv-section">
+      <p class="inv-stitle">Plataforma</p>
+      <h3 class="inv-sh">Funcionalidades Principales</h3>
+      <div class="inv-feat-grid">
+        <div class="inv-feat">
+          <div class="inv-feat-icon">🧠</div>
+          <h4>Predicción de Demanda</h4>
+          <p>Anticipa necesidades futuras utilizando análisis de datos e inteligencia artificial.</p>
+        </div>
+        <div class="inv-feat">
+          <div class="inv-feat-icon">📊</div>
+          <h4>Gestión Inteligente de Inventarios</h4>
+          <p>Detecta riesgos de sobrestock y quiebres de stock en tiempo real.</p>
+        </div>
+        <div class="inv-feat">
+          <div class="inv-feat-icon">⚡</div>
+          <h4>Automatización de Compras</h4>
+          <p>Genera recomendaciones accionables para optimizar abastecimiento.</p>
+        </div>
+        <div class="inv-feat">
+          <div class="inv-feat-icon">📈</div>
+          <h4>Dashboard Ejecutivo</h4>
+          <p>KPIs empresariales y monitoreo de operaciones en tiempo real.</p>
+        </div>
+        <div class="inv-feat">
+          <div class="inv-feat-icon">🔍</div>
+          <h4>Inteligencia de Negocio</h4>
+          <p>Análisis de tendencias y oportunidades de optimización continua.</p>
+        </div>
+        <div class="inv-feat">
+          <div class="inv-feat-icon">☁️</div>
+          <h4>Escalabilidad SaaS</h4>
+          <p>Arquitectura cloud-native preparada para crecimiento empresarial.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MI ROL -->
+    <div class="inv-section">
+      <p class="inv-stitle">Liderazgo</p>
+      <h3 class="inv-sh">Mi Participación</h3>
+      <div class="inv-role-grid">
+        <div class="inv-role-item">Conceptualización del producto</div>
+        <div class="inv-role-item">Diseño de modelo de negocio</div>
+        <div class="inv-role-item">Definición de estrategia SaaS</div>
+        <div class="inv-role-item">Diseño funcional de la plataforma</div>
+        <div class="inv-role-item">Investigación de mercado</div>
+        <div class="inv-role-item">Definición de experiencia de usuario</div>
+        <div class="inv-role-item">Dirección del proyecto</div>
+        <div class="inv-role-item">Lean Startup, Design Thinking & Scrum</div>
+      </div>
+    </div>
+
+    <!-- TECNOLOGÍAS -->
+    <div class="inv-section">
+      <p class="inv-stitle">Stack & Metodologías</p>
+      <h3 class="inv-sh">Tecnologías</h3>
+      <div class="inv-techs">
+        <span class="inv-tech">Artificial Intelligence</span>
+        <span class="inv-tech">SaaS</span>
+        <span class="inv-tech">Product Management</span>
+        <span class="inv-tech">Business Intelligence</span>
+        <span class="inv-tech">Predictive Analytics</span>
+        <span class="inv-tech">UX/UI</span>
+        <span class="inv-tech">Agile</span>
+        <span class="inv-tech">Cloud</span>
+        <span class="inv-tech">React</span>
+        <span class="inv-tech">Vercel</span>
+        <span class="inv-tech">GitHub</span>
+      </div>
+    </div>
+
+    <!-- RESULTADOS ESPERADOS -->
+    <div class="inv-section">
+      <p class="inv-stitle">Impacto</p>
+      <h3 class="inv-sh">Resultados Esperados</h3>
+      <div class="inv-results">
+        <div class="inv-result"><div class="inv-result-icon">📦</div><p>Optimización de inventarios</p></div>
+        <div class="inv-result"><div class="inv-result-icon">📉</div><p>Reducción de quiebres de stock</p></div>
+        <div class="inv-result"><div class="inv-result-icon">🎯</div><p>Mejora en decisiones de compra</p></div>
+        <div class="inv-result"><div class="inv-result-icon">⚙️</div><p>Mayor eficiencia operativa</p></div>
+        <div class="inv-result"><div class="inv-result-icon">🚀</div><p>Escalabilidad empresarial</p></div>
+      </div>
+    </div>
+
+    <!-- GALERÍA -->
+    <div class="inv-section inv-gallery">
+      <p class="inv-stitle">Producto</p>
+      <h3 class="inv-sh">Galería Visual</h3>
+      <div class="inv-gallery-track">
+        <div class="inv-gallery-slide">
+          <img src="inventa-dashboard.jpg" alt="Dashboard principal de INVENTA" loading="lazy"/>
+          <div class="inv-gallery-caption">Dashboard Principal — Panel de Control</div>
+        </div>
+        <div class="inv-gallery-slide">
+          <img src="inventa-inventory.jpg" alt="Módulo de inventarios INVENTA" loading="lazy"/>
+          <div class="inv-gallery-caption">Gestión de Inventarios — Vista de Productos</div>
+        </div>
+        <div class="inv-gallery-slide">
+          <img src="inventa-analytics.jpg" alt="Analítica e inteligencia de negocio" loading="lazy"/>
+          <div class="inv-gallery-caption">Analítica — Predicción de Demanda vs Real</div>
+        </div>
+        <div class="inv-gallery-slide">
+          <img src="inventa-mobile.jpg" alt="Vista móvil de INVENTA" loading="lazy"/>
+          <div class="inv-gallery-caption">Vista Móvil — Acceso desde cualquier dispositivo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTONES CTA -->
+    <div class="inv-actions">
+      <a class="inv-btn inv-btn-primary" href="https://inventa-dpzedgxep-juzaki.vercel.app/" target="_blank" rel="noopener">🚀 Ver Proyecto</a>
+      <a class="inv-btn inv-btn-secondary" onclick="openApp('contact')" style="cursor:pointer">✉️ Contactar</a>
+      <a class="inv-btn inv-btn-dark" href="https://github.com/Juzakito" target="_blank" rel="noopener">${svgIcon('github',14)} GitHub</a>
+    </div>
+  </div>`;
+}
+
+// 2. About Me
+function renderAbout(){
+  return `
+    <div class="about-head">
+      <div class="about-avatar">${svgIcon('about', 76)}</div>
+      <div>
+        <h1>${esc(DATA.nombre)}</h1>
+        <p class="about-title">${esc(DATA.titulo)}</p>
+      </div>
+    </div>
+    <p class="about-bio">${esc(DATA.bio)}</p>
+    <div class="chips">${DATA.skills.map(s => `<span class="chip">${esc(s.nombre)}</span>`).join('')}</div>
+    <div class="about-actions">
+      <a class="about-btn" href="${esc(DATA.socials.linkedin)}" target="_blank" rel="noopener">${svgIcon('linkedin', 16)} LinkedIn</a>
+      <a class="about-btn" href="${esc(DATA.socials.github)}" target="_blank" rel="noopener">${svgIcon('github', 16)} GitHub</a>
+      <button class="about-btn" onclick="openApp('skills')">${svgIcon('computer', 16)} Ver Índice WEI</button>
+      <button class="about-btn" onclick="openApp('notepad')">${svgIcon('notepad', 16)} Leer vision.txt</button>
+    </div>`;
+}
+
+// 3. Internet Explorer
+function renderIE(){
+  return `
+    <div class="ie-container">
+      <div class="ie-nav">
+        <button class="ie-circle-btn" title="Atrás">◀</button>
+        <button class="ie-circle-btn" title="Adelante">▶</button>
+        <div class="ie-addr-wrap">
+          <svg viewBox="0 0 24 24" fill="#286090"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <input type="text" class="ie-addr-input" id="ie-url" value="https://inventa-dpzedgxep-juzaki.vercel.app/" readonly>
+          <button class="ie-go-btn" onclick="window.open(document.getElementById('ie-url').value, '_blank')">Ir ↗</button>
+        </div>
+      </div>
+      <div class="ie-tabs">
+        <div class="ie-tab active" data-ietab="inventa">🧠 INVENTA (SaaS IA)</div>
+        <div class="ie-tab" data-ietab="freemind">🌐 Free Mind (SaaS B2B)</div>
+        <div class="ie-tab" data-ietab="github">🐙 GitHub @Juzakito</div>
+        <div class="ie-tab" data-ietab="linkedin">💼 LinkedIn Profile</div>
+      </div>
+      <div class="ie-viewport" id="ie-view">
+        <div class="ie-hero">
+          <h2>INVENTA — El Cerebro de Compras para tu Empresa</h2>
+          <p>Plataforma SaaS impulsada por IA diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar compras empresariales.</p>
+          <p><b>Impacto:</b> -35% quiebres de stock, -28% sobrestock, modelos predictivos de abastecimiento y analítica en tiempo real.</p>
+          <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;">
+            <a class="ie-big-link" href="https://inventa-dpzedgxep-juzaki.vercel.app/" target="_blank" rel="noopener">Abrir en vivo ↗</a>
+            <button class="ie-big-link" style="border:none; cursor:pointer;" onclick="openApp('inventa')">Ver Caso de Estudio 🪟</button>
+          </div>
+        </div>
+        <div style="font-size:12px; color:#527494; line-height:1.6; margin-top:10px;">
+          <b>Especificaciones:</b> Inteligencia artificial aplicada a compras, dashboards ejecutivos en tiempo real, optimización de capital de trabajo y arquitectura SaaS escalable.
+        </div>
+      </div>
+    </div>`;
+}
+
+// 4. Command Prompt
+function renderCMD(){
+  return `
+    <div class="cmd-box" id="cmd-terminal" onclick="document.getElementById('cmd-in').focus()">
+      <div class="cmd-history" id="cmd-out">Microsoft Windows [Versión 6.0.6002]
+(C) Copyright 1985-2006 Microsoft Corp. Reservados todos los derechos.
+
+Escriba <span class="cmd-cyan">"help"</span> para ver la lista de comandos disponibles.
+</div>
+      <div class="cmd-line">
+        <span class="cmd-prompt-lbl">C:\\Users\\Jose&gt;</span>
+        <input type="text" class="cmd-input" id="cmd-in" autofocus autocomplete="off" spellcheck="false">
+      </div>
+    </div>`;
+}
+
+// 5. File Explorer
+function renderExplorer(){
+  return `
+    <div class="fe-container">
+      <div class="fe-cmdbar">
+        <span class="fe-cmd-btn">Organizar ▾</span>
+        <span class="fe-cmd-btn">Vistas ▾</span>
+        <span class="fe-cmd-btn" onclick="openApp('about')">Abrir Sobre Mí</span>
+        <span class="fe-cmd-btn" onclick="openApp('projects')">Abrir Proyectos</span>
+      </div>
+      <div class="fe-body">
+        <div class="fe-sidebar">
+          <div class="fe-tree-title">Favoritos</div>
+          <div class="fe-tree-item active" onclick="selectFeCategory('docs')">📁 Documentos</div>
+          <div class="fe-tree-item" onclick="openApp('projects')">📁 Proyectos</div>
+          <div class="fe-tree-item" onclick="openApp('inventa')">🧠 INVENTA (SaaS)</div>
+          <div class="fe-tree-item" onclick="openApp('gallery')">🖼️ Imágenes</div>
+          <div class="fe-tree-title">Equipo</div>
+          <div class="fe-tree-item" onclick="openApp('skills')">💻 Disco local (C:)</div>
+          <div class="fe-tree-item" onclick="openApp('ie')">🌐 Red / Internet</div>
+        </div>
+        <div class="fe-grid" id="fe-grid">
+          <div class="fe-file" onclick="openApp('projects')">
+            ${svgIcon('projects', 40)}
+            <span>Proyectos</span>
+            <small>Carpeta</small>
+          </div>
+          <div class="fe-file" onclick="openApp('inventa')">
+            ${svgIcon('inventa', 40)}
+            <span>INVENTA</span>
+            <small>Caso de estudio</small>
+          </div>
+          <div class="fe-file" onclick="openApp('notepad')">
+            ${svgIcon('notepad', 40)}
+            <span>vision.txt</span>
+            <small>Documento de texto</small>
+          </div>
+          <div class="fe-file" onclick="openApp('about')">
+            ${svgIcon('about', 40)}
+            <span>Sobre_Mi.txt</span>
+            <small>Documento</small>
+          </div>
+          <div class="fe-file" onclick="openApp('ie')">
+            ${svgIcon('ie', 40)}
+            <span>FreeMind.url</span>
+            <small>Acceso directo</small>
+          </div>
+          <div class="fe-file" onclick="openApp('gallery')">
+            ${svgIcon('gallery', 40)}
+            <span>Bliss.jpg</span>
+            <small>Imagen JPEG</small>
+          </div>
+          <div class="fe-file" onclick="openApp('wmp')">
+            ${svgIcon('wmp', 40)}
+            <span>Aero_Ambient.wma</span>
+            <small>Audio WMA</small>
+          </div>
+          <div class="fe-file" onclick="openApp('skills')">
+            ${svgIcon('computer', 40)}
+            <span>Propiedades.sys</span>
+            <small>Archivo del sistema</small>
+          </div>
+          <div class="fe-file" onclick="openApp('contact')">
+            ${svgIcon('mail', 40)}
+            <span>Contacto.msg</span>
+            <small>Elemento Outlook</small>
+          </div>
+        </div>
+      </div>
+      <div class="fe-status">
+        <span>9 elementos</span>
+        <span>C:\\Users\\Jose\\Documents</span>
+      </div>
+    </div>`;
+}
+
+// 6. Media Player
+function renderWMP(){
+  return `
+    <div class="wmp-box">
+      <div class="wmp-tabs">
+        <span class="wmp-tab active">Reproducción en curso</span>
+        <span class="wmp-tab">Biblioteca</span>
+        <span class="wmp-tab">Grabar</span>
+        <span class="wmp-tab">Sincronizar</span>
+      </div>
+      <div class="wmp-main">
+        <div class="wmp-art">
+          ${svgIcon('wmp', 72)}
+        </div>
+        <div class="wmp-info">
+          <div class="wmp-title">Windows Aero Ambient Suite</div>
+          <div class="wmp-artist">José González · Product & Tech Lead</div>
+          <div style="font-size:11px; color:#8ab5d8; margin-top:2px;">Frutiger Aero 2007 (Remastered)</div>
+          <div class="wmp-eq" id="wmp-eq">
+            <div class="wmp-bar" style="height:14px;"></div>
+            <div class="wmp-bar" style="height:24px;"></div>
+            <div class="wmp-bar" style="height:32px;"></div>
+            <div class="wmp-bar" style="height:18px;"></div>
+            <div class="wmp-bar" style="height:28px;"></div>
+            <div class="wmp-bar" style="height:12px;"></div>
+            <div class="wmp-bar" style="height:22px;"></div>
+            <div class="wmp-bar" style="height:30px;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="wmp-controls">
+        <div class="wmp-progress-wrap">
+          <span id="wmp-cur-time">00:00</span>
+          <div class="wmp-track" id="wmp-track"><div class="wmp-fill" id="wmp-fill" style="width:0%;"></div></div>
+          <span>03:45</span>
+        </div>
+        <div class="wmp-btns">
+          <button class="ql-btn" style="color:#a8cde8;" title="Anterior">⏮</button>
+          <button class="wmp-play-btn" id="wmp-toggle-play" title="Reproducir / Pausar">▶</button>
+          <button class="ql-btn" style="color:#a8cde8;" title="Siguiente">⏭</button>
+        </div>
+      </div>
+    </div>`;
+}
+
+// 7. Image Viewer
+function renderGallery(){
+  return `
+    <div class="iv-container">
+      <div class="iv-toolbar">
+        <button class="iv-btn" onclick="ivPrev()">◀ Anterior</button>
+        <button class="iv-btn" onclick="ivNext()">Siguiente ▶</button>
+        <button class="iv-btn" onclick="ivRotate()">⟳ Girar</button>
+        <button class="iv-btn" onclick="ivZoom(1.2)">Acercar (+)</button>
+        <button class="iv-btn" onclick="ivZoom(0.8)">Alejar (-)</button>
+        <button class="iv-btn" onclick="ivReset()">Tamaño real</button>
+      </div>
+      <div class="iv-viewport">
+        <img src="bliss.jpg" id="iv-main-img" class="iv-img" alt="Bliss Wallpaper" style="transform: scale(1) rotate(0deg);">
+      </div>
+      <div class="iv-status">
+        <span id="iv-filename">Bliss.jpg</span>
+        <span id="iv-counter">Imagen 1 de 3</span>
+        <span>1920 × 1080 píxeles</span>
+      </div>
+    </div>`;
+}
+
+// 8. Text Editor (Notepad)
+const MANIFESTO_TEXT = `======================================================
+SISTEMA INICIADO: JOSÉ GONZÁLEZ
+ROL: PRODUCT MANAGER & TECH LEAD · SAAS B2B E IA
+======================================================
+Estado actual: Orquestando la tecnología detrás de Free Mind.
+
+Si abriste este archivo, buscas algo más que un currículum tradicional.
+
+Creo firmemente en que el código y la estrategia de negocio son inseparables. Mi enfoque no es solo construir software, sino validar hipótesis empíricas rápidamente. La verdadera productividad en una startup no se mide por la cantidad de nuevas funciones programadas, sino por el aprendizaje validado que obtenemos (Lean Startup).
+
+En Free Mind, no solo desarrollamos una aplicación web en React; construimos un ecosistema de soporte peer-to-peer. Diseñamos el protocolo I-CARE: un escudo automatizado con Inteligencia Artificial que analiza texto en milisegundos para detectar riesgos críticos y activar rescates institucionales oportunos (Duty to Warn).
+
+Mi objetivo como líder de producto siempre es dual:
+1. Proteger al usuario final (salud mental estudiantil sin fricción).
+2. Blindar el modelo de negocio (proteger el Lifetime Value - LTV institucional).
+
+Ejecutando código. Liderando equipos bajo Scrum. Validando en el mercado real.
+
+¿Hablamos? Abre el panel de contacto o envíame un correo:
+jmgonzalez.contact@gmail.com
+======================================================`;
+
+function renderNotepad(){
+  return `
+    <div class="np-container">
+      <div class="np-menubar">
+        <span class="np-menu-btn" onclick="alert('Documento guardado virtualmente.')">Archivo</span>
+        <span class="np-menu-btn">Edición</span>
+        <span class="np-menu-btn">Formato</span>
+        <span class="np-menu-btn">Ver</span>
+        <span class="np-menu-btn" onclick="alert('Bloc de notas de José González · Build 2026')">Ayuda</span>
+      </div>
+      <textarea class="np-textarea" id="np-text" spellcheck="false">${esc(MANIFESTO_TEXT)}</textarea>
+      <div class="np-statusbar">
+        <span>Línea 1, Columna 1</span>
+        <span>100%</span>
+        <span>Windows (CRLF)</span>
+        <span>UTF-8</span>
+      </div>
+    </div>`;
+}
+
+// Skills / Propiedades del Sistema
+function renderSkills(){
+  const base = Math.min(...DATA.skills.map(s => s.score));
+  return `
+    <div class="sys-banner">
+      <div class="sys-logo">${svgIcon('computer', 42)}</div>
+      <div class="sys-meta">
+        <h3>Ver información básica acerca del perfil</h3>
+        <p>Windows Vista™ Enterprise · Tech Lead Service Pack 2</p>
+      </div>
+    </div>
+    <div class="sys-section">
+      <h4>Especificaciones del Sistema</h4>
+      <div class="sys-row"><span class="lbl">Sistema Operativo:</span><span class="val">Emprendedor Tecnológico &amp; Scrum Master v2.0</span></div>
+      <div class="sys-row"><span class="lbl">Procesador:</span><span class="val">Ejecución de Sprints Ágiles y validación empírica mediante pilotos "Wizard of Oz" (No-Code)</span></div>
+      <div class="sys-row"><span class="lbl">Memoria (RAM):</span><span class="val">Alta capacidad para pivotar modelos de negocio desde Lean Startup hacia SaaS B2B escalable</span></div>
+      <div class="sys-row"><span class="lbl">Seguridad / Firewall:</span><span class="val">Protocolo I-CARE integrado. Moderación semántica y guardarraíles de Inteligencia Artificial</span></div>
+      <div class="sys-row"><span class="lbl">Alma Mater:</span><span class="val">Universidad Científica del Sur (Laboratorio de Emprendimientos 2026)</span></div>
+    </div>
+    <div class="sys-section">
+      <h4>Evaluación de Experiencia de Windows (WEI)</h4>
+      <div class="wei-head">
+        <div class="wei-base"><span class="wei-num">${base.toFixed(1).replace('.', ',')}</span><small>Índice base</small></div>
+        <p>Determinado por el subcomponente con la puntuación más baja. Máxima solidez en estrategia de producto y ejecución ágil.</p>
+      </div>
+      ${DATA.skills.map(s => `
+        <div class="wei-row">
+          <div class="wei-name">${esc(s.nombre)}</div>
+          <div class="bar-wrap"><div class="bar-fill" data-w="${(s.score / 5.9 * 100).toFixed(1)}"></div></div>
+          <div class="wei-score">${s.score.toFixed(1).replace('.', ',')}</div>
+        </div>`).join('')}
+    </div>`;
+}
+
+// Contacto
+function renderContact(){
+  const g = DATA.socials;
+  return `
+    <div class="contact-grid">
+      <h2 style="font-size:18px; color:#0d2c55; margin-bottom:4px;">Canales de Contacto Directo</h2>
+      <p style="font-size:12.5px; color:#3d5a75; margin-bottom:12px;">Conéctate con José González para alianzas estratégicas, proyectos SaaS o liderazgo de producto:</p>
+      <a class="big-btn" href="${esc(g.linkedin)}" target="_blank" rel="noopener">
+        ${svgIcon('linkedin', 32)}
+        <span><b>LinkedIn</b><br><small>${esc(g.linkedin.replace('https://', ''))}</small></span>
       </a>
+      <a class="big-btn" href="${esc(g.github)}" target="_blank" rel="noopener">
+        ${svgIcon('github', 32)}
+        <span><b>GitHub</b><br><small>${esc(g.github.replace('https://', ''))}</small></span>
+      </a>
+      <a class="big-btn" href="mailto:${esc(g.email)}">
+        ${svgIcon('mail', 32)}
+        <span><b>Correo Electrónico</b><br><small>${esc(g.email)}</small></span>
+      </a>
+    </div>`;
+}
 
-      <ul class="nav-links">
-        <li><a href="#casos" class="nav-link">Casos de Estudio</a></li>
-        <li><a href="#iniciativas" class="nav-link">Iniciativas</a></li>
-        <li><a href="#competencias" class="nav-link">Competencias</a></li>
-        <li><a href="#trayectoria" class="nav-link">Trayectoria</a></li>
-        <li><a href="#contacto" class="nav-link">Contacto</a></li>
-      </ul>
+/* ============================================================
+   REGISTRO DE TODAS LAS APLICACIONES
+   ============================================================ */
+const APPS = {
+  projects: { titulo: 'Projects',                  icono: 'projects', w: 700, h: 480, minW: 460, minH: 340, render: renderProjects },
+  inventa:  { titulo: 'INVENTA — Caso de Estudio', icono: 'inventa',  w: 860, h: 580, minW: 520, minH: 400, render: renderInventa },
+  about:    { titulo: 'About Me',                  icono: 'about',    w: 580, h: 420, minW: 440, minH: 340, render: renderAbout },
+  ie:       { titulo: 'Internet Explorer',         icono: 'ie',       w: 780, h: 520, minW: 480, minH: 360, render: renderIE },
+  cmd:      { titulo: 'Command Prompt',            icono: 'cmd',      w: 640, h: 400, minW: 420, minH: 280, render: renderCMD },
+  explorer: { titulo: 'File Explorer',             icono: 'explorer', w: 720, h: 480, minW: 460, minH: 340, render: renderExplorer },
+  wmp:      { titulo: 'Media Player',              icono: 'wmp',      w: 620, h: 440, minW: 440, minH: 340, render: renderWMP },
+  gallery:  { titulo: 'Image Viewer',              icono: 'gallery',  w: 680, h: 480, minW: 440, minH: 340, render: renderGallery },
+  notepad:  { titulo: 'Text Editor',               icono: 'notepad',  w: 620, h: 460, minW: 420, minH: 300, render: renderNotepad },
+  skills:   { titulo: 'Propiedades del Sistema',   icono: 'computer', w: 620, h: 530, minW: 460, minH: 380, render: renderSkills },
+  contact:  { titulo: 'Contacto',                  icono: 'mail',     w: 500, h: 380, minW: 400, minH: 300, render: renderContact },
+};
 
-      <div class="nav-actions">
-        <a href="#contacto" class="btn btn-sm btn-primary">Hablemos</a>
+/* ============================================================
+   GESTOR DE VENTANAS
+   ============================================================ */
+const desktop = document.getElementById('desktop');
+const taskButtons = document.getElementById('task-buttons');
+const openWins = new Map();
+let zTop = 100;
+let cascade = 0;
+const coarse = matchMedia('(pointer: coarse)').matches;
+const TASKBAR = 44;
+
+function deskSize(){
+  return { w: desktop.clientWidth, h: desktop.clientHeight };
+}
+
+function focusWin(win){
+  if (win.minimized){ win.minimized = false; win.el.classList.remove('minimized'); }
+  win.el.style.zIndex = ++zTop;
+  openWins.forEach(w => w.el.classList.toggle('active', w === win));
+  updateTaskButtons();
+}
+
+function openApp(appId, origin){
+  if (openWins.has(appId)){ focusWin(openWins.get(appId)); return; }
+  const app = APPS[appId];
+  if (!app) return;
+
+  const d = deskSize();
+  const el = document.createElement('section');
+  el.className = 'aero-window opening';
+  el.innerHTML = `
+    <header class="titlebar">
+      <div class="win-title">${svgIcon(app.icono, 16)}<span>${esc(app.titulo)}</span></div>
+      <div class="wbtn-group">
+        <button class="wbtn" data-act="min" title="Minimizar" aria-label="Minimizar">${GLYPHS.min}</button>
+        <button class="wbtn" data-act="max" title="Maximizar" aria-label="Maximizar">${GLYPHS.max}</button>
+        <button class="wbtn wbtn-close" data-act="close" title="Cerrar" aria-label="Cerrar">${GLYPHS.close}</button>
       </div>
-    </nav>
-  </div>
+    </header>
+    <div class="window-body">${app.render()}</div>
+    <div class="resizer" title="Redimensionar"></div>`;
 
-  <main>
-    <!-- ========================================================================
-         2. HERO SECTION — PROPUESTA DE VALOR & IMPACTO EN 5 SEGUNDOS
-         ======================================================================== -->
-    <section class="hero-section" id="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-badge reveal">
-            <span class="status-dot"></span>
-            <span>Product Manager & Tech Lead · Innovación & IA Aplicada</span>
-          </div>
+  let w = Math.min(app.w, d.w - 16);
+  let h = Math.min(app.h, d.h - TASKBAR - 14);
+  let x, y;
+  if (d.w < 700){ x = 4; y = 4; }
+  else if (openWins.size === 0){ x = Math.round((d.w - w) / 2); y = Math.round((d.h - TASKBAR - h) / 2) - 14; }
+  else { const off = (cascade++ % 6) * 28; x = 60 + off; y = 35 + off; }
+  x = clamp(x, 4, Math.max(4, d.w - w - 6));
+  y = clamp(y, 4, Math.max(4, d.h - TASKBAR - h - 6));
 
-          <h1 class="hero-title reveal reveal-delay-1">
-            Transformando complejidad operativa en <span class="highlight">productos SaaS con IA</span> de alto impacto.
-          </h1>
+  Object.assign(el.style, { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px' });
 
-          <p class="hero-subtitle reveal reveal-delay-2">
-            Uno la visión estratégica de negocio, el diseño centrado en el usuario y arquitecturas tecnológicas escalables. Desde la validación con Lean Startup hasta la entrega continua con Scrum.
-          </p>
+  if (origin){
+    const r = el.getBoundingClientRect();
+    el.style.transformOrigin = `${origin.x - r.left}px ${origin.y - r.top}px`;
+  }
+  desktop.appendChild(el);
+  setTimeout(() => el.classList.remove('opening'), 220);
 
-          <div class="hero-actions reveal reveal-delay-3">
-            <a href="#casos" class="btn btn-lg btn-primary btn-glow">
-              <span>Explorar Casos de Estudio</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M12 4v14"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/jmgonzalezz" target="_blank" rel="noopener" class="btn btn-lg btn-secondary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-              <span>Conectar en LinkedIn</span>
-            </a>
-          </div>
+  const win = { appId, el, minimized: false, maximized: false, prev: null, taskBtn: null };
+  openWins.set(appId, win);
 
-          <!-- Bento Strip de Métricas Clave -->
-          <div class="hero-metrics-strip reveal reveal-delay-4">
-            <div class="metric-card spotlight-card">
-              <div class="metric-val blue">-35%</div>
-              <div class="metric-label">Quiebres de Stock</div>
-              <div class="metric-sub">Optimización predictiva (INVENTA)</div>
-            </div>
-            <div class="metric-card spotlight-card">
-              <div class="metric-val purple">99.2%</div>
-              <div class="metric-label">Uptime Predictivo</div>
-              <div class="metric-sub">Modelos de demanda en producción</div>
-            </div>
-            <div class="metric-card spotlight-card">
-              <div class="metric-val emerald">&lt;200ms</div>
-              <div class="metric-label">Alerta en Crisis</div>
-              <div class="metric-sub">Protocolo semántico I-CARE</div>
-            </div>
-            <div class="metric-card spotlight-card">
-              <div class="metric-val cyan">100%</div>
-              <div class="metric-label">Lifecycle Delivery</div>
-              <div class="metric-sub">Discovery, Scrum & Roadmap</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  el.addEventListener('pointerdown', () => focusWin(win));
+  el.addEventListener('click', e => {
+    const btn = e.target.closest('.wbtn');
+    if (!btn) return;
+    if (btn.dataset.act === 'min') minimizeWin(win);
+    else if (btn.dataset.act === 'max') toggleMax(win);
+    else closeWin(win);
+  });
 
-    <!-- ========================================================================
-         3. MARQUEE DE METODOLOGÍAS Y CAPACIDADES ESTRATÉGICAS
-         ======================================================================== -->
-    <div class="marquee-container" aria-hidden="true">
-      <div class="marquee-track">
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          <span>Estrategia SaaS B2B</span>
-        </div>
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          <span>Scrum Master Certificado</span>
-        </div>
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          <span>Product Discovery & Lean</span>
-        </div>
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg>
-          <span>Modelos Predictivos con IA</span>
-        </div>
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-          <span>Roadmapping & OKRs</span>
-        </div>
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <span>Gestión de Stakeholders</span>
-        </div>
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          <span>Factibilidad Técnica & Prototipado</span>
-        </div>
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          <span>Protección de LTV Institucional</span>
-        </div>
-        <!-- Duplicado para loop infinito fluido -->
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          <span>Estrategia SaaS B2B</span>
-        </div>
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          <span>Scrum Master Certificado</span>
-        </div>
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          <span>Product Discovery & Lean</span>
-        </div>
-        <div class="marquee-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg>
-          <span>Modelos Predictivos con IA</span>
-        </div>
-      </div>
+  const tb = el.querySelector('.titlebar');
+  tb.addEventListener('dblclick', e => { if (!e.target.closest('.wbtn-group')) toggleMax(win); });
+  tb.addEventListener('pointerdown', e => startDrag(e, win, tb));
+  el.querySelector('.resizer').addEventListener('pointerdown', e => startResize(e, win));
+
+  addTaskButton(win);
+  focusWin(win);
+
+  // Inicialización de lógica interna de cada app
+  initAppLogic(appId, el);
+
+  return win;
+}
+
+function startDrag(e, win, tb){
+  if (e.button !== 0 || e.target.closest('.wbtn-group')) return;
+  if (win.maximized) return;
+  const dr = desktop.getBoundingClientRect();
+  const r = win.el.getBoundingClientRect();
+  const ox = e.clientX - r.left, oy = e.clientY - r.top;
+  win.el.classList.add('dragging');
+  tb.setPointerCapture(e.pointerId);
+  const onMove = ev => {
+    let x = ev.clientX - dr.left - ox;
+    let y = ev.clientY - dr.top - oy;
+    x = clamp(x, 110 - r.width, dr.width - 90);
+    y = clamp(y, 0, dr.height - TASKBAR - 30);
+    win.el.style.left = Math.round(x) + 'px';
+    win.el.style.top = Math.round(y) + 'px';
+  };
+  const stop = () => {
+    win.el.classList.remove('dragging');
+    tb.removeEventListener('pointermove', onMove);
+    tb.removeEventListener('pointerup', stop);
+    tb.removeEventListener('pointercancel', stop);
+  };
+  tb.addEventListener('pointermove', onMove);
+  tb.addEventListener('pointerup', stop);
+  tb.addEventListener('pointercancel', stop);
+}
+
+function startResize(e, win){
+  if (e.button !== 0) return;
+  e.preventDefault();
+  const app = APPS[win.appId];
+  const handle = e.currentTarget;
+  const r = win.el.getBoundingClientRect();
+  const d = deskSize();
+  win.el.classList.add('dragging');
+  handle.setPointerCapture(e.pointerId);
+  const onMove = ev => {
+    const w = clamp(ev.clientX - r.left, app.minW || 340, d.w - r.left - 2);
+    const h = clamp(ev.clientY - r.top, app.minH || 240, d.h - TASKBAR - r.top - 2);
+    win.el.style.width = Math.round(w) + 'px';
+    win.el.style.height = Math.round(h) + 'px';
+  };
+  const stop = () => {
+    win.el.classList.remove('dragging');
+    handle.removeEventListener('pointermove', onMove);
+    handle.removeEventListener('pointerup', stop);
+    handle.removeEventListener('pointercancel', stop);
+  };
+  handle.addEventListener('pointermove', onMove);
+  handle.addEventListener('pointerup', stop);
+  handle.addEventListener('pointercancel', stop);
+}
+
+function toggleMax(win){
+  const d = deskSize();
+  const el = win.el;
+  el.classList.add('anim');
+  if (!win.maximized){
+    win.prev = { x: el.offsetLeft, y: el.offsetTop, w: el.offsetWidth, h: el.offsetHeight };
+    Object.assign(el.style, { left: '0px', top: '0px', width: d.w + 'px', height: (d.h - TASKBAR) + 'px' });
+    win.maximized = true;
+    el.classList.add('maximized');
+    el.querySelector('[data-act="max"]').innerHTML = GLYPHS.restore;
+  } else {
+    const p = win.prev || { x: 60, y: 40, w: 580, h: 420 };
+    Object.assign(el.style, { left: p.x + 'px', top: p.y + 'px', width: p.w + 'px', height: p.h + 'px' });
+    win.maximized = false;
+    el.classList.remove('maximized');
+    el.querySelector('[data-act="max"]').innerHTML = GLYPHS.max;
+  }
+  setTimeout(() => el.classList.remove('anim'), 230);
+}
+
+function minimizeWin(win){
+  win.minimized = true;
+  win.el.style.transformOrigin = '50% 100%';
+  win.el.classList.add('minimized');
+  updateTaskButtons();
+}
+
+function closeWin(win){
+  win.el.classList.add('closing');
+  if (win.taskBtn) win.taskBtn.remove();
+  openWins.delete(win.appId);
+  setTimeout(() => {
+    win.el.remove();
+    let top = null;
+    openWins.forEach(w => { if (!w.minimized && (!top || +w.el.style.zIndex > +top.el.style.zIndex)) top = w; });
+    if (top) focusWin(top); else updateTaskButtons();
+  }, 160);
+}
+
+/* ============================================================
+   BARRA DE TAREAS Y BOTONES
+   ============================================================ */
+function addTaskButton(win){
+  const app = APPS[win.appId];
+  const btn = document.createElement('button');
+  btn.className = 'task-btn';
+  btn.innerHTML = `${svgIcon(app.icono, 19)}<span class="tb-label">${esc(app.titulo)}</span>`;
+  btn.addEventListener('click', () => {
+    if (win.minimized) focusWin(win);
+    else if (win.el.classList.contains('active')) minimizeWin(win);
+    else focusWin(win);
+  });
+  win.taskBtn = btn;
+  taskButtons.appendChild(btn);
+}
+
+function updateTaskButtons(){
+  openWins.forEach(w => {
+    if (w.taskBtn) w.taskBtn.classList.toggle('active', !w.minimized && w.el.classList.contains('active'));
+  });
+}
+
+/* Iconos del Escritorio (Las 8 Apps en Orden) */
+const iconCol = document.getElementById('icon-col');
+DESKTOP_ICONS.forEach(appId => {
+  const app = APPS[appId];
+  const el = document.createElement('div');
+  el.className = 'dicon';
+  el.tabIndex = 0;
+  el.innerHTML = `${svgIcon(app.icono, 48)}<span class="dlabel">${esc(app.titulo)}</span>`;
+  el.dataset.app = appId;
+  el.addEventListener('click', e => {
+    document.querySelectorAll('.dicon.selected').forEach(i => i.classList.remove('selected'));
+    el.classList.add('selected');
+    if (coarse || e.detail > 1) openApp(appId, { x: e.clientX, y: e.clientY });
+  });
+  el.addEventListener('keydown', e => { if (e.key === 'Enter') openApp(appId); });
+  iconCol.appendChild(el);
+});
+
+/* Quick Launch en Barra de Tareas */
+const quickLaunch = document.getElementById('quick-launch');
+quickLaunch.innerHTML = `
+  <button class="ql-btn" data-app="notepad" title="Text Editor">${svgIcon('notepad', 18)}</button>
+  <button class="ql-btn" data-app="explorer" title="File Explorer">${svgIcon('explorer', 18)}</button>
+  <button class="ql-btn" data-app="ie" title="Internet Explorer">${svgIcon('ie', 18)}</button>
+  <button class="ql-btn" data-app="about" title="About Me">${svgIcon('about', 18)}</button>`;
+
+quickLaunch.addEventListener('click', e => {
+  const btn = e.target.closest('.ql-btn');
+  if (btn) openApp(btn.dataset.app);
+});
+
+/* Menú Inicio */
+const startMenu = document.getElementById('start-menu');
+startMenu.innerHTML = `
+  <div class="sm-cols">
+    <div class="sm-left">
+      ${DESKTOP_ICONS.map(id => `
+        <div class="sm-item" data-app="${id}">${svgIcon(APPS[id].icono, 28)}<span>${esc(APPS[id].titulo)}</span></div>`).join('')}
+      <div class="sm-sep"></div>
+      <div class="sm-search">${svgIcon('search', 14)}<input type="text" placeholder="Buscar programas..." id="sm-q" aria-label="Buscar programas"></div>
     </div>
-
-    <!-- ========================================================================
-         4. CASOS DE ESTUDIO DESTACADOS (FORMATO LINEAR / STRIPE DEEP DIVE)
-         ======================================================================== -->
-    <section class="section" id="casos">
-      <div class="container">
-        <div class="section-header text-center reveal">
-          <span class="section-tag">Casos de Estudio</span>
-          <h2 class="section-title">Productos reales diseñados para resolver fricciones críticas de negocio.</h2>
-          <p class="section-desc">
-            No se trata de proyectos teóricos. Cada caso representa la identificación de un problema de mercado, el diseño estratégico de la solución y la orquestación técnica necesaria para llevarlo a producción.
-          </p>
-        </div>
-
-        <!-- CASO 01: INVENTA -->
-        <article class="case-study-card spotlight-card reveal">
-          <div class="case-study-grid">
-            <!-- Columna Izquierda: Narrativa Estratégica -->
-            <div class="case-study-info">
-              <span class="case-study-badge">Caso Destacado · SaaS B2B + Inteligencia Artificial</span>
-              <div class="case-study-header">
-                <h3>INVENTA — El Cerebro de Compras para tu Empresa</h3>
-                <p class="case-tagline">Anticipación de demanda, control de inventarios y compras autónomas para Latinoamérica.</p>
-              </div>
-
-              <div class="case-study-narrative">
-                <div class="narrative-block">
-                  <h4>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                    El Problema de Negocio
-                  </h4>
-                  <p>
-                    Las medianas empresas sufren pérdidas continuas por quiebres de stock (ventas perdidas) y sobreinventario (capital de trabajo inmovilizado), al gestionar su abastecimiento en hojas de cálculo desconectadas y decisiones intuitivas.
-                  </p>
-                </div>
-
-                <div class="narrative-block">
-                  <h4>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    La Solución de Producto
-                  </h4>
-                  <p>
-                    Diseñé una plataforma SaaS que centraliza datos de ventas y aplica modelos predictivos de series temporales para calcular el punto de reorden óptimo, generando sugerencias automáticas de compra y un dashboard ejecutivo en tiempo real.
-                  </p>
-                </div>
-
-                <div class="narrative-block">
-                  <h4>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                    Mi Rol de Liderazgo (Product & Tech Lead)
-                  </h4>
-                  <p>
-                    Lideré el ciclo integral: desde entrevistas de Product Discovery con gerentes de compras, estructuración de historias de usuario en Jira, hasta la definición de arquitectura cloud y validación continua con Lean Startup.
-                  </p>
-                  <div class="role-tags-list">
-                    <span class="role-tag">Product Strategy</span>
-                    <span class="role-tag">Discovery & Entrevistas</span>
-                    <span class="role-tag">Scrum / Sprint Backlog</span>
-                    <span class="role-tag">UX/UI Architecture</span>
-                    <span class="role-tag">Algoritmos Predictivos</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- KPIs de Negocio -->
-              <div class="case-kpis">
-                <div class="kpi-item">
-                  <div class="kpi-num">-35%</div>
-                  <div class="kpi-title">Quiebres de Stock</div>
-                </div>
-                <div class="kpi-item">
-                  <div class="kpi-num">-28%</div>
-                  <div class="kpi-title">Sobrestock Evitado</div>
-                </div>
-                <div class="kpi-item">
-                  <div class="kpi-num">99.2%</div>
-                  <div class="kpi-title">Uptime Predictivo</div>
-                </div>
-              </div>
-
-              <!-- Botones de Acción -->
-              <div class="case-actions">
-                <a href="https://inventa-dpzedgxep-juzaki.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">
-                  <span>Probar Producto en Vivo</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-                </a>
-                <a href="https://github.com/Juzakito" target="_blank" rel="noopener" class="btn btn-secondary">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-                  <span>Ver Repositorio</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Columna Derecha: Showcase Visual con Galería Interactiva -->
-            <div class="case-gallery-wrap">
-              <div class="case-main-preview" id="inventa-main-preview" title="Haz clic para ampliar la captura">
-                <img src="inventa-dashboard.jpg" id="inventa-main-preview-img" alt="INVENTA Dashboard Ejecutivo" loading="lazy" />
-                <div class="case-preview-overlay">
-                  <span class="preview-caption">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-                    <span id="inventa-preview-caption">Dashboard Ejecutivo — KPIs y predicción de demanda</span>
-                  </span>
-                </div>
-              </div>
-
-              <!-- Selector de Miniaturas -->
-              <div class="case-thumbs-row">
-                <button class="case-thumb-btn active" data-src="inventa-dashboard.jpg" title="Ver Dashboard">
-                  <img src="inventa-dashboard.jpg" alt="Miniatura Dashboard" />
-                </button>
-                <button class="case-thumb-btn" data-src="inventa-inventory.jpg" title="Ver Inventario">
-                  <img src="inventa-inventory.jpg" alt="Miniatura Inventario" />
-                </button>
-                <button class="case-thumb-btn" data-src="inventa-analytics.jpg" title="Ver Analítica">
-                  <img src="inventa-analytics.jpg" alt="Miniatura Analítica" />
-                </button>
-                <button class="case-thumb-btn" data-src="inventa-mobile.jpg" title="Ver Vista Móvil">
-                  <img src="inventa-mobile.jpg" alt="Miniatura Móvil" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- CASO 02: FREE MIND & PROTOCOLO I-CARE -->
-        <article class="case-study-card spotlight-card reveal">
-          <div class="case-study-grid">
-            <div class="case-study-info">
-              <span class="case-study-badge" style="color:#c084fc; background:rgba(168,85,247,0.1); border-color:rgba(168,85,247,0.25);">
-                Caso Estratégico · Salud Mental Universitaria & SaaS B2B
-              </span>
-              <div class="case-study-header">
-                <h3>Free Mind & Protocolo I-CARE (Duty to Warn)</h3>
-                <p class="case-tagline">Protección de la salud emocional estudiantil y resguardo del Lifetime Value (LTV) institucional.</p>
-              </div>
-
-              <div class="case-study-narrative">
-                <div class="narrative-block">
-                  <h4>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                    El Problema Crítico
-                  </h4>
-                  <p>
-                    Las universidades enfrentan altas tasas de deserción académica impulsadas por crisis de salud mental no atendidas, sumado a tiempos de espera de semanas en gabinetes psicológicos y barreras de estigma social.
-                  </p>
-                </div>
-
-                <div class="narrative-block">
-                  <h4>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    La Solución & Protocolo I-CARE
-                  </h4>
-                  <p>
-                    Desarrollamos una comunidad anónima de acompañamiento Peer-to-Peer respaldada por un algoritmo semántico de moderación que analiza el discurso en milisegundos. Ante la detección de riesgo severo, activa automáticamente protocolos institucionales de rescate y contención inmediata.
-                  </p>
-                </div>
-
-                <div class="narrative-block">
-                  <h4>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                    Mi Rol de Liderazgo
-                  </h4>
-                  <p>
-                    Orquesté el modelo de producto B2B para vicerrectorados académicos, traduciendo el bienestar estudiantil en retención de matrícula y valor institucional (LTV), supervisando el cumplimiento ético y la arquitectura en React.
-                  </p>
-                  <div class="role-tags-list">
-                    <span class="role-tag">Estrategia B2B Institucional</span>
-                    <span class="role-tag">Moderación Semántica IA</span>
-                    <span class="role-tag">Gestión de Riesgos</span>
-                    <span class="role-tag">Frontend Architecture</span>
-                    <span class="role-tag">Scrum Master</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- KPIs -->
-              <div class="case-kpis">
-                <div class="kpi-item">
-                  <div class="kpi-num" style="color:#c084fc;">&lt;200ms</div>
-                  <div class="kpi-title">Detección de Riesgo</div>
-                </div>
-                <div class="kpi-item">
-                  <div class="kpi-num" style="color:#c084fc;">100%</div>
-                  <div class="kpi-title">Privacidad & Anonimato</div>
-                </div>
-                <div class="kpi-item">
-                  <div class="kpi-num" style="color:#c084fc;">24/7</div>
-                  <div class="kpi-title">Acompañamiento Continuo</div>
-                </div>
-              </div>
-
-              <!-- Botones -->
-              <div class="case-actions">
-                <a href="https://freemind-app.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">
-                  <span>Abrir Free Mind en Vivo</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Preview Card conceptual para Free Mind -->
-            <div class="case-gallery-wrap">
-              <div class="case-main-preview" style="background:linear-gradient(135deg,#131127,#1f1a3a); display:flex; align-items:center; justify-content:center; padding:36px; min-height:300px;">
-                <div style="text-align:center; max-width:340px;">
-                  <div style="width:64px; height:64px; border-radius:50%; background:rgba(168,85,247,0.2); border:1px solid rgba(168,85,247,0.4); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; color:#c084fc; font-size:28px;">
-                    🛡️
-                  </div>
-                  <h4 style="font-size:1.3rem; color:#fff; margin-bottom:8px;">Protocolo I-CARE</h4>
-                  <p style="font-size:0.88rem; color:#cbd5e1; line-height:1.5;">
-                    Algoritmo de alerta temprana en tiempo real para universidades. Salvaguarda integral de vidas y protección de la comunidad académica.
-                  </p>
-                  <div style="margin-top:20px; display:inline-block; font-size:0.78rem; font-family:'JetBrains Mono',monospace; color:#34d399; background:rgba(16,185,129,0.1); padding:4px 12px; border-radius:999px; border:1px solid rgba(16,185,129,0.25);">
-                    ● Sistema Activo en freemind-app.vercel.app
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         5. LABORATORIO ÁGIL & INICIATIVAS COMPLEMENTARIAS
-         ======================================================================== -->
-    <section class="section" id="iniciativas">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag emerald">Laboratorio Ágil</span>
-          <h2 class="section-title">Iniciativas de Experimentación y Analítica</h2>
-          <p class="section-desc">
-            Metodologías de validación empírica y paneles de control desarrollados para comprobar hipótesis de mercado sin fricción innecesaria.
-          </p>
-        </div>
-
-        <div class="bento-grid">
-          <!-- Card 1: B2B Insights Dashboard -->
-          <div class="bento-card spotlight-card reveal">
-            <div class="bento-card-header">
-              <div class="bento-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
-              </div>
-              <span class="bento-tag" style="color:#38bdf8; border-color:rgba(56,189,248,0.3);">Business Intelligence</span>
-            </div>
-            <h3>B2B Insights Dashboard para Rectorados</h3>
-            <p>
-              Panel analítico para directores de carrera y vicerrectorías académicas que consolida mapas de calor sobre el estrés estudiantil, correlacionando patrones de riesgo con el resguardo del Lifetime Value (LTV) y la retención semestral.
-            </p>
-            <div class="bento-tags">
-              <span class="bento-tag">Data Analytics</span>
-              <span class="bento-tag">Executive Dashboards</span>
-              <span class="bento-tag">Retención de Matrícula</span>
-              <span class="bento-tag">Heatmaps</span>
-            </div>
-          </div>
-
-          <!-- Card 2: MVP Wizard of Oz -->
-          <div class="bento-card spotlight-card reveal reveal-delay-1">
-            <div class="bento-card-header">
-              <div class="bento-icon" style="color:#f59e0b; background:rgba(245,158,11,0.1); border-color:rgba(245,158,11,0.25);">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              </div>
-              <span class="bento-tag" style="color:#fbbf24; border-color:rgba(251,191,36,0.3);">Lean Startup</span>
-            </div>
-            <h3>MVP Wizard of Oz (Validación en Campo)</h3>
-            <p>
-              Experimento de validación ágil sin código preliminar implementado con Bubble, bots de Telegram y códigos QR distribuidos en campus físicos. Permitió medir tracción, tasa de interacción y recurrencia antes de escribir una sola línea de código backend.
-            </p>
-            <div class="bento-tags">
-              <span class="bento-tag">No-Code</span>
-              <span class="bento-tag">Growth Hacking</span>
-              <span class="bento-tag">Validación Empírica</span>
-              <span class="bento-tag">Product Discovery</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         6. MATRIZ DE COMPETENCIAS EJECUTIVAS (BENTO 4 PILARES)
-         ======================================================================== -->
-    <section class="section" id="competencias">
-      <div class="container">
-        <div class="section-header text-center reveal">
-          <span class="section-tag purple">Especialidades</span>
-          <h2 class="section-title">El puente entre la visión de negocio y la ingeniería de software.</h2>
-          <p class="section-desc">
-            Mi formación en Administración de Empresas sumada al liderazgo ágil de software me permite comunicar con igual precisión con un CEO, un equipo de diseño o un arquitecto cloud.
-          </p>
-        </div>
-
-        <div class="pillars-grid">
-          <!-- Pilar 1 -->
-          <div class="pillar-card spotlight-card reveal">
-            <div class="pillar-top">
-              <div class="pillar-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-              <h3>Product Strategy & Business</h3>
-            </div>
-            <p class="pillar-desc">
-              Concepción de modelos de negocio viables, definición de unit economics y alineación con objetivos estratégicos de la compañía.
-            </p>
-            <ul class="pillar-skills-list">
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Product Discovery & Customer Interviews</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Definición y seguimiento de OKRs empresariales</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Estrategia de Monetización SaaS y retención de LTV</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Análisis competitivo y Product-Market Fit</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Pilar 2 -->
-          <div class="pillar-card spotlight-card reveal reveal-delay-1">
-            <div class="pillar-top">
-              <div class="pillar-icon" style="color:#34d399; background:rgba(16,185,129,0.15); border-color:rgba(16,185,129,0.25);">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-              </div>
-              <h3>Agile & Project Leadership</h3>
-            </div>
-            <p class="pillar-desc">
-              Orquestación de sprints de alto rendimiento eliminando fricciones, facilitando ceremonias y asegurando entregas continuas de valor.
-            </p>
-            <ul class="pillar-skills-list">
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Scrum Master (Sprint Planning, Dailies, Retrospectivas)</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Gestión de Product Backlog en Jira & Linear</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Mapeo de historias de usuario (User Story Mapping)</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Mitigación de dependencias y riesgos de entrega</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Pilar 3 -->
-          <div class="pillar-card spotlight-card reveal reveal-delay-2">
-            <div class="pillar-top">
-              <div class="pillar-icon" style="color:#c084fc; background:rgba(168,85,247,0.15); border-color:rgba(168,85,247,0.25);">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/></svg>
-              </div>
-              <h3>Inteligencia Artificial Aplicada</h3>
-            </div>
-            <p class="pillar-desc">
-              Integración pragmática de modelos de IA en procesos reales de negocio, evitando el 'hype' para enfocarse en ROI comprobable.
-            </p>
-            <ul class="pillar-skills-list">
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Modelos de predicción de demanda de inventarios</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Moderación semántica en tiempo real (NLP / LLMs)</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Diseño de flujos de interacción asistidos por IA</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Protocolos de seguridad ética y cumplimiento de datos</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Pilar 4 -->
-          <div class="pillar-card spotlight-card reveal reveal-delay-3">
-            <div class="pillar-top">
-              <div class="pillar-icon" style="color:#38bdf8; background:rgba(56,189,248,0.15); border-color:rgba(56,189,248,0.25);">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              </div>
-              <h3>Factibilidad Técnica & Prototipado</h3>
-            </div>
-            <p class="pillar-desc">
-              Capacidad técnica para validar viabilidad de arquitecturas, construir prototipos funcionales y dialogar al mismo nivel con ingenieros.
-            </p>
-            <ul class="pillar-skills-list">
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Desarrollo Frontend Moderno (React, JavaScript, HTML5/CSS3)</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Diseño de sistemas de diseño en Figma</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Arquitecturas REST APIs y consumo de microservicios</span>
-              </li>
-              <li class="pillar-skill-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Despliegue y optimización en plataformas Cloud (Vercel, Git)</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         7. TRAYECTORIA PROFESIONAL & FILOSOFÍA (TIMELINE)
-         ======================================================================== -->
-    <section class="section" id="trayectoria">
-      <div class="container-narrow">
-        <div class="section-header text-center reveal">
-          <span class="section-tag">Trayectoria</span>
-          <h2 class="section-title">Evolución hacia el Liderazgo de Producto</h2>
-          <p class="section-desc">
-            Una trayectoria intencional que articula rigor analítico de negocios con ejecución tecnológica de frontera.
-          </p>
-        </div>
-
-        <div class="timeline-wrap">
-          <!-- Entrada 1 -->
-          <div class="timeline-entry reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">2024 — Presente</div>
-              <h3 class="timeline-role">Product Manager & Tech Lead</h3>
-              <div class="timeline-company">INVENTA · Plataforma SaaS de Compras con IA</div>
-              <p class="timeline-body">
-                Liderazgo de punta a punta: definición de visión de producto, roadmap estratégico, descubrimiento con compradores B2B y dirección del desarrollo del motor de predicción de demanda de inventarios.
-              </p>
-            </div>
-          </div>
-
-          <!-- Entrada 2 -->
-          <div class="timeline-entry reveal reveal-delay-1">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">2023 — 2024</div>
-              <h3 class="timeline-role">Scrum Master & Product Strategist</h3>
-              <div class="timeline-company">Free Mind & Protocolo I-CARE</div>
-              <p class="timeline-body">
-                Coordinación ágil del equipo de desarrollo, implementación de ceremonias Scrum y conceptualización del algoritmo semántico de contención de crisis, vinculando la retención estudiantil con el LTV universitario.
-              </p>
-            </div>
-          </div>
-
-          <!-- Entrada 3 -->
-          <div class="timeline-entry reveal reveal-delay-2">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <div class="timeline-date">Formación & Fundamentos</div>
-              <h3 class="timeline-role">Administración, Innovación & Metodologías Ágiles</h3>
-              <div class="timeline-company">Especialización en Estrategia Digital y Productos Tecnológicos</div>
-              <p class="timeline-body">
-                Sólida base en gestión de proyectos, modelos de negocio, investigación de operaciones y diseño de soluciones basadas en datos, complementada con certificaciones y práctica activa en entornos ágiles.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         8. CONTACTO DE ALTA CONVERSIÓN (RECRUITERS & STAKEHOLDERS)
-         ======================================================================== -->
-    <section class="section" id="contacto">
-      <div class="container">
-        <div class="section-header text-center reveal">
-          <span class="section-tag emerald">Contacto Directo</span>
-          <h2 class="section-title">¿Conversamos sobre tu próximo desafío de producto?</h2>
-          <p class="section-desc">
-            Abierto a oportunidades como Product Manager, Tech Lead, roles en startups tecnológicas, incubadoras y laboratorios de innovación digital.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          <!-- Columna Izquierda: Accesos Rápidos -->
-          <div class="contact-info-card reveal">
-            <h3>Canales de Comunicación</h3>
-            <p>
-              Prefiero la comunicación directa y ágil. Si deseas evaluar mi perfil para una posición o proyecto, el enlace directo por LinkedIn o un correo electrónico es la vía más rápida.
-            </p>
-
-            <div class="contact-channels">
-              <!-- Copiar Email -->
-              <a href="#" class="contact-channel-item" id="copy-email-btn" title="Copiar correo al portapapeles">
-                <div class="channel-left">
-                  <div class="channel-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  </div>
-                  <div>
-                    <div class="channel-name">Correo Electrónico</div>
-                    <div class="channel-detail">jmgonzalez.contact@gmail.com</div>
-                  </div>
-                </div>
-                <span class="btn btn-sm btn-secondary">Copiar 📋</span>
-              </a>
-
-              <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/in/jmgonzalezz" target="_blank" rel="noopener" class="contact-channel-item">
-                <div class="channel-left">
-                  <div class="channel-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                  </div>
-                  <div>
-                    <div class="channel-name">LinkedIn</div>
-                    <div class="channel-detail">linkedin.com/in/jmgonzalezz</div>
-                  </div>
-                </div>
-                <span class="btn btn-sm btn-secondary">Conectar ↗</span>
-              </a>
-
-              <!-- GitHub -->
-              <a href="https://github.com/Juzakito" target="_blank" rel="noopener" class="contact-channel-item">
-                <div class="channel-left">
-                  <div class="channel-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-                  </div>
-                  <div>
-                    <div class="channel-name">GitHub</div>
-                    <div class="channel-detail">github.com/Juzakito</div>
-                  </div>
-                </div>
-                <span class="btn btn-sm btn-secondary">Perfil ↗</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Columna Derecha: Formulario Elegante -->
-          <div class="contact-form-card reveal reveal-delay-1">
-            <form id="contact-form">
-              <div class="form-group">
-                <label for="contact-name" class="form-label">Nombre y Empresa</label>
-                <input type="text" id="contact-name" class="form-input" placeholder="Ej. Ana Morales · Stripe / YC Startup" required />
-              </div>
-
-              <div class="form-group">
-                <label for="contact-email" class="form-label">Correo Profesional</label>
-                <input type="email" id="contact-email" class="form-input" placeholder="tu.nombre@empresa.com" required />
-              </div>
-
-              <div class="form-group">
-                <label for="contact-message" class="form-label">Mensaje / Oportunidad</label>
-                <textarea id="contact-message" class="form-textarea" placeholder="Cuéntame sobre el rol, desafío de producto o proyecto que estás liderando..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
-                <span>Enviar Mensaje</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ========================================================================
-       9. FOOTER
-       ======================================================================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div>
-          <b>José González</b> · Product Manager & Tech Lead
-          <p style="font-size:0.8rem; color:#64748b; margin-top:2px;">
-            Diseñado con estándares de alta precisión inspirados en Stripe, Linear y Apple.
-          </p>
-        </div>
-
-        <div class="footer-links">
-          <a href="#hero" class="footer-link">Inicio</a>
-          <a href="#casos" class="footer-link">Casos</a>
-          <a href="#competencias" class="footer-link">Habilidades</a>
-          <a href="https://www.linkedin.com/in/jmgonzalezz" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
-          <a href="https://github.com/Juzakito" target="_blank" rel="noopener" class="footer-link">GitHub</a>
-        </div>
-      </div>
+    <div class="sm-right">
+      <div class="sm-user">${svgIcon('about', 44)}<div><b>${esc(DATA.nombre)}</b><small>Product & Tech Lead</small></div></div>
+      <span class="sm-link" data-app="about">Sobre mí</span>
+      <span class="sm-link" data-app="projects">Mis proyectos</span>
+      <span class="sm-link" data-app="inventa">INVENTA (Destacado)</span>
+      <span class="sm-link" data-app="skills">Propiedades del Sistema</span>
+      <span class="sm-link" data-app="contact">Contacto</span>
+      <span class="sm-link" data-app="notepad">Manifiesto (vision.txt)</span>
+      <button class="sm-shutdown" id="sm-shutdown">${svgIcon('power', 18)}<span>Apagar</span></button>
     </div>
-  </footer>
+  </div>`;
 
-  <!-- ========================================================================
-       10. LIGHTBOX MODAL (ZOOM EN CAPTURAS DE INVENTA)
-       ======================================================================== -->
-  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Vista ampliada de captura">
-    <div class="lightbox-content">
-      <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar visor">✕</button>
-      <img src="" id="lightbox-img" class="lightbox-img" alt="Vista detallada del caso de estudio" />
-    </div>
-  </div>
+startMenu.addEventListener('click', e => {
+  const item = e.target.closest('[data-app]');
+  if (item){ openApp(item.dataset.app); toggleStartMenu(false); }
+});
+startMenu.querySelector('#sm-shutdown').addEventListener('click', () => {
+  toggleStartMenu(false);
+  document.getElementById('shutdown-screen').classList.add('show');
+});
+document.getElementById('shutdown-screen').addEventListener('click', e => e.currentTarget.classList.remove('show'));
 
-  <!-- TOAST NOTIFICACIÓN -->
-  <div class="toast-msg" id="toast-msg" role="status" aria-live="polite">
-    <span id="toast-text">✓ Notificación</span>
-  </div>
+const smInput = document.getElementById('sm-q');
+smInput.addEventListener('input', () => {
+  const q = smInput.value.trim().toLowerCase();
+  startMenu.querySelectorAll('.sm-item[data-app]').forEach(it => {
+    it.style.display = it.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+});
+smInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter'){
+    const first = [...startMenu.querySelectorAll('.sm-item[data-app]')].find(it => it.style.display !== 'none');
+    if (first){ openApp(first.dataset.app); toggleStartMenu(false); }
+  }
+});
 
-  <!-- SCRIPT PRINCIPAL -->
-  <script src="scripts/app.js"></script>
+const startButton = document.getElementById('start-button');
+startButton.innerHTML = svgIcon('startOrb', 34);
+function toggleStartMenu(force){
+  const show = force !== undefined ? force : !startMenu.classList.contains('open');
+  startMenu.classList.toggle('open', show);
+  if (show){
+    smInput.value = '';
+    startMenu.querySelectorAll('.sm-item[data-app]').forEach(it => it.style.display = '');
+    setTimeout(() => smInput.focus(), 50);
+  }
+}
+startButton.addEventListener('click', e => { e.stopPropagation(); toggleStartMenu(); });
+document.addEventListener('pointerdown', e => {
+  if (!e.target.closest('#start-menu, #start-button')) toggleStartMenu(false);
+  if (!e.target.closest('.dicon')) document.querySelectorAll('.dicon.selected').forEach(i => i.classList.remove('selected'));
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') toggleStartMenu(false); });
+
+/* Reloj de la barra de tareas */
+function tick(){
+  const now = new Date();
+  document.getElementById('clk-time').textContent = now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+  document.getElementById('clk-date').textContent = now.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' });
+}
+tick();
+setInterval(tick, 10000);
+
+/* Gadget: Reloj Margarita */
+function updateClockGadget(){
+  const now = new Date();
+  const sec = now.getSeconds();
+  const min = now.getMinutes() + sec / 60;
+  const hr = (now.getHours() % 12) + min / 60;
+  
+  const secLine = document.getElementById('clock-sec');
+  const minLine = document.getElementById('clock-min');
+  const hrLine = document.getElementById('clock-hour');
+  
+  if (secLine) secLine.setAttribute('transform', `rotate(${sec * 6} 80 80)`);
+  if (minLine) minLine.setAttribute('transform', `rotate(${min * 6} 80 80)`);
+  if (hrLine) hrLine.setAttribute('transform', `rotate(${hr * 30} 80 80)`);
+}
+setInterval(updateClockGadget, 1000);
+updateClockGadget();
+
+/* Gadget: Calendario */
+function renderCalendarGadget(){
+  const now = new Date();
+  const months = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
+  const monthYearEl = document.getElementById('cal-month-year');
+  if (monthYearEl) {
+    monthYearEl.textContent = `${months[now.getMonth()]} ${now.getFullYear()}`;
+  }
+  const gridEl = document.getElementById('cal-grid');
+  if (!gridEl) return;
+  const year = now.getFullYear();
+  const month = now.getMonth();
+  const today = now.getDate();
+  const firstDay = (new Date(year, month, 1).getDay() + 6) % 7;
+  const totalDays = new Date(year, month + 1, 0).getDate();
+  
+  let html = '<div class="cal-days-head"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div><div class="cal-days-body">';
+  for (let i = 0; i < firstDay; i++) html += '<span class="cal-day empty"></span>';
+  for (let d = 1; d <= totalDays; d++) {
+    const isToday = d === today ? ' class="cal-day today"' : ' class="cal-day"';
+    html += `<span${isToday}>${d}</span>`;
+  }
+  html += '</div>';
+  gridEl.innerHTML = html;
+}
+renderCalendarGadget();
+
+/* ============================================================
+   LÓGICA INTERACTIVA DE LAS APPS
+   ============================================================ */
+let audioCtx = null;
+let isPlaying = false;
+let playInterval = null;
+let playSec = 0;
+let eqAnimInterval = null;
+
+// Imágenes para Image Viewer
+const GALLERY_ITEMS = [
+  { file: 'bliss.jpg', name: 'Bliss.jpg', res: '1920 × 1080 píxeles' },
+  { file: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200', name: 'Vista_Aurora.jpg', res: '1920 × 1200 píxeles' },
+  { file: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200', name: 'B2B_Analytics_Mockup.png', res: '1600 × 900 píxeles' },
+];
+let currentGalleryIdx = 0;
+let galleryZoom = 1;
+let galleryRot = 0;
+
+function ivNext(){
+  currentGalleryIdx = (currentGalleryIdx + 1) % GALLERY_ITEMS.length;
+  updateGalleryDisplay();
+}
+function ivPrev(){
+  currentGalleryIdx = (currentGalleryIdx - 1 + GALLERY_ITEMS.length) % GALLERY_ITEMS.length;
+  updateGalleryDisplay();
+}
+function ivRotate(){
+  galleryRot = (galleryRot + 90) % 360;
+  updateGalleryTransform();
+}
+function ivZoom(factor){
+  galleryZoom = clamp(galleryZoom * factor, 0.4, 3);
+  updateGalleryTransform();
+}
+function ivReset(){
+  galleryZoom = 1;
+  galleryRot = 0;
+  updateGalleryTransform();
+}
+function updateGalleryTransform(){
+  const img = document.getElementById('iv-main-img');
+  if (img) img.style.transform = `scale(${galleryZoom}) rotate(${galleryRot}deg)`;
+}
+function updateGalleryDisplay(){
+  const item = GALLERY_ITEMS[currentGalleryIdx];
+  const img = document.getElementById('iv-main-img');
+  const fname = document.getElementById('iv-filename');
+  const fcounter = document.getElementById('iv-counter');
+  if (img) img.src = item.file;
+  if (fname) fname.textContent = item.name;
+  if (fcounter) fcounter.textContent = `Imagen ${currentGalleryIdx + 1} de ${GALLERY_ITEMS.length}`;
+  ivReset();
+}
+
+function initAppLogic(appId, el){
+  // 1. Command Prompt interactivo
+  if (appId === 'cmd'){
+    const input = el.querySelector('#cmd-in');
+    const out = el.querySelector('#cmd-out');
+    const cmdHistory = [];
+    let histIdx = -1;
+
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter'){
+        const raw = input.value;
+        const cmd = raw.trim().toLowerCase();
+        input.value = '';
+        if (raw.trim()) cmdHistory.push(raw);
+        histIdx = cmdHistory.length;
+
+        out.innerHTML += `\nC:\\Users\\Jose&gt; ${esc(raw)}\n`;
+
+        if (cmd === 'help'){
+          out.innerHTML += `<span class="cmd-yellow">COMANDOS DISPONIBLES:</span>
+  <span class="cmd-cyan">whoami</span>       Muestra la información del usuario del sistema
+  <span class="cmd-cyan">projects</span>     Lista las iniciativas y proyectos SaaS B2B
+  <span class="cmd-cyan">skills</span>       Muestra la evaluación técnica (WEI)
+  <span class="cmd-cyan">contact</span>      Muestra enlaces de contacto y redes
+  <span class="cmd-cyan">dir</span>          Lista los archivos y carpetas del directorio
+  <span class="cmd-cyan">cat vision.txt</span> Muestra el manifiesto del Tech Lead
+  <span class="cmd-cyan">ver</span>          Versión de Windows Vista Enterprise
+  <span class="cmd-cyan">cls</span>          Limpia la pantalla de la terminal
+  <span class="cmd-cyan">exit</span>         Cierra la ventana del símbolo del sistema\n`;
+        } else if (cmd === 'whoami'){
+          out.innerHTML += `<span class="cmd-green">jose-gonzalez\\tech-lead</span>
+Nombre: José González
+Rol: Product Manager & Tech Lead · SaaS B2B e Inteligencia Artificial
+Startup: Free Mind\n`;
+        } else if (cmd === 'projects'){
+          out.innerHTML += `<span class="cmd-yellow">PROYECTOS ACTIVOS:</span>
+1. INVENTA (SaaS IA Compras & Inventarios) [DESTACADO] -> https://inventa-dpzedgxep-juzaki.vercel.app/
+2. Free Mind (SaaS B2B + IA Peer-to-Peer) -> https://freemind-app.vercel.app/
+3. Protocolo I-CARE (Duty to Warn / Moderación Semántica)
+4. B2B Insights Dashboard (Mapas de calor de estrés estudiantil & LTV)
+5. MVP Wizard of Oz (Validación empírica No-Code)\n`;
+        } else if (cmd === 'skills'){
+          out.innerHTML += `<span class="cmd-yellow">EVALUACIÓN DE EXPERIENCIA (WEI):</span>
+- Product Management & Scrum:       [5.8 / 5.9]
+- Estrategia B2B & Lean Startup:    [5.6 / 5.9]
+- Diseño UI/UX (Figma):             [4.8 / 5.9]
+- Integración IA (Protocolos):      [4.7 / 5.9]
+- React & Entornos No-Code:         [4.5 / 5.9]\n`;
+        } else if (cmd === 'contact'){
+          out.innerHTML += `<span class="cmd-yellow">CONTACTO:</span>
+LinkedIn: ${DATA.socials.linkedin}
+GitHub:   ${DATA.socials.github}
+Email:    ${DATA.socials.email}\n`;
+        } else if (cmd === 'dir'){
+          out.innerHTML += ` Directorio de C:\\Users\\Jose\\Documents
+
+16/09/2026  19:50    &lt;DIR&gt;          .
+16/09/2026  19:50    &lt;DIR&gt;          ..
+16/09/2026  19:50    &lt;DIR&gt;          Projects
+16/09/2026  19:50               360 INVENTA.url
+16/09/2026  19:50             2.450 vision.txt
+16/09/2026  19:50             1.120 Sobre_Mi.txt
+16/09/2026  19:50               340 FreeMind.url
+16/09/2026  19:50         3.450.210 Aero_Ambient.wma
+16/09/2026  19:50             4.096 Propiedades.sys
+               6 archivos      3.458.576 bytes
+               3 carpetas 128.450.914.304 bytes libres\n`;
+        } else if (cmd === 'cat vision.txt' || cmd === 'type vision.txt'){
+          out.innerHTML += `<span class="cmd-muted">${esc(MANIFESTO_TEXT)}</span>\n`;
+        } else if (cmd === 'ver'){
+          out.innerHTML += `Microsoft Windows Vista™ [Versión 6.0.6002] Enterprise (Tech Lead Edition)\n`;
+        } else if (cmd === 'cls'){
+          out.innerHTML = '';
+        } else if (cmd === 'exit'){
+          closeWin(openWins.get('cmd'));
+          return;
+        } else if (cmd !== ''){
+          out.innerHTML += `'${esc(raw)}' no se reconoce como un comando interno o externo.\nEscriba "help" para ver la lista de comandos permitidos.\n`;
+        }
+        const term = el.querySelector('#cmd-terminal');
+        term.scrollTop = term.scrollHeight;
+      } else if (e.key === 'ArrowUp'){
+        if (histIdx > 0){ histIdx--; input.value = cmdHistory[histIdx] || ''; }
+      } else if (e.key === 'ArrowDown'){
+        if (histIdx < cmdHistory.length - 1){ histIdx++; input.value = cmdHistory[histIdx] || ''; }
+        else { histIdx = cmdHistory.length; input.value = ''; }
+      }
+    });
+    setTimeout(() => input.focus(), 80);
+  }
+
+  // 2. Internet Explorer Tabs
+  if (appId === 'ie'){
+    const tabs = el.querySelectorAll('.ie-tab');
+    const view = el.querySelector('#ie-view');
+    const urlInput = el.querySelector('#ie-url');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const which = tab.dataset.ietab;
+        if (which === 'inventa'){
+          urlInput.value = 'https://inventa-dpzedgxep-juzaki.vercel.app/';
+          view.innerHTML = `
+            <div class="ie-hero">
+              <h2>INVENTA — El Cerebro de Compras para tu Empresa</h2>
+              <p>Plataforma SaaS impulsada por IA diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar compras empresariales.</p>
+              <p><b>Impacto:</b> -35% quiebres de stock, -28% sobrestock, modelos predictivos de abastecimiento y analítica en tiempo real.</p>
+              <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;">
+                <a class="ie-big-link" href="https://inventa-dpzedgxep-juzaki.vercel.app/" target="_blank" rel="noopener">Abrir en vivo ↗</a>
+                <button class="ie-big-link" style="border:none; cursor:pointer;" onclick="openApp('inventa')">Ver Caso de Estudio 🪟</button>
+              </div>
+            </div>
+            <div style="font-size:12px; color:#527494; line-height:1.6; margin-top:10px;">
+              <b>Especificaciones:</b> Inteligencia artificial aplicada a compras, dashboards ejecutivos en tiempo real, optimización de capital de trabajo y arquitectura SaaS escalable.
+            </div>`;
+        } else if (which === 'freemind'){
+          urlInput.value = 'https://freemind-app.vercel.app/';
+          view.innerHTML = `
+            <div class="ie-hero">
+              <h2>Free Mind — Ecosistema Digital de Salud Mental Universitaria</h2>
+              <p>Plataforma SaaS B2B que combina Inteligencia Artificial y un modelo Peer-to-Peer para ofrecer soporte emocional anónimo a estudiantes universitarios.</p>
+              <p><b>Protocolo I-CARE:</b> Moderación semántica automatizada en tiempo real que protege la salud estudiantil y resguarda el Lifetime Value (LTV) institucional.</p>
+              <a class="ie-big-link" href="https://freemind-app.vercel.app/" target="_blank" rel="noopener">Abrir freemind-app.vercel.app en vivo ↗</a>
+            </div>`;
+        } else if (which === 'github'){
+          urlInput.value = 'https://github.com/Juzakito';
+          view.innerHTML = `
+            <div class="ie-hero">
+              <h2>GitHub — @Juzakito</h2>
+              <p>Repositorios de código abierto, desarrollo de arquitecturas SaaS, portafolio Windows Vista y experimentos ágiles.</p>
+              <a class="ie-big-link" href="${esc(DATA.socials.github)}" target="_blank" rel="noopener">Ver Perfil en GitHub ↗</a>
+            </div>`;
+        } else if (which === 'linkedin'){
+          urlInput.value = 'https://www.linkedin.com/in/jmgonzalezz';
+          view.innerHTML = `
+            <div class="ie-hero">
+              <h2>LinkedIn — José González</h2>
+              <p>Product Manager & Tech Lead · SaaS B2B e Inteligencia Artificial.</p>
+              <a class="ie-big-link" href="${esc(DATA.socials.linkedin)}" target="_blank" rel="noopener">Conectar en LinkedIn ↗</a>
+            </div>`;
+        }
+      });
+    });
+  }
+
+  // 3. Media Player (Audio Synth & Animación)
+  if (appId === 'wmp'){
+    const playBtn = el.querySelector('#wmp-toggle-play');
+    const fill = el.querySelector('#wmp-fill');
+    const timeEl = el.querySelector('#wmp-cur-time');
+    const bars = el.querySelectorAll('.wmp-bar');
+
+    playBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      playBtn.textContent = isPlaying ? '⏸' : '▶';
+
+      if (isPlaying){
+        // Iniciar Web Audio Synth
+        try {
+          if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          playAmbientSound();
+        } catch(err){}
+
+        // Animación de ecualizador
+        if (eqAnimInterval) clearInterval(eqAnimInterval);
+        eqAnimInterval = setInterval(() => {
+          bars.forEach(b => {
+            const h = Math.floor(Math.random() * 26) + 6;
+            b.style.height = h + 'px';
+          });
+        }, 140);
+
+        // Barra de progreso
+        if (playInterval) clearInterval(playInterval);
+        playInterval = setInterval(() => {
+          playSec = (playSec + 1) % 225;
+          const pct = (playSec / 225) * 100;
+          if (fill) fill.style.width = pct + '%';
+          const m = Math.floor(playSec / 60);
+          const s = playSec % 60;
+          if (timeEl) timeEl.textContent = `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+        }, 1000);
+      } else {
+        if (eqAnimInterval) clearInterval(eqAnimInterval);
+        if (playInterval) clearInterval(playInterval);
+        bars.forEach(b => { b.style.height = '8px'; });
+      }
+    });
+  }
+
+  // 4. Skills animación WEI
+  if (appId === 'skills'){
+    void el.offsetWidth;
+    setTimeout(() => {
+      el.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.w + '%'; });
+    }, 60);
+  }
+}
+
+/* Síntesis suave de acorde ambiental Frutiger Aero */
+function playAmbientSound(){
+  if (!audioCtx) return;
+  const now = audioCtx.currentTime;
+  const freqs = [261.63, 329.63, 392.00, 523.25]; // Do Mayor 7 / Acorde etéreo
+  freqs.forEach((f, i) => {
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(f, now);
+    
+    gain.gain.setValueAtTime(0, now);
+    gain.gain.linearRampToValueAtTime(0.04, now + 1.2);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 6.0);
+    
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start(now + i * 0.15);
+    osc.stop(now + 6.5);
+  });
+}
+
+/* Arranque inicial limpio: no se abren ventanas automáticamente */
+</script>
 </body>
 </html>
