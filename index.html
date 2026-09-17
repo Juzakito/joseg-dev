@@ -241,61 +241,174 @@ a{ color: var(--azul); }
 #tray svg{ width:17px; height:17px; opacity:.92; }
 #clock{ text-align:right; color:#eaf6ff; font-size:11.5px; line-height:1.35; text-shadow:0 1px 2px rgba(0,10,30,.8); }
 
-/* ---------- Menú Inicio ---------- */
+/* ---------- Menú Inicio (Windows Vista Frutiger Aero — Exacto a referencia) ---------- */
 #start-menu{
-  position:absolute; left:6px; bottom:calc(var(--taskbar-h) + 5px); width:410px; z-index:9000;
-  border-radius:10px; overflow:hidden; display:none;
-  background:linear-gradient(180deg, rgba(250,253,255,.76), rgba(228,240,252,.64));
-  backdrop-filter: blur(18px) saturate(1.6);
-  -webkit-backdrop-filter: blur(18px) saturate(1.6);
-  border:1px solid rgba(255,255,255,.8);
-  box-shadow:0 12px 42px rgba(0,20,60,.45), inset 0 1px 0 rgba(255,255,255,.9);
+  position:absolute; left:0px; bottom:var(--taskbar-h); width:414px; z-index:9000;
+  border-radius:8px 8px 0 0; overflow:hidden; display:none;
+  background:#0e1a27;
+  border:1px solid rgba(255,255,255,.32);
+  border-bottom:none;
+  box-shadow: 0 16px 48px rgba(0, 15, 35, 0.75), 0 0 0 1px rgba(8, 20, 32, 0.9), inset 0 1px 0 rgba(255,255,255,.75);
 }
-#start-menu.open{ display:block; animation:smIn .16s ease-out; }
-@keyframes smIn{ from{ opacity:0; transform:translateY(14px); } }
-.sm-cols{ display:grid; grid-template-columns:1.35fr .85fr; min-height:410px; }
+#start-menu.open{ display:flex; flex-direction:column; animation:smIn .15s cubic-bezier(0.1, 0.9, 0.2, 1); }
+@keyframes smIn{ from{ opacity:0; transform:translateY(12px) scale(0.98); } to{ opacity:1; transform:translateY(0) scale(1); } }
+
+/* Cuerpo con 2 columnas */
+.sm-body{
+  display:grid; grid-template-columns: 248px 166px; min-height:388px;
+}
+
+/* Columna Izquierda: Gradiente Frutiger Aero Menta/Lima/Chartreuse */
 .sm-left{
-  background:rgba(255,255,255,.82); padding:8px; display:flex; flex-direction:column;
-  border-right:1px solid rgba(160,195,230,.5);
+  background: linear-gradient(145deg, #92dfbc 0%, #b8e8b2 38%, #d5f1a5 75%, #e1f59e 100%);
+  padding: 8px 6px 8px 8px;
+  display: flex; flex-direction: column; gap: 3px;
+  border-right: 1px solid rgba(15, 30, 45, 0.75);
+  box-shadow: inset -1px 0 0 rgba(255, 255, 255, 0.45);
 }
+
 .sm-item{
-  display:flex; align-items:center; gap:10px; padding:6px 9px; border-radius:6px;
-  border:1px solid transparent; cursor:pointer; font-size:12.5px; color:#16324f;
+  display: flex; align-items: center; gap: 8px;
+  padding: 5px 6px; border-radius: 5px;
+  border: 1px solid transparent; cursor: pointer; text-decoration: none;
+  transition: background .12s, border-color .12s, box-shadow .12s;
 }
-.sm-item svg{ width:28px; height:28px; flex:0 0 auto; }
-.sm-item:hover{ background:linear-gradient(180deg,#e8f4ff,#d2e8fa); border-color:#b3d5f0; }
-.sm-sep{ height:1px; background:linear-gradient(90deg, transparent, #c3d9ec, transparent); margin:6px 4px; }
-.sm-search{
-  margin-top:auto; display:flex; align-items:center; gap:6px;
-  background:#fff; border:1px solid #a9c6e2; border-radius:999px; padding:5px 12px;
-  box-shadow:inset 0 1px 3px rgba(30,70,120,.18);
+.sm-item:hover{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(230, 248, 238, 0.4) 100%);
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 1px 3px rgba(0, 25, 20, 0.12), inset 0 1px 0 #ffffff;
 }
-.sm-search input{
-  border:none; outline:none; flex:1; font-size:12px; font-family:inherit; color:#16324f; background:transparent;
+.sm-item-icon{
+  width: 32px; height: 32px; flex: 0 0 32px;
+  display: flex; align-items: center; justify-content: center;
+  filter: drop-shadow(0 2px 3px rgba(0, 30, 20, 0.35));
 }
-.sm-search input::placeholder{ color:#8aa8c4; }
-.sm-search svg{ width:14px; height:14px; opacity:.6; }
+.sm-item-icon svg{ width: 32px; height: 32px; }
+.sm-item-texts{
+  display: flex; flex-direction: column; gap: 1px; min-width: 0;
+}
+.sm-item-title{
+  font-size: 12px; font-weight: 700; color: #102435;
+  letter-spacing: -0.15px; line-height: 1.15;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.sm-item-desc{
+  font-size: 10px; color: #3b5a4b; line-height: 1.22;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Columna Derecha: Slate Aero Glass */
 .sm-right{
-  background:linear-gradient(180deg, rgba(88,128,168,.34), rgba(34,62,98,.5));
-  padding:14px 12px; display:flex; flex-direction:column; color:#eaf4ff;
+  background: linear-gradient(180deg, rgba(30, 48, 66, 0.96) 0%, rgba(18, 30, 45, 0.98) 60%, rgba(10, 18, 28, 0.99) 100%);
+  backdrop-filter: blur(16px) saturate(1.6);
+  -webkit-backdrop-filter: blur(16px) saturate(1.6);
+  padding: 12px 10px;
+  display: flex; flex-direction: column; color: #eaf4ff;
 }
-.sm-user{ display:flex; align-items:center; gap:10px; margin-bottom:12px; }
-.sm-user svg{ width:44px; height:44px; filter:drop-shadow(0 2px 4px rgba(0,20,50,.4)); }
-.sm-user b{ font-size:13px; display:block; text-shadow:0 1px 2px rgba(0,20,50,.6); }
-.sm-user small{ font-size:10.5px; opacity:.85; }
-.sm-link{
-  display:block; padding:5px 9px; margin-left:-6px; border-radius:6px; font-size:12px;
-  color:#e8f3ff; text-decoration:none; cursor:pointer; text-shadow:0 1px 2px rgba(0,20,50,.5);
+
+.sm-avatar-box{
+  display: flex; justify-content: center; margin-bottom: 10px;
 }
-.sm-link:hover{ background:rgba(255,255,255,.16); text-decoration:underline; }
-.sm-shutdown{
-  margin-top:auto; align-self:flex-end; display:flex; align-items:center; gap:8px;
-  padding:7px 14px; border-radius:8px; border:1px solid rgba(255,255,255,.5); cursor:pointer;
-  background:linear-gradient(180deg, rgba(255,150,110,.95), rgba(205,70,35,.95)); color:#fff; font-size:12.5px; font-weight:600;
-  box-shadow:0 2px 8px rgba(120,30,0,.4), inset 0 1px 0 rgba(255,255,255,.6);
+.sm-avatar-frame{
+  width: 66px; height: 66px; border-radius: 8px;
+  border: 2.5px solid #d4be76;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+  overflow: hidden; background: #182838;
 }
-.sm-shutdown:hover{ filter:brightness(1.12); box-shadow:0 0 12px rgba(255,110,60,.7); }
-.sm-shutdown svg{ width:18px; height:18px; }
+.sm-avatar-frame img{
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+.sm-user-pill{
+  background: linear-gradient(180deg, rgba(65, 88, 114, 0.75) 0%, rgba(32, 48, 70, 0.85) 100%);
+  border: 1px solid rgba(135, 175, 215, 0.35);
+  border-radius: 6px; padding: 6px 10px;
+  color: #ffffff; font-size: 12.5px; font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+  margin-bottom: 8px; cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background .12s, border-color .12s;
+}
+.sm-user-pill:hover{
+  background: linear-gradient(180deg, rgba(80, 108, 138, 0.88) 0%, rgba(42, 62, 88, 0.95) 100%);
+  border-color: rgba(160, 205, 245, 0.55);
+}
+
+.sm-links-list{
+  display: flex; flex-direction: column; gap: 2px;
+}
+.sm-link-row{
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 4.5px 8px; color: #eaf3ff; font-size: 11.5px;
+  text-decoration: none; cursor: pointer; border-radius: 4px;
+  text-shadow: 0 1px 2px rgba(0, 15, 35, 0.5);
+  transition: background .12s;
+}
+.sm-link-row:hover{
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+.sm-link-arrow{
+  color: #8faec9; font-size: 11px; opacity: 0.85; margin-left: 6px;
+}
+
+/* Barra inferior del Menú Inicio (Search + 3 botones de acción) */
+.sm-footer{
+  display: grid; grid-template-columns: 248px 166px;
+  background: linear-gradient(180deg, #182838 0%, #0d1723 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 5px 8px 6px 8px; align-items: center;
+}
+
+.sm-search-box{
+  display: flex; align-items: center; gap: 6px;
+  background: #ffffff; border: 1px solid #67849e;
+  border-radius: 3px; padding: 2px 7px; height: 25px;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.32);
+}
+.sm-search-box input{
+  border: none; outline: none; background: transparent;
+  font-size: 11px; font-family: inherit; font-style: italic;
+  color: #102435; width: 100%;
+}
+.sm-search-box input::placeholder{
+  color: #728c9f; font-style: italic;
+}
+.sm-search-icon{
+  width: 15px; height: 15px; flex: 0 0 15px; display: flex; align-items: center; justify-content: center;
+}
+.sm-search-icon svg{ width: 15px; height: 15px; }
+
+.sm-actions-row{
+  display: flex; align-items: center; justify-content: flex-end; gap: 4px; padding-right: 2px;
+}
+.sm-btn-act{
+  width: 32px; height: 23px; border-radius: 3px; border: 1px solid;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 1px 3px rgba(0, 0, 0, 0.4);
+  transition: filter .12s, transform .08s;
+}
+.sm-btn-act:hover{ filter: brightness(1.22); }
+.sm-btn-act:active{ transform: translateY(1px); }
+.sm-btn-act svg{ width: 14px; height: 14px; }
+
+/* Botón 1: Standby (Ámbar / Oro) */
+.sm-btn-standby{
+  background: linear-gradient(180deg, #ba944c 0%, #8d6b2c 48%, #573f15 50%, #765721 100%);
+  border-color: #3b2a0c;
+}
+/* Botón 2: Bloquear (Azul aero glass) */
+.sm-btn-lock{
+  background: linear-gradient(180deg, #448ec8 0%, #256da6 48%, #134775 50%, #1e5e92 100%);
+  border-color: #0c2d4a;
+}
+/* Botón 3: Apagar (Rojo carmesí) */
+.sm-btn-shutdown{
+  background: linear-gradient(180deg, #d64739 0%, #b82d21 48%, #85140a 50%, #ab2216 100%);
+  border-color: #520903;
+}
 
 /* ---------- Pantalla de apagado ---------- */
 #shutdown-screen{
@@ -1167,6 +1280,68 @@ const ICONS = {
     <path d="M24 50h16l2 6H22z" fill="#94a3b8" stroke="#64748b" stroke-width="0.6"/>
     <rect x="18" y="55" width="28" height="4" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="0.5"/>
   </svg>`,
+
+  // Windows Vista Security Shield (4 quadrants: Red, Blue, Yellow, Green with metallic chrome bevel)
+  shield: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sh_m__UID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.5" stop-color="#d4e2f0"/><stop offset="1" stop-color="#708aa4"/></linearGradient>
+      <linearGradient id="sh_r__UID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff6b6b"/><stop offset="1" stop-color="#cc1818"/></linearGradient>
+      <linearGradient id="sh_b__UID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5bb4ff"/><stop offset="1" stop-color="#126bc4"/></linearGradient>
+      <linearGradient id="sh_y__UID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe66d"/><stop offset="1" stop-color="#e5a00d"/></linearGradient>
+      <linearGradient id="sh_g__UID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7be87b"/><stop offset="1" stop-color="#229622"/></linearGradient>
+      <linearGradient id="sh_gl__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <path d="M32 6 C48 6, 56 12, 56 26 C56 44, 44 54, 32 58 C20 54, 8 44, 8 26 C8 12, 16 6, 32 6 Z" fill="url(#sh_m__UID__)" stroke="#3e5770" stroke-width="1.4" filter="drop-shadow(0 3px 5px rgba(0,25,60,0.4))"/>
+    <path d="M32 9 C45 9, 52 14, 52 26 C52 41, 42 49, 32 53 C22 49, 12 41, 12 26 C12 14, 19 9, 32 9 Z" fill="#1c2b3a"/>
+    <path d="M32 10 L32 29 L14 29 C14 18, 20 10, 32 10 Z" fill="url(#sh_r__UID__)"/>
+    <path d="M32 10 C44 10, 50 18, 50 29 L32 29 Z" fill="url(#sh_b__UID__)"/>
+    <path d="M14 31 L32 31 L32 51 C24 47, 16 41, 14 31 Z" fill="url(#sh_y__UID__)"/>
+    <path d="M32 31 L50 31 C48 41, 40 47, 32 51 Z" fill="url(#sh_g__UID__)"/>
+    <line x1="32" y1="9" x2="32" y2="53" stroke="#eef4fa" stroke-width="1.8"/>
+    <line x1="13" y1="30" x2="51" y2="30" stroke="#eef4fa" stroke-width="1.8"/>
+    <path d="M14 14 C22 10, 42 10, 50 14 C51 22, 45 28, 32 28 C19 28, 13 22, 14 14 Z" fill="url(#sh_gl__UID__)"/>
+  </svg>`,
+
+  // Smartphone (Evolution X style)
+  phone: `<svg viewBox="0 0 64 64" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="ph_b__UID__" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.3" stop-color="#cfddec"/><stop offset="0.7" stop-color="#94adc4"/><stop offset="1" stop-color="#5d7890"/></linearGradient>
+      <linearGradient id="ph_s__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0c2540"/><stop offset="0.5" stop-color="#184a78"/><stop offset="1" stop-color="#2a75b2"/></linearGradient>
+      <linearGradient id="ph_gl__UID__" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.8"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <rect x="17" y="6" width="30" height="52" rx="7" fill="url(#ph_b__UID__)" stroke="#38546e" stroke-width="1.3" filter="drop-shadow(0 3px 5px rgba(0,25,60,0.4))"/>
+    <rect x="20" y="13" width="24" height="37" rx="2" fill="url(#ph_s__UID__)" stroke="#1a3550" stroke-width="0.8"/>
+    <rect x="28" y="9.5" width="8" height="1.8" rx="0.9" fill="#304456"/>
+    <circle cx="28" cy="23" r="3" fill="#68d5f8" opacity="0.8"/>
+    <circle cx="36" cy="33" r="4.5" fill="#a4f0b2" opacity="0.6"/>
+    <path d="M20 37 Q 28 29 36 33 T 44 41 L 44 50 L 20 50 Z" fill="#58a8e0" opacity="0.4"/>
+    <polygon points="20,13 44,13 20,35" fill="url(#ph_gl__UID__)"/>
+    <circle cx="32" cy="54" r="2.5" fill="none" stroke="#68849c" stroke-width="1.2"/>
+  </svg>`,
+
+  // Vista Glass Search magnifying glass
+  vistaSearch: `<svg viewBox="0 0 24 24" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="vsg_l__UID__" cx="35%" cy="35%" r="65%"><stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#99d1f8"/><stop offset="1" stop-color="#3b8dc9"/></radialGradient>
+    </defs>
+    <circle cx="9.5" cy="9.5" r="6.5" fill="url(#vsg_l__UID__)" fill-opacity="0.45" stroke="#3b6e98" stroke-width="1.8"/>
+    <circle cx="9.5" cy="9.5" r="5" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.75"/>
+    <line x1="14.3" y1="14.3" x2="20.5" y2="20.5" stroke="#1c3348" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="14.8" y1="14.8" x2="19.8" y2="19.8" stroke="#6892b4" stroke-width="1.2" stroke-linecap="round"/>
+  </svg>`,
+
+  // Action Button Icons
+  padlock: `<svg viewBox="0 0 20 20" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 8V6a4 4 0 0 1 8 0v2h1a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 15 18H5a1.5 1.5 0 0 1-1.5-1.5v-7A1.5 1.5 0 0 1 5 8h1zm2 0h4V6a2 2 0 0 0-4 0v2z" fill="#ffffff" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.5))"/>
+  </svg>`,
+  standbyIcon: `<svg viewBox="0 0 20 20" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="6.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="32 10" transform="rotate(-90 10 10)" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.5))"/>
+    <line x1="10" y1="4.5" x2="10" y2="10.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.5))"/>
+  </svg>`,
+  shutdownIcon: `<svg viewBox="0 0 20 20" width="__W__" height="__W__" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6.5 6.5A6 6 0 1 0 13.5 6.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.5))"/>
+    <line x1="10" y1="3" x2="10" y2="9.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.5))"/>
+  </svg>`,
 };
 
 function svgIcon(name, size){
@@ -1924,49 +2099,163 @@ quickLaunch.addEventListener('click', e => {
   if (btn) openApp(btn.dataset.app);
 });
 
-/* Menú Inicio */
+/* ============================================================
+   MENÚ INICIO (WINDOWS VISTA FRUTIGER AERO — PERSONALIZADO)
+   ============================================================ */
+const SM_LEFT_ITEMS = [
+  {
+    id: 'inventa',
+    icon: 'inventa',
+    title: 'INVENTA',
+    desc: 'SaaS con IA para predicción de demanda y gestión de compras.',
+    app: 'inventa'
+  },
+  {
+    id: 'freemind',
+    icon: 'about',
+    title: 'Free Mind',
+    desc: 'Plataforma B2B de apoyo emocional estudiantil y comunidad.',
+    app: 'ie'
+  },
+  {
+    id: 'icare',
+    icon: 'shield',
+    title: 'Protocolo I-CARE',
+    desc: 'Moderación semántica en tiempo real y alerta Duty to Warn.',
+    app: 'projects'
+  },
+  {
+    id: 'dashboard',
+    icon: 'computer',
+    title: 'B2B Insights Dashboard',
+    desc: 'Mapas de calor de bienestar institucional y retención de LTV.',
+    app: 'projects'
+  },
+  {
+    id: 'wizard',
+    icon: 'phone',
+    title: 'MVP Wizard of Oz',
+    desc: 'Validación empírica en campo con No-Code, Telegram y QR.',
+    app: 'projects'
+  },
+  {
+    id: 'projects',
+    icon: 'projects',
+    title: 'Iniciativas & Proyectos',
+    desc: 'Portafolio de proyectos SaaS B2B, Lean Startup y Agile.',
+    app: 'projects'
+  },
+  {
+    id: 'notepad',
+    icon: 'notepad',
+    title: 'Manifiesto Tech Lead',
+    desc: 'Filosofía de producto, Scrum, cultura y visión técnica (vision.txt).',
+    app: 'notepad'
+  }
+];
+
 const startMenu = document.getElementById('start-menu');
 startMenu.innerHTML = `
-  <div class="sm-cols">
+  <div class="sm-body">
     <div class="sm-left">
-      ${DESKTOP_ICONS.map(id => `
-        <div class="sm-item" data-app="${id}">${svgIcon(APPS[id].icono, 28)}<span>${esc(APPS[id].titulo)}</span></div>`).join('')}
-      <div class="sm-sep"></div>
-      <div class="sm-search">${svgIcon('search', 14)}<input type="text" placeholder="Buscar programas..." id="sm-q" aria-label="Buscar programas"></div>
+      ${SM_LEFT_ITEMS.map(it => `
+        <div class="sm-item" data-app="${it.app}" title="${esc(it.title)}">
+          <div class="sm-item-icon">${svgIcon(it.icon, 32)}</div>
+          <div class="sm-item-texts">
+            <span class="sm-item-title">${esc(it.title)}</span>
+            <span class="sm-item-desc">${esc(it.desc)}</span>
+          </div>
+        </div>`).join('')}
     </div>
     <div class="sm-right">
-      <div class="sm-user">${svgIcon('about', 44)}<div><b>${esc(DATA.nombre)}</b><small>Product & Tech Lead</small></div></div>
-      <span class="sm-link" data-app="about">Sobre mí</span>
-      <span class="sm-link" data-app="projects">Mis proyectos</span>
-      <span class="sm-link" data-app="inventa">INVENTA (Destacado)</span>
-      <span class="sm-link" data-app="skills">Propiedades del Sistema</span>
-      <span class="sm-link" data-app="contact">Contacto</span>
-      <span class="sm-link" data-app="notepad">Manifiesto (vision.txt)</span>
-      <button class="sm-shutdown" id="sm-shutdown">${svgIcon('power', 18)}<span>Apagar</span></button>
+      <div class="sm-avatar-box">
+        <div class="sm-avatar-frame" title="José González">
+          <img src="avatar.jpg" alt="José González" onerror="this.src='favicon.png'">
+        </div>
+      </div>
+      <div class="sm-user-pill" data-app="about" title="Ver perfil de José González">
+        ${esc(DATA.nombre)}
+      </div>
+      <div class="sm-links-list">
+        <a class="sm-link-row" href="${esc(DATA.socials.linkedin)}" target="_blank" rel="noopener"><span>LinkedIn</span><span class="sm-link-arrow">↗</span></a>
+        <a class="sm-link-row" href="${esc(DATA.socials.github)}" target="_blank" rel="noopener"><span>GitHub</span><span class="sm-link-arrow">↗</span></a>
+        <a class="sm-link-row" href="${esc(DATA.projects[0].url)}" target="_blank" rel="noopener"><span>INVENTA Demo</span><span class="sm-link-arrow">↗</span></a>
+        <a class="sm-link-row" href="${esc(DATA.projects[1].url)}" target="_blank" rel="noopener"><span>Free Mind Live</span><span class="sm-link-arrow">↗</span></a>
+        <div class="sm-link-row" data-app="about"><span>Sobre Mí</span><span class="sm-link-arrow">↗</span></div>
+        <div class="sm-link-row" data-app="contact"><span>Contacto</span><span class="sm-link-arrow">↗</span></div>
+        <div class="sm-link-row" data-app="notepad"><span>vision.txt</span><span class="sm-link-arrow">↗</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sm-footer">
+    <div class="sm-search-box">
+      <input type="text" placeholder="Start Search" id="sm-q" aria-label="Start Search" autocomplete="off">
+      <div class="sm-search-icon">${svgIcon('vistaSearch', 15)}</div>
+    </div>
+    <div class="sm-actions-row">
+      <button class="sm-btn-act sm-btn-standby" id="sm-standby" title="Suspender / Standby" aria-label="Suspender">${svgIcon('standbyIcon', 13)}</button>
+      <button class="sm-btn-act sm-btn-lock" id="sm-lock" title="Bloquear equipo" aria-label="Bloquear">${svgIcon('padlock', 13)}</button>
+      <button class="sm-btn-act sm-btn-shutdown" id="sm-shutdown" title="Apagar equipo" aria-label="Apagar">${svgIcon('shutdownIcon', 13)}</button>
     </div>
   </div>`;
 
 startMenu.addEventListener('click', e => {
-  const item = e.target.closest('[data-app]');
-  if (item){ openApp(item.dataset.app); toggleStartMenu(false); }
-});
-startMenu.querySelector('#sm-shutdown').addEventListener('click', () => {
-  toggleStartMenu(false);
-  document.getElementById('shutdown-screen').classList.add('show');
+  const linkRow = e.target.closest('.sm-link-row[href]');
+  if (linkRow) {
+    toggleStartMenu(false);
+    return;
+  }
+  const appItem = e.target.closest('[data-app]');
+  if (appItem){
+    openApp(appItem.dataset.app);
+    toggleStartMenu(false);
+    return;
+  }
+  const shutdown = e.target.closest('#sm-shutdown');
+  if (shutdown){
+    toggleStartMenu(false);
+    const ss = document.getElementById('shutdown-screen');
+    ss.querySelector('h2').textContent = 'Ahora puede cerrar la sesión de forma segura.';
+    ss.querySelector('p').textContent = '(haz clic en cualquier parte para reiniciar el escritorio)';
+    ss.classList.add('show');
+    return;
+  }
+  const lock = e.target.closest('#sm-lock');
+  if (lock){
+    toggleStartMenu(false);
+    const ss = document.getElementById('shutdown-screen');
+    ss.querySelector('h2').textContent = 'Sesión bloqueada — Windows Vista';
+    ss.querySelector('p').textContent = '(haz clic en cualquier parte para desbloquear)';
+    ss.classList.add('show');
+    return;
+  }
+  const standby = e.target.closest('#sm-standby');
+  if (standby){
+    toggleStartMenu(false);
+    const ss = document.getElementById('shutdown-screen');
+    ss.querySelector('h2').textContent = 'Modo de suspensión (Standby)';
+    ss.querySelector('p').textContent = '(haz clic para reactivar el sistema)';
+    ss.classList.add('show');
+    return;
+  }
 });
 document.getElementById('shutdown-screen').addEventListener('click', e => e.currentTarget.classList.remove('show'));
 
 const smInput = document.getElementById('sm-q');
 smInput.addEventListener('input', () => {
   const q = smInput.value.trim().toLowerCase();
-  startMenu.querySelectorAll('.sm-item[data-app]').forEach(it => {
-    it.style.display = it.textContent.toLowerCase().includes(q) ? '' : 'none';
+  startMenu.querySelectorAll('.sm-item').forEach(it => {
+    const text = it.textContent.toLowerCase();
+    it.style.display = text.includes(q) ? 'flex' : 'none';
   });
 });
 smInput.addEventListener('keydown', e => {
   if (e.key === 'Enter'){
-    const first = [...startMenu.querySelectorAll('.sm-item[data-app]')].find(it => it.style.display !== 'none');
-    if (first){ openApp(first.dataset.app); toggleStartMenu(false); }
+    const first = [...startMenu.querySelectorAll('.sm-item')].find(it => it.style.display !== 'none');
+    if (first && first.dataset.app){
+      openApp(first.dataset.app);
+      toggleStartMenu(false);
+    }
   }
 });
 
@@ -1977,7 +2266,7 @@ function toggleStartMenu(force){
   startMenu.classList.toggle('open', show);
   if (show){
     smInput.value = '';
-    startMenu.querySelectorAll('.sm-item[data-app]').forEach(it => it.style.display = '');
+    startMenu.querySelectorAll('.sm-item').forEach(it => it.style.display = 'flex');
     setTimeout(() => smInput.focus(), 50);
   }
 }
