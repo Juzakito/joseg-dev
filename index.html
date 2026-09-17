@@ -320,18 +320,47 @@ a{ color: var(--azul); }
   background:linear-gradient(180deg,#ffffff,#f0f7fd); border:1px solid #bcd6ec; border-radius:8px;
   padding:12px; display:flex; flex-direction:column; gap:8px;
   box-shadow:0 2px 6px rgba(20,60,110,.12), inset 0 1px 0 #fff;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.proj-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 5px 14px rgba(20,60,110,.18), inset 0 1px 0 #fff;
+}
+.proj-card.proj-featured{
+  background:linear-gradient(180deg,#ffffff 0%,#f0f6ff 100%);
+  border:1.5px solid #4a90e2;
+  box-shadow:0 3px 12px rgba(37,99,235,.2), inset 0 1px 0 #fff;
+}
+.proj-badge-destacado{
+  align-self:flex-start; font-size:9.5px; font-weight:800; letter-spacing:.5px;
+  color:#1d4ed8; background:linear-gradient(180deg,#e0edff,#bfdbfe);
+  border:1px solid #93c5fd; padding:2px 7px; border-radius:4px;
+}
+.proj-sub{
+  font-size:10.5px; color:#2563eb; font-weight:600; margin-top:1px;
 }
 .proj-head{ display:flex; align-items:center; gap:8px; }
 .proj-head h3{ font-size:13.5px; color:#0d2c55; }
 .proj-card p{ font-size:12px; line-height:1.5; color:#3d5a75; flex:1; }
 .tags{ display:flex; flex-wrap:wrap; gap:5px; }
 .tags span{ font-size:10.5px; padding:2px 8px; border-radius:999px; background:#dcebf8; border:1px solid #b7d5ec; color:#2c587e; }
+.proj-actions{ display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; padding-top:4px; }
 .proj-link{
   font-size:11.5px; font-weight:600; text-decoration:none; color:#11477e;
   padding:4px 11px; border-radius:5px; width:max-content;
   background:linear-gradient(180deg,#f4faff,#d8ecfc); border:1px solid #9cc4e4;
+  cursor:pointer; display:inline-flex; align-items:center; gap:4px;
 }
 .proj-link:hover{ background:linear-gradient(180deg,#ffffff,#e8f5ff); box-shadow:0 1px 4px rgba(40,120,200,.3); }
+.proj-btn-case{
+  background:linear-gradient(180deg,#2563eb,#1d4ed8) !important;
+  color:#ffffff !important; border:1px solid #1e40af !important;
+  box-shadow:0 1px 4px rgba(37,99,235,.35);
+}
+.proj-btn-case:hover{
+  background:linear-gradient(180deg,#3b82f6,#2563eb) !important;
+  box-shadow:0 2px 8px rgba(37,99,235,.5) !important;
+}
 .proj-soon{ color:#7a94ab; background:#eef3f8; border-color:#cfdae5; cursor:default; }
 
 /* 2. About Me */
@@ -863,6 +892,15 @@ const DATA = {
   ],
   projects: [
     {
+      id: 'inventa',
+      nombre: 'INVENTA',
+      subtitulo: 'El Cerebro de Compras para tu Empresa',
+      destacado: true,
+      desc: 'Plataforma SaaS impulsada por IA diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar compras empresariales.',
+      tags: ['SaaS B2B', 'IA Predictiva', 'Product Management', 'Tech Lead'],
+      url: 'https://inventa-dpzedgxep-juzaki.vercel.app/'
+    },
+    {
       nombre: 'Free Mind',
       desc: 'Plataforma SaaS B2B de apoyo emocional anónimo para universitarios, impulsada por IA y un ecosistema Peer-to-Peer.',
       tags: ['React', 'SaaS B2B', 'IA'],
@@ -1155,13 +1193,23 @@ function renderProjects(){
     <div class="addr-bar">${svgIcon('projects', 18)}<span>Escritorio ▸ Projects (${DATA.projects.length} iniciativas SaaS B2B)</span></div>
     <div class="proj-grid">
       ${DATA.projects.map(p => `
-        <article class="proj-card">
-          <div class="proj-head">${svgIcon('projects', 22)}<h3>${esc(p.nombre)}</h3></div>
+        <article class="proj-card ${p.destacado ? 'proj-featured' : ''}">
+          ${p.destacado ? `<div class="proj-badge-destacado">⭐ PROYECTO DESTACADO</div>` : ''}
+          <div class="proj-head">
+            ${svgIcon(p.id === 'inventa' ? 'inventa' : 'projects', 22)}
+            <div>
+              <h3>${esc(p.nombre)}</h3>
+              ${p.subtitulo ? `<div class="proj-sub">${esc(p.subtitulo)}</div>` : ''}
+            </div>
+          </div>
           <p>${esc(p.desc)}</p>
           <div class="tags">${p.tags.map(t => `<span>${esc(t)}</span>`).join('')}</div>
-          ${p.url && p.url !== '#'
-            ? `<a class="proj-link" href="${esc(p.url)}" target="_blank" rel="noopener">Abrir en vivo ↗</a>`
-            : `<span class="proj-link proj-soon">En producción</span>`}
+          <div class="proj-actions">
+            ${p.id === 'inventa' ? `<button class="proj-link proj-btn-case" onclick="openApp('inventa')">Ver Caso de Estudio 🪟</button>` : ''}
+            ${p.url && p.url !== '#'
+              ? `<a class="proj-link" href="${esc(p.url)}" target="_blank" rel="noopener">Abrir en vivo ↗</a>`
+              : `<span class="proj-link proj-soon">En producción</span>`}
+          </div>
         </article>`).join('')}
     </div>`;
 }
@@ -1340,24 +1388,28 @@ function renderIE(){
         <button class="ie-circle-btn" title="Adelante">▶</button>
         <div class="ie-addr-wrap">
           <svg viewBox="0 0 24 24" fill="#286090"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
-          <input type="text" class="ie-addr-input" id="ie-url" value="https://freemind-app.vercel.app/" readonly>
+          <input type="text" class="ie-addr-input" id="ie-url" value="https://inventa-dpzedgxep-juzaki.vercel.app/" readonly>
           <button class="ie-go-btn" onclick="window.open(document.getElementById('ie-url').value, '_blank')">Ir ↗</button>
         </div>
       </div>
       <div class="ie-tabs">
-        <div class="ie-tab active" data-ietab="freemind">🌐 Free Mind (SaaS B2B)</div>
+        <div class="ie-tab active" data-ietab="inventa">🧠 INVENTA (SaaS IA)</div>
+        <div class="ie-tab" data-ietab="freemind">🌐 Free Mind (SaaS B2B)</div>
         <div class="ie-tab" data-ietab="github">🐙 GitHub @Juzakito</div>
         <div class="ie-tab" data-ietab="linkedin">💼 LinkedIn Profile</div>
       </div>
       <div class="ie-viewport" id="ie-view">
         <div class="ie-hero">
-          <h2>Free Mind — Ecosistema Digital de Salud Mental Universitaria</h2>
-          <p>Plataforma SaaS B2B que combina Inteligencia Artificial y un modelo Peer-to-Peer para ofrecer soporte emocional anónimo a estudiantes universitarios.</p>
-          <p><b>Protocolo I-CARE:</b> Moderación semántica automatizada en tiempo real que protege la salud estudiantil y resguarda el Lifetime Value (LTV) institucional.</p>
-          <a class="ie-big-link" href="https://freemind-app.vercel.app/" target="_blank" rel="noopener">Abrir freemind-app.vercel.app en vivo ↗</a>
+          <h2>INVENTA — El Cerebro de Compras para tu Empresa</h2>
+          <p>Plataforma SaaS impulsada por IA diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar compras empresariales.</p>
+          <p><b>Impacto:</b> -35% quiebres de stock, -28% sobrestock, modelos predictivos de abastecimiento y analítica en tiempo real.</p>
+          <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;">
+            <a class="ie-big-link" href="https://inventa-dpzedgxep-juzaki.vercel.app/" target="_blank" rel="noopener">Abrir en vivo ↗</a>
+            <button class="ie-big-link" style="border:none; cursor:pointer;" onclick="openApp('inventa')">Ver Caso de Estudio 🪟</button>
+          </div>
         </div>
-        <div style="font-size:12px; color:#527494; line-height:1.6;">
-          <b>Especificaciones de arquitectura:</b> React frontend, arquitectura escalable B2B, integración de protocolos de IA para contención de crisis, dashboards para vicerrectorados académicos.
+        <div style="font-size:12px; color:#527494; line-height:1.6; margin-top:10px;">
+          <b>Especificaciones:</b> Inteligencia artificial aplicada a compras, dashboards ejecutivos en tiempo real, optimización de capital de trabajo y arquitectura SaaS escalable.
         </div>
       </div>
     </div>`;
@@ -1394,6 +1446,7 @@ function renderExplorer(){
           <div class="fe-tree-title">Favoritos</div>
           <div class="fe-tree-item active" onclick="selectFeCategory('docs')">📁 Documentos</div>
           <div class="fe-tree-item" onclick="openApp('projects')">📁 Proyectos</div>
+          <div class="fe-tree-item" onclick="openApp('inventa')">🧠 INVENTA (SaaS)</div>
           <div class="fe-tree-item" onclick="openApp('gallery')">🖼️ Imágenes</div>
           <div class="fe-tree-title">Equipo</div>
           <div class="fe-tree-item" onclick="openApp('skills')">💻 Disco local (C:)</div>
@@ -1404,6 +1457,11 @@ function renderExplorer(){
             ${svgIcon('projects', 40)}
             <span>Proyectos</span>
             <small>Carpeta</small>
+          </div>
+          <div class="fe-file" onclick="openApp('inventa')">
+            ${svgIcon('inventa', 40)}
+            <span>INVENTA</span>
+            <small>Caso de estudio</small>
           </div>
           <div class="fe-file" onclick="openApp('notepad')">
             ${svgIcon('notepad', 40)}
@@ -1443,7 +1501,7 @@ function renderExplorer(){
         </div>
       </div>
       <div class="fe-status">
-        <span>8 elementos</span>
+        <span>9 elementos</span>
         <span>C:\\Users\\Jose\\Documents</span>
       </div>
     </div>`;
@@ -1879,6 +1937,7 @@ startMenu.innerHTML = `
       <div class="sm-user">${svgIcon('about', 44)}<div><b>${esc(DATA.nombre)}</b><small>Product & Tech Lead</small></div></div>
       <span class="sm-link" data-app="about">Sobre mí</span>
       <span class="sm-link" data-app="projects">Mis proyectos</span>
+      <span class="sm-link" data-app="inventa">INVENTA (Destacado)</span>
       <span class="sm-link" data-app="skills">Propiedades del Sistema</span>
       <span class="sm-link" data-app="contact">Contacto</span>
       <span class="sm-link" data-app="notepad">Manifiesto (vision.txt)</span>
@@ -2073,10 +2132,11 @@ Rol: Product Manager & Tech Lead · SaaS B2B e Inteligencia Artificial
 Startup: Free Mind\n`;
         } else if (cmd === 'projects'){
           out.innerHTML += `<span class="cmd-yellow">PROYECTOS ACTIVOS:</span>
-1. Free Mind (SaaS B2B + IA Peer-to-Peer) -> https://freemind-app.vercel.app/
-2. Protocolo I-CARE (Duty to Warn / Moderación Semántica)
-3. B2B Insights Dashboard (Mapas de calor de estrés estudiantil & LTV)
-4. MVP Wizard of Oz (Validación empírica No-Code)\n`;
+1. INVENTA (SaaS IA Compras & Inventarios) [DESTACADO] -> https://inventa-dpzedgxep-juzaki.vercel.app/
+2. Free Mind (SaaS B2B + IA Peer-to-Peer) -> https://freemind-app.vercel.app/
+3. Protocolo I-CARE (Duty to Warn / Moderación Semántica)
+4. B2B Insights Dashboard (Mapas de calor de estrés estudiantil & LTV)
+5. MVP Wizard of Oz (Validación empírica No-Code)\n`;
         } else if (cmd === 'skills'){
           out.innerHTML += `<span class="cmd-yellow">EVALUACIÓN DE EXPERIENCIA (WEI):</span>
 - Product Management & Scrum:       [5.8 / 5.9]
@@ -2095,12 +2155,13 @@ Email:    ${DATA.socials.email}\n`;
 16/09/2026  19:50    &lt;DIR&gt;          .
 16/09/2026  19:50    &lt;DIR&gt;          ..
 16/09/2026  19:50    &lt;DIR&gt;          Projects
+16/09/2026  19:50               360 INVENTA.url
 16/09/2026  19:50             2.450 vision.txt
 16/09/2026  19:50             1.120 Sobre_Mi.txt
 16/09/2026  19:50               340 FreeMind.url
 16/09/2026  19:50         3.450.210 Aero_Ambient.wma
 16/09/2026  19:50             4.096 Propiedades.sys
-               5 archivos      3.458.216 bytes
+               6 archivos      3.458.576 bytes
                3 carpetas 128.450.914.304 bytes libres\n`;
         } else if (cmd === 'cat vision.txt' || cmd === 'type vision.txt'){
           out.innerHTML += `<span class="cmd-muted">${esc(MANIFESTO_TEXT)}</span>\n`;
@@ -2137,7 +2198,22 @@ Email:    ${DATA.socials.email}\n`;
         tabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         const which = tab.dataset.ietab;
-        if (which === 'freemind'){
+        if (which === 'inventa'){
+          urlInput.value = 'https://inventa-dpzedgxep-juzaki.vercel.app/';
+          view.innerHTML = `
+            <div class="ie-hero">
+              <h2>INVENTA — El Cerebro de Compras para tu Empresa</h2>
+              <p>Plataforma SaaS impulsada por IA diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar compras empresariales.</p>
+              <p><b>Impacto:</b> -35% quiebres de stock, -28% sobrestock, modelos predictivos de abastecimiento y analítica en tiempo real.</p>
+              <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;">
+                <a class="ie-big-link" href="https://inventa-dpzedgxep-juzaki.vercel.app/" target="_blank" rel="noopener">Abrir en vivo ↗</a>
+                <button class="ie-big-link" style="border:none; cursor:pointer;" onclick="openApp('inventa')">Ver Caso de Estudio 🪟</button>
+              </div>
+            </div>
+            <div style="font-size:12px; color:#527494; line-height:1.6; margin-top:10px;">
+              <b>Especificaciones:</b> Inteligencia artificial aplicada a compras, dashboards ejecutivos en tiempo real, optimización de capital de trabajo y arquitectura SaaS escalable.
+            </div>`;
+        } else if (which === 'freemind'){
           urlInput.value = 'https://freemind-app.vercel.app/';
           view.innerHTML = `
             <div class="ie-hero">
