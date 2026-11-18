@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Portafolio interactivo de José González · Product Manager & Tech Lead (SaaS B2B e IA) con interfaz Windows Vista (Frutiger Aero).">
+<meta name="description" content="Portafolio interactivo de José González · Product Manager & Tech Lead (Fintech, SaaS B2B e IA): Kuota, Auditoría Kuota, MakroLab Alemania, Free Mind e INVENTA.">
 <title>José González — Portafolio</title>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
@@ -303,15 +303,16 @@ a{ color: var(--azul); }
   background: linear-gradient(180deg, rgba(30, 48, 66, 0.96) 0%, rgba(18, 30, 45, 0.98) 60%, rgba(10, 18, 28, 0.99) 100%);
   backdrop-filter: blur(16px) saturate(1.6);
   -webkit-backdrop-filter: blur(16px) saturate(1.6);
-  padding: 12px 10px;
+  padding: 10px 10px;
   display: flex; flex-direction: column; color: #eaf4ff;
+  overflow-y: auto; max-height: 440px;
 }
 
 .sm-avatar-box{
-  display: flex; justify-content: center; margin-bottom: 10px;
+  display: flex; justify-content: center; margin-bottom: 8px;
 }
 .sm-avatar-frame{
-  width: 66px; height: 66px; border-radius: 8px;
+  width: 62px; height: 62px; border-radius: 8px;
   border: 2.5px solid #d4be76;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.4);
   overflow: hidden; background: #182838;
@@ -323,10 +324,10 @@ a{ color: var(--azul); }
 .sm-user-pill{
   background: linear-gradient(180deg, rgba(65, 88, 114, 0.75) 0%, rgba(32, 48, 70, 0.85) 100%);
   border: 1px solid rgba(135, 175, 215, 0.35);
-  border-radius: 6px; padding: 6px 10px;
-  color: #ffffff; font-size: 12.5px; font-weight: 600;
+  border-radius: 6px; padding: 5px 10px;
+  color: #ffffff; font-size: 12px; font-weight: 600;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
-  margin-bottom: 8px; cursor: pointer;
+  margin-bottom: 6px; cursor: pointer;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: background .12s, border-color .12s;
 }
@@ -336,11 +337,11 @@ a{ color: var(--azul); }
 }
 
 .sm-links-list{
-  display: flex; flex-direction: column; gap: 2px;
+  display: flex; flex-direction: column; gap: 1px;
 }
 .sm-link-row{
   display: flex; justify-content: space-between; align-items: center;
-  padding: 4.5px 8px; color: #eaf3ff; font-size: 11.5px;
+  padding: 3.5px 8px; color: #eaf3ff; font-size: 11px;
   text-decoration: none; cursor: pointer; border-radius: 4px;
   text-shadow: 0 1px 2px rgba(0, 15, 35, 0.5);
   transition: background .12s;
@@ -442,6 +443,7 @@ a{ color: var(--azul); }
   box-shadow:0 5px 14px rgba(20,60,110,.18), inset 0 1px 0 #fff;
 }
 .proj-card.proj-featured{
+  grid-column:1 / -1;
   background:linear-gradient(180deg,#ffffff 0%,#f0f6ff 100%);
   border:1.5px solid #4a90e2;
   box-shadow:0 3px 12px rgba(37,99,235,.2), inset 0 1px 0 #fff;
@@ -522,12 +524,13 @@ a{ color: var(--azul); }
 }
 .ie-tabs{
   display:flex; gap:2px; padding:4px 8px 0; background:linear-gradient(180deg,#cadff3,#b4d0eb);
-  border-bottom:1px solid #8eb5d6;
+  border-bottom:1px solid #8eb5d6; overflow-x:auto; scrollbar-width:none;
 }
+.ie-tabs::-webkit-scrollbar{ display:none; }
 .ie-tab{
-  display:flex; align-items:center; gap:6px; padding:5px 12px; font-size:11.5px; color:#244464;
+  display:flex; align-items:center; gap:5px; padding:5px 10px; font-size:11px; color:#244464;
   background:rgba(255,255,255,.45); border:1px solid #9abddb; border-bottom:none;
-  border-radius:5px 5px 0 0; cursor:pointer;
+  border-radius:5px 5px 0 0; cursor:pointer; white-space:nowrap; flex:0 0 auto;
 }
 .ie-tab.active{
   background:#ffffff; color:#0e2e50; font-weight:600;
@@ -996,48 +999,72 @@ a{ color: var(--azul); }
    ============================================================ */
 const DATA = {
   nombre: 'José González',
-  titulo: 'Product Manager & Tech Lead · SaaS B2B e Inteligencia Artificial',
-  bio: 'Soy un Project Manager y Scrum Master apasionado por orquestar el ciclo completo de desarrollo de software. Combino arquitecturas ágiles, diseño UI/UX e Inteligencia Artificial para resolver problemas críticos mediante modelos SaaS B2B. Actualmente lidero la tecnología detrás de Free Mind, construyendo ecosistemas digitales que protegen la salud mental estudiantil y el Lifetime Value (LTV) institucional.',
+  titulo: 'Product Manager & Tech Lead · Fintech, SaaS B2B e IA',
+  bio: 'Soy un Product Manager y Tech Lead enfocado en construir productos digitales de alto impacto end-to-end. Combino estrategia de negocio, arquitectura técnica, diseño UI/UX e Inteligencia Artificial en ecosistemas Fintech y SaaS B2B. Lidero el producto y la ingeniería detrás de Kuota (infraestructura de cobros B2B en Perú al 1% vía 360pay con portal técnico auditado en Archify), Free Mind (compañero gamificado y comunidad segura de bienestar universitario), MakroLab (simulación macroeconómica y Machine Learning con datos oficiales de Alemania) e INVENTA (SaaS de IA predictiva para compras e inventarios).',
   skills: [
-    { nombre: 'Product Management & Scrum', score: 5.8 },
-    { nombre: 'Estrategia B2B & Lean Startup', score: 5.6 },
-    { nombre: 'Diseño UI/UX (Figma)',       score: 4.8 },
-    { nombre: 'Integración IA (Protocolos)',score: 4.7 },
-    { nombre: 'React & Entornos No-Code',   score: 4.5 },
+    { nombre: 'Product Management & Scrum',   score: 5.8 },
+    { nombre: 'Fintech & Pagos B2B',          score: 5.6 },
+    { nombre: 'Arquitectura & Seguridad',     score: 5.2 },
+    { nombre: 'IA Aplicada & Data/ML',        score: 4.9 },
+    { nombre: 'React · TypeScript · Node.js', score: 4.8 },
   ],
   projects: [
     {
+      id: 'kuota',
+      icon: 'shield',
+      nombre: 'Kuota',
+      subtitulo: 'Infraestructura de Cobros B2B con QR y Link (1% vs 3.5%)',
+      destacado: true,
+      badge: '⭐ FINTECH B2B · EN PRODUCCIÓN',
+      desc: 'Fintech B2B para comercios en Perú que reduce comisiones de 3.5% a 1% + IGV cobrando con QR o link vía 360pay (Yape, Plin y banca local), con liquidación en 48 h hábiles y calculadora interactiva de ahorro.',
+      tags: ['Fintech B2B', 'Pagos 360pay', 'React & TypeScript', 'Product & Tech Lead'],
+      url: 'https://www.kuota.pro',
+      urlLabel: 'Abrir Kuota.pro ↗',
+      secondaryUrl: 'https://auditoria-archify.vercel.app',
+      secondaryLabel: 'Portal Técnico ↗'
+    },
+    {
+      id: 'archify',
+      icon: 'computer',
+      nombre: 'Kuota · Arquitectura & Auditoría',
+      subtitulo: 'Portal Técnico con Archify, Conciliación y Seguridad',
+      desc: 'Portal técnico unificado del monorepo Kuota: 8 vistas interactivas de arquitectura en Archify, simulador reactivo de comisiones y liquidación CCI, matriz de 24 controles normativos, 14 endpoints y 7 informes técnicos.',
+      tags: ['Arquitectura Software', 'Archify SVG', 'HMAC & Seguridad', 'Express 5 / TS'],
+      url: 'https://auditoria-archify.vercel.app',
+      urlLabel: 'Abrir Portal ↗',
+      secondaryUrl: 'https://github.com/Kuota-inc/kuota-app',
+      secondaryLabel: 'GitHub Repo ↗'
+    },
+    {
+      id: 'freemind',
+      icon: 'about',
+      nombre: 'Free Mind — Jardín de Autocuidado',
+      subtitulo: 'SaaS B2B y Compañero Gamificado de Bienestar Estudiantil',
+      desc: 'Espacio cálido y anónimo para universitarios: jardín interactivo con compañero virtual evolutivo, seguimiento diario de hábitos y ánimo, comunidad segura, protocolo I-CARE y vinculación institucional.',
+      tags: ['SaaS B2B', 'Salud Mental & IA', 'Gamificación', 'React'],
+      url: 'https://freemind-app.vercel.app/app/jardin',
+      urlLabel: 'Abrir Jardín ↗'
+    },
+    {
+      id: 'makrolab',
+      icon: 'projects',
+      nombre: 'MakroLab · Laboratorio Macro de Alemania',
+      subtitulo: 'Simulador de Equilibrio General IS-LM, OA-DA y Schuldenbremse',
+      desc: 'Simulador macroeconómico de Alemania con datos oficiales de Destatis, BCE y Eurostat: equilibrio conjunto IS-LM y OA-DA, regla fiscal constitucional (Art. 115 GG), Ley de Okun y proyecciones con Machine Learning.',
+      tags: ['Econometría & Data', 'Machine Learning', 'Simulación Interactiva', 'Visualización'],
+      url: 'https://macro-alemania.vercel.app/#t=islm',
+      urlLabel: 'Abrir Simulador ↗'
+    },
+    {
       id: 'inventa',
+      icon: 'inventa',
       nombre: 'INVENTA',
       subtitulo: 'El Cerebro de Compras para tu Empresa',
-      destacado: true,
       desc: 'Plataforma SaaS impulsada por IA diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar compras empresariales.',
       tags: ['SaaS B2B', 'IA Predictiva', 'Product Management', 'Tech Lead'],
-      url: 'https://inventa-dpzedgxep-juzaki.vercel.app/'
-    },
-    {
-      nombre: 'Free Mind',
-      desc: 'Plataforma SaaS B2B de apoyo emocional anónimo para universitarios, impulsada por IA y un ecosistema Peer-to-Peer.',
-      tags: ['React', 'SaaS B2B', 'IA'],
-      url: 'https://freemind-app.vercel.app/'
-    },
-    {
-      nombre: 'Protocolo I-CARE (Duty to Warn)',
-      desc: 'Sistema algorítmico de moderación semántica que detecta riesgos de crisis en milisegundos y activa rescates institucionales automatizados.',
-      tags: ['Inteligencia Artificial', 'Seguridad', 'Automatización'],
-      url: 'https://freemind-app.vercel.app/'
-    },
-    {
-      nombre: 'B2B Insights Dashboard',
-      desc: 'Panel analítico para rectorados que genera mapas de calor de estrés por facultad y mide la protección del Lifetime Value (LTV) institucional.',
-      tags: ['Data Analytics', 'UI/UX', 'Lean Startup'],
-      url: '#'
-    },
-    {
-      nombre: 'MVP Wizard of Oz (No-Code)',
-      desc: 'Experimento de validación en campo utilizando Bubble, Telegram y Códigos QR para medir la tracción y engagement sin fricción técnica inicial.',
-      tags: ['No-Code', 'Bubble', 'Growth'],
-      url: '#'
+      url: 'https://inventa-dpzedgxep-juzaki.vercel.app/',
+      urlLabel: 'Abrir en vivo ↗',
+      caseStudyApp: 'inventa'
     }
   ],
   socials: {
@@ -1366,13 +1393,13 @@ const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
 // 1. Projects
 function renderProjects(){
   return `
-    <div class="addr-bar">${svgIcon('projects', 18)}<span>Escritorio ▸ Projects (${DATA.projects.length} iniciativas SaaS B2B)</span></div>
+    <div class="addr-bar">${svgIcon('projects', 18)}<span>Escritorio ▸ Projects (${DATA.projects.length} productos en vivo · Fintech, SaaS &amp; IA)</span></div>
     <div class="proj-grid">
       ${DATA.projects.map(p => `
         <article class="proj-card ${p.destacado ? 'proj-featured' : ''}">
-          ${p.destacado ? `<div class="proj-badge-destacado">⭐ PROYECTO DESTACADO</div>` : ''}
+          ${p.destacado ? `<div class="proj-badge-destacado">${esc(p.badge || '⭐ PROYECTO DESTACADO')}</div>` : ''}
           <div class="proj-head">
-            ${svgIcon(p.id === 'inventa' ? 'inventa' : 'projects', 22)}
+            ${svgIcon(p.icon || 'projects', 22)}
             <div>
               <h3>${esc(p.nombre)}</h3>
               ${p.subtitulo ? `<div class="proj-sub">${esc(p.subtitulo)}</div>` : ''}
@@ -1381,10 +1408,15 @@ function renderProjects(){
           <p>${esc(p.desc)}</p>
           <div class="tags">${p.tags.map(t => `<span>${esc(t)}</span>`).join('')}</div>
           <div class="proj-actions">
-            ${p.id === 'inventa' ? `<button class="proj-link proj-btn-case" onclick="openApp('inventa')">Ver Caso de Estudio 🪟</button>` : ''}
             ${p.url && p.url !== '#'
-              ? `<a class="proj-link" href="${esc(p.url)}" target="_blank" rel="noopener">Abrir en vivo ↗</a>`
+              ? `<a class="proj-link" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.urlLabel || 'Abrir en vivo ↗')}</a>`
               : `<span class="proj-link proj-soon">En producción</span>`}
+            ${p.secondaryUrl
+              ? `<a class="proj-link proj-btn-case" href="${esc(p.secondaryUrl)}" target="_blank" rel="noopener">${esc(p.secondaryLabel || 'Ver más ↗')}</a>`
+              : ''}
+            ${p.caseStudyApp
+              ? `<button class="proj-link proj-btn-case" onclick="openApp('${esc(p.caseStudyApp)}')">Ver Caso de Estudio 🪟</button>`
+              : ''}
           </div>
         </article>`).join('')}
     </div>`;
@@ -1556,7 +1588,97 @@ function renderAbout(){
 }
 
 // 3. Internet Explorer
+const IE_TABS = [
+  { id: 'kuota',    label: '💳 Kuota.pro' },
+  { id: 'archify',  label: '🏗️ Auditoría Kuota' },
+  { id: 'freemind', label: '🌱 Free Mind' },
+  { id: 'makrolab', label: '📊 MakroLab DE' },
+  { id: 'inventa',  label: '🧠 INVENTA' },
+  { id: 'github',   label: '🐙 GitHub @Juzakito' },
+];
+
+const IE_PAGES = {
+  kuota: {
+    url: 'https://www.kuota.pro',
+    html: `
+      <div class="ie-hero">
+        <h2>Kuota Payments — Cobra con QR y Link pagando 1% en vez de 3.5%</h2>
+        <p>Fintech B2B diseñada para comercios en Perú que permite cobrar con QR o link desde la app bancaria del cliente (Yape, Plin, BCP, BBVA, Interbank y Scotiabank vía 360pay) pagando 1% + IGV con liquidación en 48 h hábiles.</p>
+        <p><b>Producto:</b> Calculadora interactiva de ahorro mensual/anual frente a POS tradicional (3.5%), preguntas frecuentes normativas y flujo de waitlist / agendamiento comercial.</p>
+        <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;">
+          <a class="ie-big-link" href="https://www.kuota.pro" target="_blank" rel="noopener">Abrir kuota.pro en vivo ↗</a>
+          <a class="ie-big-link" href="https://auditoria-archify.vercel.app" target="_blank" rel="noopener">Ver Portal Técnico ↗</a>
+        </div>
+      </div>
+      <div style="font-size:12px; color:#527494; line-height:1.6; margin-top:10px;">
+        <b>Especificaciones:</b> Producto Fintech B2B en fase piloto (Lima, Perú), cumplimiento de Ley 29733 y ecosistema modular (Payments, Compradores, Proveedores).
+      </div>`
+  },
+  archify: {
+    url: 'https://auditoria-archify.vercel.app',
+    html: `
+      <div class="ie-hero">
+        <h2>Kuota · Portal Técnico de Arquitectura, Pagos y Seguridad</h2>
+        <p>Portal unificado para ingeniería y producto sobre el monorepo de Kuota: 8 vistas interactivas de arquitectura en Archify v2.17.0, simulador reactivo de comisiones (1% + IGV, piso S/ 4.50) y liquidación bancaria CCI.</p>
+        <p><b>Cobertura técnica:</b> 24 controles normativos de seguridad, 14 endpoints catalogados, 6 hallazgos diagnósticos (FND-01 a FND-06) y lectura en vivo de 7 informes técnicos + descargas Excel, CSV y ZIP.</p>
+        <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;">
+          <a class="ie-big-link" href="https://auditoria-archify.vercel.app" target="_blank" rel="noopener">Abrir auditoria-archify.vercel.app ↗</a>
+          <a class="ie-big-link" href="https://github.com/Kuota-inc/kuota-app" target="_blank" rel="noopener">Ver repo Kuota-inc/kuota-app ↗</a>
+        </div>
+      </div>
+      <div style="font-size:12px; color:#527494; line-height:1.6; margin-top:10px;">
+        <b>Stack documentado:</b> Flutter / Dart, React Native, React / TypeScript, Node.js / Express 5, PostgreSQL / SQLite, HMAC-SHA256 (360Pay), Didit KYC, Google Play Integrity y validación SUNAT RUC.
+      </div>`
+  },
+  freemind: {
+    url: 'https://freemind-app.vercel.app/app/jardin',
+    html: `
+      <div class="ie-hero">
+        <h2>Free Mind — Tu Nido de Autocuidado (Jardín Universitario)</h2>
+        <p>Plataforma SaaS B2B de bienestar emocional y apoyo anónimo para universitarios. Integra un jardín interactivo con compañero virtual evolutivo, registro diario de ánimo y hábitos, comunidad segura y el protocolo I-CARE de rescate institucional.</p>
+        <p><b>Experiencia /app/jardin:</b> Gestión de vitales del compañero (Salud, Comida, Ánimo), rachas, energía diaria, atributos de evolución (Lógica, Calma, Energía, Vínculo), acceso institucional (ESEN) y conexión con psicólogos y Línea 113.</p>
+        <a class="ie-big-link" href="https://freemind-app.vercel.app/app/jardin" target="_blank" rel="noopener">Abrir Jardín en vivo ↗</a>
+      </div>`
+  },
+  makrolab: {
+    url: 'https://macro-alemania.vercel.app/#t=islm',
+    html: `
+      <div class="ie-hero">
+        <h2>MakroLab — Laboratorio Macroeconómico de Alemania</h2>
+        <p>Simulador interactivo de equilibrio general para la economía alemana con datos oficiales de Destatis, BCE, Eurostat y la Bundesagentur für Arbeit.</p>
+        <p><b>Módulos analíticos (10 pestañas):</b> Equilibrio conjunto IS-LM (α = 1,47), OA-DA, tipo de cambio (Mundell-Fleming), trayectoria, Ley de Okun, incertidumbre, política óptima, comparador de escenarios, regla fiscal Schuldenbremse (Art. 115 GG / Maastricht) y previsión con Machine Learning.</p>
+        <a class="ie-big-link" href="https://macro-alemania.vercel.app/#t=islm" target="_blank" rel="noopener">Abrir MakroLab (#t=islm) en vivo ↗</a>
+      </div>`
+  },
+  inventa: {
+    url: 'https://inventa-dpzedgxep-juzaki.vercel.app/',
+    html: `
+      <div class="ie-hero">
+        <h2>INVENTA — El Cerebro de Compras para tu Empresa</h2>
+        <p>Plataforma SaaS impulsada por IA diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar compras empresariales.</p>
+        <p><b>Impacto:</b> -35% quiebres de stock, -28% sobrestock, modelos predictivos de abastecimiento y analítica en tiempo real.</p>
+        <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;">
+          <a class="ie-big-link" href="https://inventa-dpzedgxep-juzaki.vercel.app/" target="_blank" rel="noopener">Abrir en vivo ↗</a>
+          <button class="ie-big-link" style="border:none; cursor:pointer;" onclick="openApp('inventa')">Ver Caso de Estudio 🪟</button>
+        </div>
+      </div>
+      <div style="font-size:12px; color:#527494; line-height:1.6; margin-top:10px;">
+        <b>Especificaciones:</b> Inteligencia artificial aplicada a compras, dashboards ejecutivos en tiempo real, optimización de capital de trabajo y arquitectura SaaS escalable.
+      </div>`
+  },
+  github: {
+    url: 'https://github.com/Juzakito',
+    html: `
+      <div class="ie-hero">
+        <h2>GitHub — @Juzakito</h2>
+        <p>Repositorios de código abierto, arquitecturas Fintech y SaaS B2B, simuladores interactivos y este portafolio Windows Vista Aero.</p>
+        <a class="ie-big-link" href="https://github.com/Juzakito" target="_blank" rel="noopener">Ver Perfil en GitHub ↗</a>
+      </div>`
+  }
+};
+
 function renderIE(){
+  const initial = IE_PAGES.kuota;
   return `
     <div class="ie-container">
       <div class="ie-nav">
@@ -1564,31 +1686,22 @@ function renderIE(){
         <button class="ie-circle-btn" title="Adelante">▶</button>
         <div class="ie-addr-wrap">
           <svg viewBox="0 0 24 24" fill="#286090"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
-          <input type="text" class="ie-addr-input" id="ie-url" value="https://inventa-dpzedgxep-juzaki.vercel.app/" readonly>
+          <input type="text" class="ie-addr-input" id="ie-url" value="${esc(initial.url)}" readonly>
           <button class="ie-go-btn" onclick="window.open(document.getElementById('ie-url').value, '_blank')">Ir ↗</button>
         </div>
       </div>
       <div class="ie-tabs">
-        <div class="ie-tab active" data-ietab="inventa">🧠 INVENTA (SaaS IA)</div>
-        <div class="ie-tab" data-ietab="freemind">🌐 Free Mind (SaaS B2B)</div>
-        <div class="ie-tab" data-ietab="github">🐙 GitHub @Juzakito</div>
-        <div class="ie-tab" data-ietab="linkedin">💼 LinkedIn Profile</div>
+        ${IE_TABS.map((t, idx) => `<div class="ie-tab${idx === 0 ? ' active' : ''}" data-ietab="${esc(t.id)}">${esc(t.label)}</div>`).join('')}
       </div>
-      <div class="ie-viewport" id="ie-view">
-        <div class="ie-hero">
-          <h2>INVENTA — El Cerebro de Compras para tu Empresa</h2>
-          <p>Plataforma SaaS impulsada por IA diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar compras empresariales.</p>
-          <p><b>Impacto:</b> -35% quiebres de stock, -28% sobrestock, modelos predictivos de abastecimiento y analítica en tiempo real.</p>
-          <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;">
-            <a class="ie-big-link" href="https://inventa-dpzedgxep-juzaki.vercel.app/" target="_blank" rel="noopener">Abrir en vivo ↗</a>
-            <button class="ie-big-link" style="border:none; cursor:pointer;" onclick="openApp('inventa')">Ver Caso de Estudio 🪟</button>
-          </div>
-        </div>
-        <div style="font-size:12px; color:#527494; line-height:1.6; margin-top:10px;">
-          <b>Especificaciones:</b> Inteligencia artificial aplicada a compras, dashboards ejecutivos en tiempo real, optimización de capital de trabajo y arquitectura SaaS escalable.
-        </div>
-      </div>
+      <div class="ie-viewport" id="ie-view">${initial.html}</div>
     </div>`;
+}
+
+function openIETab(tabId){
+  const win = openApp('ie');
+  if (win && win.el && typeof win.el._setIETab === 'function') {
+    win.el._setIETab(tabId);
+  }
 }
 
 // 4. Command Prompt
@@ -1608,6 +1721,8 @@ Escriba <span class="cmd-cyan">"help"</span> para ver la lista de comandos dispo
 }
 
 // 5. File Explorer
+function selectFeCategory(cat){}
+
 function renderExplorer(){
   return `
     <div class="fe-container">
@@ -1622,6 +1737,10 @@ function renderExplorer(){
           <div class="fe-tree-title">Favoritos</div>
           <div class="fe-tree-item active" onclick="selectFeCategory('docs')">📁 Documentos</div>
           <div class="fe-tree-item" onclick="openApp('projects')">📁 Proyectos</div>
+          <div class="fe-tree-item" onclick="openIETab('kuota')">💳 Kuota.pro</div>
+          <div class="fe-tree-item" onclick="openIETab('archify')">🏗️ Auditoría Kuota</div>
+          <div class="fe-tree-item" onclick="openIETab('freemind')">🌱 Free Mind Jardín</div>
+          <div class="fe-tree-item" onclick="openIETab('makrolab')">📊 MakroLab DE</div>
           <div class="fe-tree-item" onclick="openApp('inventa')">🧠 INVENTA (SaaS)</div>
           <div class="fe-tree-item" onclick="openApp('gallery')">🖼️ Imágenes</div>
           <div class="fe-tree-title">Equipo</div>
@@ -1633,6 +1752,26 @@ function renderExplorer(){
             ${svgIcon('projects', 40)}
             <span>Proyectos</span>
             <small>Carpeta</small>
+          </div>
+          <div class="fe-file" onclick="openIETab('kuota')">
+            ${svgIcon('shield', 40)}
+            <span>Kuota.url</span>
+            <small>Fintech B2B</small>
+          </div>
+          <div class="fe-file" onclick="openIETab('archify')">
+            ${svgIcon('computer', 40)}
+            <span>Auditoria_Kuota.url</span>
+            <small>Portal Archify</small>
+          </div>
+          <div class="fe-file" onclick="openIETab('freemind')">
+            ${svgIcon('ie', 40)}
+            <span>FreeMind_Jardin.url</span>
+            <small>Bienestar &amp; IA</small>
+          </div>
+          <div class="fe-file" onclick="openIETab('makrolab')">
+            ${svgIcon('ie', 40)}
+            <span>MakroLab_DE.url</span>
+            <small>Simulador Macro</small>
           </div>
           <div class="fe-file" onclick="openApp('inventa')">
             ${svgIcon('inventa', 40)}
@@ -1648,11 +1787,6 @@ function renderExplorer(){
             ${svgIcon('about', 40)}
             <span>Sobre_Mi.txt</span>
             <small>Documento</small>
-          </div>
-          <div class="fe-file" onclick="openApp('ie')">
-            ${svgIcon('ie', 40)}
-            <span>FreeMind.url</span>
-            <small>Acceso directo</small>
           </div>
           <div class="fe-file" onclick="openApp('gallery')">
             ${svgIcon('gallery', 40)}
@@ -1677,7 +1811,7 @@ function renderExplorer(){
         </div>
       </div>
       <div class="fe-status">
-        <span>9 elementos</span>
+        <span>12 elementos</span>
         <span>C:\\Users\\Jose\\Documents</span>
       </div>
     </div>`;
@@ -1754,21 +1888,21 @@ function renderGallery(){
 // 8. Text Editor (Notepad)
 const MANIFESTO_TEXT = `======================================================
 SISTEMA INICIADO: JOSÉ GONZÁLEZ
-ROL: PRODUCT MANAGER & TECH LEAD · SAAS B2B E IA
+ROL: PRODUCT MANAGER & TECH LEAD · FINTECH, SAAS B2B E IA
 ======================================================
-Estado actual: Orquestando la tecnología detrás de Free Mind.
+Estado actual: Construyendo y liderando productos digitales en producción.
 
 Si abriste este archivo, buscas algo más que un currículum tradicional.
 
-Creo firmemente en que el código y la estrategia de negocio son inseparables. Mi enfoque no es solo construir software, sino validar hipótesis empíricas rápidamente. La verdadera productividad en una startup no se mide por la cantidad de nuevas funciones programadas, sino por el aprendizaje validado que obtenemos (Lean Startup).
+Creo firmemente en que la estrategia de producto, la arquitectura técnica y la ejecución empírica son inseparables. No basta con escribir código: hay que diseñar sistemas confiables, medir su impacto real y entregar valor tangible al usuario y al negocio.
 
-En Free Mind, no solo desarrollamos una aplicación web en React; construimos un ecosistema de soporte peer-to-peer. Diseñamos el protocolo I-CARE: un escudo automatizado con Inteligencia Artificial que analiza texto en milisegundos para detectar riesgos críticos y activar rescates institucionales oportunos (Duty to Warn).
+Algunos frentes activos en los que vengo trabajando:
+- Kuota (kuota.pro): infraestructura fintech B2B de cobros con QR y link al 1% + IGV vía 360pay para comercios en Perú, respaldada por una arquitectura auditada y documentada en vivo con Archify (auditoria-archify.vercel.app), simulador de conciliación bancaria y controles de seguridad HMAC.
+- Free Mind (freemind-app.vercel.app/app/jardin): ecosistema SaaS B2B y compañero gamificado de autocuidado para universitarios, combinando hábitos diarios, comunidad segura y el protocolo I-CARE (Duty to Warn) para proteger el bienestar estudiantil y el LTV institucional.
+- MakroLab Alemania (macro-alemania.vercel.app): laboratorio macroeconómico interactivo (IS-LM, OA-DA, Schuldenbremse Art. 115 GG, Ley de Okun y Machine Learning) construido sobre series oficiales de Destatis, BCE y Eurostat.
+- INVENTA: plataforma SaaS con IA predictiva para optimizar inventarios y compras empresariales.
 
-Mi objetivo como líder de producto siempre es dual:
-1. Proteger al usuario final (salud mental estudiantil sin fricción).
-2. Blindar el modelo de negocio (proteger el Lifetime Value - LTV institucional).
-
-Ejecutando código. Liderando equipos bajo Scrum. Validando en el mercado real.
+Ejecutando código. Auditando arquitecturas. Validando en el mercado real.
 
 ¿Hablamos? Abre el panel de contacto o envíame un correo:
 jmgonzalez.contact@gmail.com
@@ -1807,10 +1941,10 @@ function renderSkills(){
     </div>
     <div class="sys-section">
       <h4>Especificaciones del Sistema</h4>
-      <div class="sys-row"><span class="lbl">Sistema Operativo:</span><span class="val">Emprendedor Tecnológico &amp; Scrum Master v2.0</span></div>
-      <div class="sys-row"><span class="lbl">Procesador:</span><span class="val">Ejecución de Sprints Ágiles y validación empírica mediante pilotos "Wizard of Oz" (No-Code)</span></div>
-      <div class="sys-row"><span class="lbl">Memoria (RAM):</span><span class="val">Alta capacidad para pivotar modelos de negocio desde Lean Startup hacia SaaS B2B escalable</span></div>
-      <div class="sys-row"><span class="lbl">Seguridad / Firewall:</span><span class="val">Protocolo I-CARE integrado. Moderación semántica y guardarraíles de Inteligencia Artificial</span></div>
+      <div class="sys-row"><span class="lbl">Sistema Operativo:</span><span class="val">Product Manager, Tech Lead &amp; Scrum Master v3.0</span></div>
+      <div class="sys-row"><span class="lbl">Procesador:</span><span class="val">Ejecución ágil end-to-end en Fintech B2B, SaaS, Econometría e IA</span></div>
+      <div class="sys-row"><span class="lbl">Memoria (RAM):</span><span class="val">Arquitectura de sistemas, conciliación de pagos, validación Lean Startup y producto escalable</span></div>
+      <div class="sys-row"><span class="lbl">Seguridad / Firewall:</span><span class="val">Controles HMAC-SHA256, auditoría técnica Archify y protocolo I-CARE de IA responsable</span></div>
       <div class="sys-row"><span class="lbl">Alma Mater:</span><span class="val">Universidad Científica del Sur (Laboratorio de Emprendimientos 2026)</span></div>
     </div>
     <div class="sys-section">
@@ -2104,53 +2238,60 @@ quickLaunch.addEventListener('click', e => {
    ============================================================ */
 const SM_LEFT_ITEMS = [
   {
-    id: 'inventa',
-    icon: 'inventa',
-    title: 'INVENTA',
-    desc: 'SaaS con IA para predicción de demanda y gestión de compras.',
-    app: 'inventa'
+    id: 'kuota',
+    icon: 'shield',
+    title: 'Kuota Payments',
+    desc: 'Fintech B2B · Cobros QR y link al 1% vía 360pay en Perú.',
+    ietab: 'kuota',
+    kw: 'kuota pagos fintech 360pay qr cobros'
+  },
+  {
+    id: 'archify',
+    icon: 'computer',
+    title: 'Auditoría Kuota',
+    desc: 'Arquitectura Archify (8 vistas), conciliación CCI y seguridad.',
+    ietab: 'archify',
+    kw: 'archify auditoria arquitectura seguridad hmac kuota'
   },
   {
     id: 'freemind',
     icon: 'about',
-    title: 'Free Mind',
-    desc: 'Plataforma B2B de apoyo emocional estudiantil y comunidad.',
-    app: 'ie'
+    title: 'Free Mind · Jardín',
+    desc: 'SaaS B2B de autocuidado estudiantil, hábitos e I-CARE.',
+    ietab: 'freemind',
+    kw: 'freemind jardin autocuidado salud mental icare'
   },
   {
-    id: 'icare',
-    icon: 'shield',
-    title: 'Protocolo I-CARE',
-    desc: 'Moderación semántica en tiempo real y alerta Duty to Warn.',
-    app: 'projects'
+    id: 'makrolab',
+    icon: 'ie',
+    title: 'MakroLab Alemania',
+    desc: 'Simulador IS-LM, OA-DA, Schuldenbremse y ML (Destatis/BCE).',
+    ietab: 'makrolab',
+    kw: 'makrolab alemania macro islm oada okun destatis'
   },
   {
-    id: 'dashboard',
-    icon: 'computer',
-    title: 'B2B Insights Dashboard',
-    desc: 'Mapas de calor de bienestar institucional y retención de LTV.',
-    app: 'projects'
-  },
-  {
-    id: 'wizard',
-    icon: 'phone',
-    title: 'MVP Wizard of Oz',
-    desc: 'Validación empírica en campo con No-Code, Telegram y QR.',
-    app: 'projects'
+    id: 'inventa',
+    icon: 'inventa',
+    title: 'INVENTA',
+    desc: 'SaaS con IA para predicción de demanda y gestión de compras.',
+    app: 'inventa',
+    kw: 'inventa ia compras inventario saas'
   },
   {
     id: 'projects',
     icon: 'projects',
     title: 'Iniciativas & Proyectos',
-    desc: 'Portafolio de proyectos SaaS B2B, Lean Startup y Agile.',
-    app: 'projects'
+    desc: '5 productos en vivo: Fintech, SaaS B2B, Econometría e IA.',
+    app: 'projects',
+    kw: 'proyectos iniciativas portafolio'
   },
   {
     id: 'notepad',
     icon: 'notepad',
     title: 'Manifiesto Tech Lead',
-    desc: 'Filosofía de producto, Scrum, cultura y visión técnica (vision.txt).',
-    app: 'notepad'
+    desc: 'Filosofía de producto, arquitectura y visión técnica (vision.txt).',
+    app: 'notepad',
+    kw: 'vision.txt manifiesto tech lead scrum'
   }
 ];
 
@@ -2159,7 +2300,7 @@ startMenu.innerHTML = `
   <div class="sm-body">
     <div class="sm-left">
       ${SM_LEFT_ITEMS.map(it => `
-        <div class="sm-item" data-app="${it.app}" title="${esc(it.title)}">
+        <div class="sm-item" ${it.app ? `data-app="${it.app}"` : ''} ${it.ietab ? `data-ietab="${it.ietab}"` : ''} data-kw="${esc(it.kw || '')}" title="${esc(it.title)}">
           <div class="sm-item-icon">${svgIcon(it.icon, 32)}</div>
           <div class="sm-item-texts">
             <span class="sm-item-title">${esc(it.title)}</span>
@@ -2179,8 +2320,11 @@ startMenu.innerHTML = `
       <div class="sm-links-list">
         <a class="sm-link-row" href="${esc(DATA.socials.linkedin)}" target="_blank" rel="noopener"><span>LinkedIn</span><span class="sm-link-arrow">↗</span></a>
         <a class="sm-link-row" href="${esc(DATA.socials.github)}" target="_blank" rel="noopener"><span>GitHub</span><span class="sm-link-arrow">↗</span></a>
-        <a class="sm-link-row" href="${esc(DATA.projects[0].url)}" target="_blank" rel="noopener"><span>INVENTA Demo</span><span class="sm-link-arrow">↗</span></a>
-        <a class="sm-link-row" href="${esc(DATA.projects[1].url)}" target="_blank" rel="noopener"><span>Free Mind Live</span><span class="sm-link-arrow">↗</span></a>
+        <a class="sm-link-row" href="https://www.kuota.pro" target="_blank" rel="noopener"><span>Kuota.pro</span><span class="sm-link-arrow">↗</span></a>
+        <a class="sm-link-row" href="https://auditoria-archify.vercel.app" target="_blank" rel="noopener"><span>Auditoría Kuota</span><span class="sm-link-arrow">↗</span></a>
+        <a class="sm-link-row" href="https://freemind-app.vercel.app/app/jardin" target="_blank" rel="noopener"><span>Free Mind Jardín</span><span class="sm-link-arrow">↗</span></a>
+        <a class="sm-link-row" href="https://macro-alemania.vercel.app/#t=islm" target="_blank" rel="noopener"><span>MakroLab DE</span><span class="sm-link-arrow">↗</span></a>
+        <a class="sm-link-row" href="https://inventa-dpzedgxep-juzaki.vercel.app/" target="_blank" rel="noopener"><span>INVENTA Demo</span><span class="sm-link-arrow">↗</span></a>
         <div class="sm-link-row" data-app="about"><span>Sobre Mí</span><span class="sm-link-arrow">↗</span></div>
         <div class="sm-link-row" data-app="contact"><span>Contacto</span><span class="sm-link-arrow">↗</span></div>
         <div class="sm-link-row" data-app="notepad"><span>vision.txt</span><span class="sm-link-arrow">↗</span></div>
@@ -2202,6 +2346,12 @@ startMenu.innerHTML = `
 startMenu.addEventListener('click', e => {
   const linkRow = e.target.closest('.sm-link-row[href]');
   if (linkRow) {
+    toggleStartMenu(false);
+    return;
+  }
+  const ieTabItem = e.target.closest('[data-ietab]');
+  if (ieTabItem){
+    openIETab(ieTabItem.dataset.ietab);
     toggleStartMenu(false);
     return;
   }
@@ -2245,15 +2395,16 @@ const smInput = document.getElementById('sm-q');
 smInput.addEventListener('input', () => {
   const q = smInput.value.trim().toLowerCase();
   startMenu.querySelectorAll('.sm-item').forEach(it => {
-    const text = it.textContent.toLowerCase();
+    const text = (it.textContent + ' ' + (it.dataset.kw || '')).toLowerCase();
     it.style.display = text.includes(q) ? 'flex' : 'none';
   });
 });
 smInput.addEventListener('keydown', e => {
   if (e.key === 'Enter'){
     const first = [...startMenu.querySelectorAll('.sm-item')].find(it => it.style.display !== 'none');
-    if (first && first.dataset.app){
-      openApp(first.dataset.app);
+    if (first){
+      if (first.dataset.ietab) openIETab(first.dataset.ietab);
+      else if (first.dataset.app) openApp(first.dataset.app);
       toggleStartMenu(false);
     }
   }
@@ -2418,22 +2569,18 @@ function initAppLogic(appId, el){
         } else if (cmd === 'whoami'){
           out.innerHTML += `<span class="cmd-green">jose-gonzalez\\tech-lead</span>
 Nombre: José González
-Rol: Product Manager & Tech Lead · SaaS B2B e Inteligencia Artificial
-Startup: Free Mind\n`;
+Rol: Product Manager &amp; Tech Lead · Fintech, SaaS B2B e IA
+Proyectos en vivo: Kuota, Auditoría Kuota, Free Mind, MakroLab DE, INVENTA\n`;
         } else if (cmd === 'projects'){
-          out.innerHTML += `<span class="cmd-yellow">PROYECTOS ACTIVOS:</span>
-1. INVENTA (SaaS IA Compras & Inventarios) [DESTACADO] -> https://inventa-dpzedgxep-juzaki.vercel.app/
-2. Free Mind (SaaS B2B + IA Peer-to-Peer) -> https://freemind-app.vercel.app/
-3. Protocolo I-CARE (Duty to Warn / Moderación Semántica)
-4. B2B Insights Dashboard (Mapas de calor de estrés estudiantil & LTV)
-5. MVP Wizard of Oz (Validación empírica No-Code)\n`;
+          out.innerHTML += `<span class="cmd-yellow">PROYECTOS EN VIVO:</span>
+1. Kuota (Fintech B2B · Cobros 1% vía 360pay) [DESTACADO] -&gt; https://www.kuota.pro
+2. Kuota · Portal Técnico &amp; Auditoría (Archify / Seguridad) -&gt; https://auditoria-archify.vercel.app
+3. Free Mind — Jardín de Autocuidado (SaaS B2B + IA)       -&gt; https://freemind-app.vercel.app/app/jardin
+4. MakroLab · Laboratorio Macro Alemania (IS-LM / ML)      -&gt; https://macro-alemania.vercel.app/#t=islm
+5. INVENTA (SaaS IA Compras &amp; Inventarios)                 -&gt; https://inventa-dpzedgxep-juzaki.vercel.app/\n`;
         } else if (cmd === 'skills'){
-          out.innerHTML += `<span class="cmd-yellow">EVALUACIÓN DE EXPERIENCIA (WEI):</span>
-- Product Management & Scrum:       [5.8 / 5.9]
-- Estrategia B2B & Lean Startup:    [5.6 / 5.9]
-- Diseño UI/UX (Figma):             [4.8 / 5.9]
-- Integración IA (Protocolos):      [4.7 / 5.9]
-- React & Entornos No-Code:         [4.5 / 5.9]\n`;
+          out.innerHTML += `<span class="cmd-yellow">EVALUACIÓN DE EXPERIENCIA (WEI):</span>\n` +
+            DATA.skills.map(s => `- ${esc(s.nombre.padEnd(32, ' '))} [${s.score.toFixed(1)} / 5.9]`).join('\n') + '\n';
         } else if (cmd === 'contact'){
           out.innerHTML += `<span class="cmd-yellow">CONTACTO:</span>
 LinkedIn: ${DATA.socials.linkedin}
@@ -2442,16 +2589,19 @@ Email:    ${DATA.socials.email}\n`;
         } else if (cmd === 'dir'){
           out.innerHTML += ` Directorio de C:\\Users\\Jose\\Documents
 
-16/09/2026  19:50    &lt;DIR&gt;          .
-16/09/2026  19:50    &lt;DIR&gt;          ..
-16/09/2026  19:50    &lt;DIR&gt;          Projects
-16/09/2026  19:50               360 INVENTA.url
-16/09/2026  19:50             2.450 vision.txt
-16/09/2026  19:50             1.120 Sobre_Mi.txt
-16/09/2026  19:50               340 FreeMind.url
-16/09/2026  19:50         3.450.210 Aero_Ambient.wma
-16/09/2026  19:50             4.096 Propiedades.sys
-               6 archivos      3.458.576 bytes
+17/11/2026  20:30    &lt;DIR&gt;          .
+17/11/2026  20:30    &lt;DIR&gt;          ..
+17/11/2026  20:30    &lt;DIR&gt;          Projects
+17/11/2026  20:30               340 Kuota.url
+17/11/2026  20:30               380 Auditoria_Kuota.url
+17/11/2026  20:30               370 FreeMind_Jardin.url
+17/11/2026  20:30               365 MakroLab_DE.url
+17/11/2026  20:30               360 INVENTA.url
+17/11/2026  20:30             2.840 vision.txt
+17/11/2026  20:30             1.240 Sobre_Mi.txt
+17/11/2026  20:30         3.450.210 Aero_Ambient.wma
+17/11/2026  20:30             4.096 Propiedades.sys
+               9 archivos      3.460.201 bytes
                3 carpetas 128.450.914.304 bytes libres\n`;
         } else if (cmd === 'cat vision.txt' || cmd === 'type vision.txt'){
           out.innerHTML += `<span class="cmd-muted">${esc(MANIFESTO_TEXT)}</span>\n`;
@@ -2483,53 +2633,16 @@ Email:    ${DATA.socials.email}\n`;
     const view = el.querySelector('#ie-view');
     const urlInput = el.querySelector('#ie-url');
 
+    el._setIETab = which => {
+      const page = IE_PAGES[which];
+      if (!page) return;
+      tabs.forEach(t => t.classList.toggle('active', t.dataset.ietab === which));
+      urlInput.value = page.url;
+      view.innerHTML = page.html;
+    };
+
     tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        const which = tab.dataset.ietab;
-        if (which === 'inventa'){
-          urlInput.value = 'https://inventa-dpzedgxep-juzaki.vercel.app/';
-          view.innerHTML = `
-            <div class="ie-hero">
-              <h2>INVENTA — El Cerebro de Compras para tu Empresa</h2>
-              <p>Plataforma SaaS impulsada por IA diseñada para optimizar la gestión de inventarios, anticipar la demanda y automatizar compras empresariales.</p>
-              <p><b>Impacto:</b> -35% quiebres de stock, -28% sobrestock, modelos predictivos de abastecimiento y analítica en tiempo real.</p>
-              <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap;">
-                <a class="ie-big-link" href="https://inventa-dpzedgxep-juzaki.vercel.app/" target="_blank" rel="noopener">Abrir en vivo ↗</a>
-                <button class="ie-big-link" style="border:none; cursor:pointer;" onclick="openApp('inventa')">Ver Caso de Estudio 🪟</button>
-              </div>
-            </div>
-            <div style="font-size:12px; color:#527494; line-height:1.6; margin-top:10px;">
-              <b>Especificaciones:</b> Inteligencia artificial aplicada a compras, dashboards ejecutivos en tiempo real, optimización de capital de trabajo y arquitectura SaaS escalable.
-            </div>`;
-        } else if (which === 'freemind'){
-          urlInput.value = 'https://freemind-app.vercel.app/';
-          view.innerHTML = `
-            <div class="ie-hero">
-              <h2>Free Mind — Ecosistema Digital de Salud Mental Universitaria</h2>
-              <p>Plataforma SaaS B2B que combina Inteligencia Artificial y un modelo Peer-to-Peer para ofrecer soporte emocional anónimo a estudiantes universitarios.</p>
-              <p><b>Protocolo I-CARE:</b> Moderación semántica automatizada en tiempo real que protege la salud estudiantil y resguarda el Lifetime Value (LTV) institucional.</p>
-              <a class="ie-big-link" href="https://freemind-app.vercel.app/" target="_blank" rel="noopener">Abrir freemind-app.vercel.app en vivo ↗</a>
-            </div>`;
-        } else if (which === 'github'){
-          urlInput.value = 'https://github.com/Juzakito';
-          view.innerHTML = `
-            <div class="ie-hero">
-              <h2>GitHub — @Juzakito</h2>
-              <p>Repositorios de código abierto, desarrollo de arquitecturas SaaS, portafolio Windows Vista y experimentos ágiles.</p>
-              <a class="ie-big-link" href="${esc(DATA.socials.github)}" target="_blank" rel="noopener">Ver Perfil en GitHub ↗</a>
-            </div>`;
-        } else if (which === 'linkedin'){
-          urlInput.value = 'https://www.linkedin.com/in/jmgonzalezz';
-          view.innerHTML = `
-            <div class="ie-hero">
-              <h2>LinkedIn — José González</h2>
-              <p>Product Manager & Tech Lead · SaaS B2B e Inteligencia Artificial.</p>
-              <a class="ie-big-link" href="${esc(DATA.socials.linkedin)}" target="_blank" rel="noopener">Conectar en LinkedIn ↗</a>
-            </div>`;
-        }
-      });
+      tab.addEventListener('click', () => el._setIETab(tab.dataset.ietab));
     });
   }
 
